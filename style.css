@@ -1,1 +1,667 @@
+/* =========================
+   HER CARE - STYLE SHEET
+   ========================= */
 
+:root {
+    --pink: #F8C8DC;
+    --blush: #FCE4EC;
+    --lavender: #DCC6E0;
+    --blue: #C7DFF2;
+    --mint: #CDE8D5;
+    --peach: #FAD9C1;
+    --cream: #FFF9F5;
+    --rose: #D99AB5;
+    --text: #5F5360;
+    --dark: #403641;
+    --white: #FFFFFF;
+}
+
+/* =========================
+   GENERAL
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--dark);
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    border-bottom: 2px solid var(--blush);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--rose);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--rose);
+}
+
+.menu-button {
+    display: none;
+    background: var(--pink);
+    border: 2px solid var(--rose);
+    padding: 8px 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(255, 249, 245, 0.88),
+            rgba(252, 228, 236, 0.88)
+        );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--rose);
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.button {
+    display: inline-block;
+    padding: 13px 25px;
+
+    background-color: var(--pink);
+    border: 2px solid var(--rose);
+
+    color: var(--dark);
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: var(--rose);
+    color: var(--white);
+}
+
+.button.secondary {
+    background-color: var(--blue);
+    border-color: #9dbdd8;
+}
+
+.button.secondary:hover {
+    background-color: #9dbdd8;
+}
+
+/* =========================
+   SECTION HEADERS
+   ========================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about {
+    background-color: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+/* =========================
+   TEAM
+   ========================= */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.team-card {
+    padding: 25px;
+    text-align: center;
+
+    background-color: var(--blush);
+    border: 2px solid var(--pink);
+}
+
+.team-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--lavender);
+    border: 2px solid var(--rose);
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+.team-card h3 {
+    margin-bottom: 5px;
+}
+
+.team-card p {
+    font-size: 14px;
+}
+
+/* =========================
+   MISSION
+   ========================= */
+
+.mission {
+    background-color: var(--lavender);
+    text-align: center;
+}
+
+.mission-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.mission h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.mission p {
+    font-size: 22px;
+}
+
+/* =========================
+   WHY IT MATTERS
+   ========================= */
+
+.why {
+    background-color: var(--cream);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.info-card {
+    padding: 30px;
+
+    background-color: var(--white);
+    border: 2px solid var(--blush);
+
+    min-height: 220px;
+}
+
+.info-card:nth-child(2) {
+    background-color: var(--blue);
+}
+
+.info-card:nth-child(3) {
+    background-color: var(--mint);
+}
+
+.info-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   CARE KITS
+   ========================= */
+
+.care-kits {
+    background-color: var(--white);
+}
+
+.kit-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.kit-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.kit-item {
+    padding: 25px 15px;
+
+    text-align: center;
+
+    background-color: var(--blush);
+    border: 2px solid var(--pink);
+
+    transition: 0.3s;
+}
+
+.kit-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--rose);
+}
+
+.kit-item:nth-child(2),
+.kit-item:nth-child(7) {
+    background-color: var(--blue);
+}
+
+.kit-item:nth-child(3),
+.kit-item:nth-child(8) {
+    background-color: var(--mint);
+}
+
+.kit-item:nth-child(4),
+.kit-item:nth-child(9) {
+    background-color: var(--peach);
+}
+
+.kit-item:nth-child(5),
+.kit-item:nth-child(10) {
+    background-color: var(--lavender);
+}
+
+.kit-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.kit-item h3 {
+    font-size: 18px;
+}
+
+/* =========================
+   GET INVOLVED
+   ========================= */
+
+.get-involved {
+    background-color: var(--blush);
+}
+
+.involvement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.involvement-card {
+    background-color: var(--white);
+    padding: 35px;
+
+    border: 2px solid var(--pink);
+}
+
+.involvement-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   VISION
+   ========================= */
+
+.vision {
+    background-color: var(--blue);
+}
+
+.vision-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.vision h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.vision p {
+    font-size: 19px;
+}
+
+/* =========================
+   IMPACT
+   ========================= */
+
+.impact {
+    background-color: var(--white);
+}
+
+.impact-box {
+    max-width: 900px;
+    margin: auto;
+
+    padding: 45px;
+
+    background-color: var(--mint);
+    border: 2px solid #A9D4B5;
+
+    text-align: center;
+}
+
+.impact-box h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.impact-box p {
+    margin-bottom: 20px;
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact {
+    background-color: var(--cream);
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-container p {
+    margin-bottom: 25px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    padding: 20px 30px;
+
+    background-color: var(--white);
+    border: 2px solid var(--blush);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.footer-logo {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   SCROLL ANIMATIONS
+   ========================= */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kit-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .why-grid,
+    .involvement-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        position: relative;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+        background-color: var(--white);
+        border: 2px solid var(--blush);
+
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .kit-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mission h2,
+    .vision h2,
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .team-grid,
+    .kit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
