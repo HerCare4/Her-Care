@@ -397,17 +397,23 @@ a {
 .what-container {
     max-width: 1100px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     align-items: stretch;
 }
 
 .what-card {
+    flex: 1;
     text-align: center;
     text-decoration: none;
     color: #5F5360;
     padding: 10px 30px;
     transition: transform 0.2s ease;
+}
+
+.divider {
+    width: 1px;
+    background: #F3B8CA;
+    margin: 10px 0;
 }
 
 .what-card:hover {
