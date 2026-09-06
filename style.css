@@ -523,31 +523,25 @@ a {
    TEAM HEART 
 ===================================== */ 
 
-.team-heart { 
-    position: relative; 
+.team-heart {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
 
-    width: 40px; 
-    height: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    margin: -20px auto 10px; 
+    background: #FFF9F5;
+    border-radius: 50%;
 
-    background: var(--cream); 
+    font-size: 24px;
+    color: #D99AB5;
 
-    border: 1px solid #e99db9; 
-
-    border-radius: 50%; 
-
-    display: flex; 
-
-    justify-content: center; 
-    align-items: center; 
-
-    color: #ed7199; 
-
-    font-size: 24px; 
-
-    z-index: 2; 
-} 
+    z-index: 5;
+}
 
 
 /* ===================================== 
