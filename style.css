@@ -63,7 +63,7 @@ a {
     max-width: 1200px;
     margin: auto;
 
-    min-height: 95px;
+    min-height: 90px;
 
     display: flex;
     align-items: center;
@@ -72,6 +72,9 @@ a {
     padding: 15px 30px;
 }
 
+
+.nav-container nav {
+    flex: 1;
 
 /* LOGO */
 
@@ -105,11 +108,10 @@ a {
 /* NAV LINKS */
 
 .nav-links {
-    list-style: none;
-
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: flex-end;
+    gap: 28px;
 }
 
 .nav-links a {
