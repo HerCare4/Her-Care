@@ -1,44 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Contact | Her Care</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header class="navbar">
-
+<header>
     <div class="nav-container">
 
         <a href="index.html" class="logo">
-
             <img src="images/logo.png" alt="Her Care Logo" class="logo-image">
-
             <span class="logo-her">Her</span>
             <span class="logo-care">Care</span>
             <span class="logo-by">by Ayani Bhakta</span>
-
         </a>
 
-        <button class="menu-button">☰</button>
+        <button class="menu-toggle" aria-label="Open menu">
+            ☰
+        </button>
 
         <nav>
-
             <ul class="nav-links">
-
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="mission.html">Our Mission</a></li>
@@ -46,173 +35,216 @@
                 <li><a href="get-involved.html">Get Involved</a></li>
                 <li><a href="impact.html">Our Impact</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
-
             </ul>
-
         </nav>
 
     </div>
-
 </header>
 
 
-<section class="page-hero">
+<main class="contact-page">
 
-    <div class="page-hero-content">
-
-        <div class="slogan">♡ CONTACT US ♡</div>
-
-        <h1>
-            We'd Love To
-            <span>Hear From You</span>
-        </h1>
-
-        <p>
-            Have a question, want to volunteer, or interested
-            in supporting Her Care? Reach out to us.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section class="content-section">
-
-    <div class="contact-grid">
-
-        <div class="contact-card">
-
-            <div class="big-heart"></div>
-
-            <h2>Email Us</h2>
-
+    <!-- PAGE HERO -->
+    <section class="page-hero contact-hero">
+        <div class="content-container">
+            <p class="small-title">LET'S CONNECT</p>
+            <h1>Contact <span>Her Care</span></h1>
             <p>
-                Have a question or want to get involved?
+                Have a question, want to get involved, or just want to say hello?
+                We would love to hear from you.
             </p>
-
-            <a href="mailto:hercare4.her@gmail.com" class="contact-link">
-                hercare4.her@gmail.com
-            </a>
-
         </div>
+    </section>
 
 
-        <div class="contact-card">
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
 
-            <div class="big-heart"></div>
+        <div class="content-container contact-layout">
 
-            <h2>Connect With Us</h2>
+            <!-- LEFT SIDE -->
+            <div class="contact-intro">
 
-            <p>
-                Follow Her Care and help spread awareness
-                through social media.
-            </p>
+                <p class="small-title">REACH OUT</p>
 
-            <div class="contact-social">
+                <h2>We'd love to hear from you ♡</h2>
 
-                <a href="https://www.facebook.com/" target="_blank">
-                    Facebook
-                </a>
+                <p>
+                    Her Care is built around community, kindness, and support.
+                    Whether you are interested in donating, volunteering,
+                    partnering with us, or learning more about our mission,
+                    feel free to reach out.
+                </p>
 
-                <a href="https://www.instagram.com/" target="_blank">
-                    Instagram
-                </a>
+                <div class="contact-note">
+                    <span>♡</span>
+                    <div>
+                        <strong>Every connection matters.</strong>
+                        <p>
+                            Your support can help us continue providing care
+                            and dignity to girls and women in need.
+                        </p>
+                    </div>
+                </div>
 
-                <a href="https://www.tiktok.com/" target="_blank">
-                    TikTok
-                </a>
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <div class="contact-card">
+
+                <h3>Connect With Us</h3>
+
+                <p class="contact-card-text">
+                    Follow Her Care or send us an email.
+                </p>
+
+
+                <div class="contact-socials">
+
+                    <!-- FACEBOOK -->
+                    <a href="https://www.facebook.com/profile.php?id=61594185781032&sk=directory_contact_info&fb_profile_edit_entry_point=%7B%22feature%22%3A%22profile_directory%22%2C%22click_point%22%3A%22pencil_edit_directory_section%22%2C%22additional_metadata%22%3A%7B%22section_type%22%3A%22contact_info%22%7D%7D"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-social facebook">
+
+                        <span class="social-symbol">ⓕ</span>
+
+                        <span>
+                            <strong>Facebook</strong>
+                            <small>Follow Her Care</small>
+                        </span>
+
+                        <span class="arrow">→</span>
+
+                    </a>
+
+
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/hercare_ayani/?utm_source=ig_web_button_share_sheet"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-social instagram">
+
+                        <span class="social-symbol">◎</span>
+
+                        <span>
+                            <strong>Instagram</strong>
+                            <small>@hercare_ayani</small>
+                        </span>
+
+                        <span class="arrow">→</span>
+
+                    </a>
+
+
+                    <!-- TIKTOK -->
+                    <a href="https://www.tiktok.com/@hercare_ayani?is_from_webapp=1&sender_device=pc"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-social tiktok">
+
+                        <span class="social-symbol">♪</span>
+
+                        <span>
+                            <strong>TikTok</strong>
+                            <small>@hercare_ayani</small>
+                        </span>
+
+                        <span class="arrow">→</span>
+
+                    </a>
+
+
+                    <!-- EMAIL -->
+                    <a href="mailto:hercare4.her@gmail.com"
+                       class="contact-social email">
+
+                        <span class="social-symbol">✉</span>
+
+                        <span>
+                            <strong>Email</strong>
+                            <small>hercare4.her@gmail.com</small>
+                        </span>
+
+                        <span class="arrow">→</span>
+
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="content-card contact-message">
+    <!-- BOTTOM CTA -->
+    <section class="page-cta">
+        <div class="content-container">
 
-        <div class="card-heart"></div>
+            <p class="small-title">HER CARE</p>
 
-        <h2>Let's Make A Difference Together</h2>
+            <h2>Because every girl deserves dignity ♡</h2>
 
-        <p>
-            Her Care is built around community. Whether you are
-            interested in donating, volunteering, partnering, or
-            simply learning more, we would love to connect with you.
-        </p>
+            <a href="get-involved.html" class="cta-button">
+                Get Involved
+            </a>
 
-     
+        </div>
+    </section>
 
-    </div>
-
-</section>
+</main>
 
 
 <footer>
 
-    <div class="footer-container">
+    <div class="footer-content">
 
-        <div class="footer-brand">
-
-            <div class="footer-logo">
-                <span>Her</span>Care
-            </div>
-
-            <div class="footer-by">by Ayani Bhakta</div>
-
-            <p>Thank you for being a part of our journey.</p>
-
-            <div class="social-icons">
-                <a href="https://www.facebook.com/" target="_blank">ⓕ</a>
-                <a href="https://www.instagram.com/" target="_blank">🅾</a>
-                <a href="https://www.tiktok.com/" target="_blank">♪</a>
-                <a href="mailto:hercare4.her@gmail.com">✉</a>
-            </div>
-
+        <div>
+            <h3>Her Care</h3>
+            <p>Because Every Girl Deserves Dignity ♡</p>
         </div>
 
-        <div class="footer-column">
+        <div class="social-icons">
 
-            <h4>QUICK LINKS</h4>
+            <a href="https://www.facebook.com/profile.php?id=61594185781032&sk=directory_contact_info&fb_profile_edit_entry_point=%7B%22feature%22%3A%22profile_directory%22%2C%22click_point%22%3A%22pencil_edit_directory_section%22%2C%22additional_metadata%22%3A%7B%22section_type%22%3A%22contact_info%22%7D%7D"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Facebook">
+                ⓕ
+            </a>
 
-            <a href="about.html">About</a>
-            <a href="mission.html">Our Mission</a>
-            <a href="care-kits.html">Care Kits</a>
-            <a href="get-involved.html">Get Involved</a>
-            <a href="impact.html">Our Impact</a>
-            <a href="contact.html">Contact</a>
+            <a href="https://www.instagram.com/hercare_ayani/?utm_source=ig_web_button_share_sheet"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram">
+                ◎
+            </a>
 
-        </div>
+            <a href="https://www.tiktok.com/@hercare_ayani?is_from_webapp=1&sender_device=pc"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="TikTok">
+                ♪
+            </a>
 
-        <div class="footer-column">
-
-            <h4>GET INVOLVED</h4>
-
-            <a href="get-involved.html">Donate</a>
-            <a href="get-involved.html">Spread Awareness</a>
-            <a href="get-involved.html">Partner With Us</a>
-            <a href="get-involved.html">Volunteer</a>
-
-        </div>
-
-        <div class="footer-column contact">
-
-            <h4>CONTACT</h4>
-
-            <p>✉ hercare4.her@gmail.com</p>
-
-            <p>♡ Serving our community with care and kindness.</p>
+            <a href="mailto:hercare4.her@gmail.com"
+               aria-label="Email">
+                ✉
+            </a>
 
         </div>
 
     </div>
 
-    <div class="copyright">
-        © <span id="year"></span> Her Care. All rights reserved. ♡
-    </div>
+    <p class="copyright">
+        © 2026 Her Care. All rights reserved.
+    </p>
 
 </footer>
+
 
 <script src="script.js"></script>
 
