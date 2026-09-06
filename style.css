@@ -36,6 +36,15 @@ body {
     background: var(--cream);
     color: var(--text);
     overflow-x: hidden;
+
+    /* Keeps footer at bottom */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 img {
@@ -764,7 +773,7 @@ a {
 
 
 /* =====================================
-   CTA
+   HOMEPAGE CTA
 ===================================== */
 
 .cta {
@@ -806,6 +815,8 @@ footer {
     background: #FBE1EB;
 
     border-top: 1px solid #efc5d5;
+
+    margin-top: auto;
 }
 
 .footer-container {
@@ -880,6 +891,14 @@ footer {
 
     align-items: center;
     justify-content: center;
+
+    transition: 0.25s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+
+    background: #EBA9C4;
 }
 
 
@@ -912,6 +931,10 @@ footer {
     color: #625967;
 }
 
+.footer-column a:hover {
+    color: #E66F98;
+}
+
 
 /* =====================================
    COPYRIGHT
@@ -927,6 +950,332 @@ footer {
     font-size: 12px;
 
     color: #746976;
+}
+
+
+/* =====================================
+   CONTACT PAGE
+===================================== */
+
+.contact-page {
+    min-height: calc(100vh - 150px);
+}
+
+
+/* CONTACT HERO */
+
+.contact-hero {
+    text-align: center;
+
+    padding: 80px 20px 65px;
+
+    background: linear-gradient(
+        135deg,
+        var(--blush),
+        var(--lavender)
+    );
+}
+
+.contact-hero h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 58px;
+
+    font-weight: 600;
+
+    margin: 10px 0 15px;
+
+    color: var(--text);
+}
+
+.contact-hero h1 span {
+    color: var(--rose);
+}
+
+.contact-hero p:last-child {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* CONTACT SECTION */
+
+.contact-section {
+    padding: 80px 20px;
+
+    background: var(--cream);
+}
+
+.contact-layout {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* LEFT SIDE */
+
+.contact-intro h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 45px;
+
+    font-weight: 600;
+
+    margin: 10px 0 20px;
+
+    color: var(--text);
+}
+
+.contact-intro > p:not(.small-title) {
+    line-height: 1.9;
+
+    font-size: 15px;
+
+    color: var(--text);
+}
+
+.small-title {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: var(--rose);
+}
+
+
+/* LITTLE MESSAGE BOX */
+
+.contact-note {
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 30px;
+
+    padding: 22px;
+
+    background: white;
+
+    border-left: 4px solid var(--pink);
+
+    box-shadow: 0 8px 25px rgba(95, 83, 96, 0.08);
+}
+
+.contact-note > span {
+    font-size: 28px;
+
+    color: var(--rose);
+}
+
+.contact-note strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+}
+
+.contact-note p {
+    margin: 5px 0 0;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* CONTACT CARD */
+
+.contact-card {
+    background: white;
+
+    padding: 40px;
+
+    box-shadow: 0 15px 40px rgba(95, 83, 96, 0.10);
+
+    border-top: 5px solid var(--pink);
+}
+
+.contact-card h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 34px;
+
+    margin: 0 0 5px;
+
+    color: var(--text);
+}
+
+.contact-card-text {
+    font-size: 14px;
+
+    margin-bottom: 25px;
+
+    color: #766c77;
+}
+
+
+/* =====================================
+   CONTACT SOCIAL LINKS
+===================================== */
+
+.contact-socials {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.contact-social {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px;
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    background: var(--cream);
+
+    border: 1px solid #f0e4e9;
+
+    transition: 0.25s ease;
+}
+
+.contact-social:hover {
+    transform: translateX(5px);
+
+    background: var(--blush);
+
+    box-shadow: 0 5px 15px rgba(95, 83, 96, 0.08);
+}
+
+
+/* SOCIAL SYMBOL */
+
+.social-symbol {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    font-size: 22px;
+
+    border-radius: 50%;
+
+    color: var(--rose);
+
+    flex-shrink: 0;
+}
+
+
+/* SOCIAL TEXT */
+
+.contact-social strong {
+    display: block;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.contact-social small {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    color: #877b86;
+}
+
+.contact-social .arrow {
+    margin-left: auto;
+
+    font-size: 18px;
+
+    color: var(--rose);
+}
+
+
+/* =====================================
+   CONTACT CTA
+===================================== */
+
+.page-cta {
+    text-align: center;
+
+    padding: 65px 20px;
+
+    background: var(--pink);
+}
+
+.page-cta h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 38px;
+
+    margin: 8px 0 25px;
+
+    color: var(--text);
+}
+
+.cta-button {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: white;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition: 0.25s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(95, 83, 96, 0.15);
 }
 
 
@@ -966,6 +1315,7 @@ footer {
 
     .logo-image {
         width: 50px;
+
         height: 50px;
 
         margin-right: 6px;
@@ -1015,6 +1365,7 @@ footer {
         position: absolute;
 
         top: 75px;
+
         left: 0;
 
         width: 100%;
@@ -1266,7 +1617,7 @@ footer {
     }
 
 
-    /* CTA */
+    /* HOMEPAGE CTA */
 
     .cta {
         padding: 45px 20px;
@@ -1277,7 +1628,58 @@ footer {
     }
 
 
-    /* FOOTER */
+    /* =================================
+       CONTACT PAGE MOBILE
+    ================================= */
+
+    .contact-hero {
+        padding: 60px 20px 50px;
+    }
+
+    .contact-hero h1 {
+        font-size: 45px;
+    }
+
+    .contact-hero p:last-child {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .contact-section {
+        padding: 60px 20px;
+    }
+
+    .contact-intro h2 {
+        font-size: 38px;
+    }
+
+    .contact-card {
+        padding: 30px 22px;
+    }
+
+    .contact-card h3 {
+        font-size: 31px;
+    }
+
+    .page-cta {
+        padding: 50px 20px;
+    }
+
+    .page-cta h2 {
+        font-size: 32px;
+    }
+
+
+    /* =================================
+       FOOTER MOBILE
+    ================================= */
 
     .footer-container {
         width: 100%;
@@ -1319,6 +1721,7 @@ footer {
 
     .logo-image {
         width: 43px;
+
         height: 43px;
     }
 
@@ -1344,6 +1747,7 @@ footer {
 
     .what-card {
         padding-left: 10px;
+
         padding-right: 10px;
     }
 
@@ -1353,6 +1757,31 @@ footer {
 
     .what-card p {
         font-size: 12px;
+    }
+
+
+    /* CONTACT SMALL PHONE */
+
+    .contact-hero h1 {
+        font-size: 40px;
+    }
+
+    .contact-intro h2 {
+        font-size: 34px;
+    }
+
+    .contact-card {
+        padding: 25px 18px;
+    }
+
+    .contact-social {
+        padding: 13px;
+    }
+
+    .social-symbol {
+        width: 38px;
+
+        height: 38px;
     }
 
 }
