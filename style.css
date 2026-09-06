@@ -975,16 +975,36 @@ footer {
     }
 
 
-   .logo {
+ .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .logo-image {
-    width: 45px;
-    height: 45px;
+    width: 65px !important;
+    height: 65px !important;
+    max-width: 65px !important;
+    max-height: 65px !important;
     object-fit: contain;
+    display: block;
     margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.logo-her {
+    font-family: cursive;
+    font-style: italic;
+}
+
+.logo-care {
+    font-family: "Playfair Display", serif;
+}
+
+.logo-by {
+    font-family: "Montserrat", sans-serif;
+    margin-left: 5px;
 }
 
     .logo-her {
