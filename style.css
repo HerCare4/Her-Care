@@ -500,18 +500,18 @@ a {
 .team-photo {
     position: relative;
     width: 100%;
-    height: 280px;
+    height: 320px;
     overflow: hidden;
+    background: #FFF9F5;
 }
 
-.team-photo img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: contain; 
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     object-position: center;
-    display: block; 
+    display: block;
 }
-
 
 /* ===================================== 
    TEAM HEART 
