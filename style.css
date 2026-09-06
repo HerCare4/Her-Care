@@ -468,7 +468,12 @@ a {
     margin: 10px 0;
 }
 
-@media (max-width: 800px) {
+
+/* =====================================
+   WHAT WE DO - MOBILE
+===================================== */
+
+@media (max-width: 700px) {
 
     .what-container {
         grid-template-columns: repeat(2, 1fr);
