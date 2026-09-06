@@ -67,14 +67,7 @@ a {
     align-items: center;
     justify-content: space-between;
 
-    padding: 15px 30px;
-}
-
-
-/* NAVIGATION AREA */
-
-.nav-container nav {
-    flex: 1;
+    padding: 10px 30px;
 }
 
 
@@ -90,22 +83,14 @@ a {
     flex-shrink: 0;
 }
 
-
-/* LOGO IMAGE */
-
 .logo-image {
     width: 65px;
     height: 65px;
-    max-width: 65px;
-    max-height: 65px;
     object-fit: contain;
     display: block;
-    margin-right: 10px;
     flex-shrink: 0;
+    margin-right: 10px;
 }
-
-
-/* HER */
 
 .logo-her {
     font-family: cursive;
@@ -115,18 +100,12 @@ a {
     line-height: 1;
 }
 
-
-/* CARE */
-
 .logo-care {
     font-family: "Cormorant Garamond", serif;
     font-size: 48px;
     color: #252333;
     line-height: 1;
 }
-
-
-/* BY AYANI BHAKTA */
 
 .logo-by {
     font-family: "Montserrat", sans-serif;
@@ -140,11 +119,15 @@ a {
    NAV LINKS
 ===================================== */
 
+.nav-container nav {
+    flex: 1;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 28px;
+    gap: 24px;
 }
 
 .nav-links a {
@@ -304,9 +287,6 @@ a {
     border-radius: 0 0 80px 0;
 }
 
-
-/* Decorative frame */
-
 .team-frame {
     border: 2px solid var(--rose);
 
@@ -333,87 +313,29 @@ a {
 
     display: flex;
 
-    flex-direction: column;
-
     justify-content: center;
 
     align-items: center;
 
     text-align: center;
 
-    padding: 30px;
+    padding: 0;
+
+    overflow: hidden;
 }
 
 
-/* =====================================
-   HERO TEAM PHOTO
-===================================== */
+/* TEAM PHOTO IN HERO */
 
 .hero-team-photo {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     object-position: center top;
+
     display: block;
-}
-
-
-/* =====================================
-   OLD FRAME TEXT
-===================================== */
-
-.frame-heart {
-    font-size: 42px;
-
-    color: #E8789F;
-
-    margin-bottom: 20px;
-}
-
-.frame-small {
-    font-size: 13px;
-
-    letter-spacing: 3px;
-
-    color: #9B6682;
-
-    margin-bottom: 12px;
-}
-
-.frame-inner h2 {
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: 58px;
-
-    color: #4F4552;
-
-    margin-bottom: 10px;
-}
-
-.frame-inner p {
-    font-size: 15px;
-
-    letter-spacing: 1.5px;
-
-    color: #756B77;
-
-    margin-bottom: 25px;
-}
-
-.frame-line {
-    width: 80px;
-
-    height: 1px;
-
-    background: var(--rose);
-
-    margin-bottom: 20px;
-}
-
-.frame-inner span {
-    font-size: 13px;
-
-    color: #756B77;
 }
 
 
@@ -931,7 +853,9 @@ footer {
 }
 
 
-/* FOOTER COLUMNS */
+/* =====================================
+   FOOTER COLUMNS
+===================================== */
 
 .footer-column {
     display: flex;
@@ -959,7 +883,9 @@ footer {
 }
 
 
-/* COPYRIGHT */
+/* =====================================
+   COPYRIGHT
+===================================== */
 
 .copyright {
     border-top: 1px solid #e9bfd0;
@@ -991,8 +917,6 @@ footer {
     }
 
 
-    /* MOBILE LOGO */
-
     .logo {
         display: flex;
 
@@ -1009,10 +933,6 @@ footer {
         width: 50px;
 
         height: 50px;
-
-        max-width: 50px;
-
-        max-height: 50px;
 
         object-fit: contain;
 
@@ -1057,7 +977,7 @@ footer {
 
     /* MOBILE NAV */
 
-    nav {
+    .nav-container nav {
         position: absolute;
 
         top: 75px;
@@ -1108,9 +1028,7 @@ footer {
     }
 
 
-    /* =====================================
-       HERO MOBILE
-    ===================================== */
+    /* HERO */
 
     .hero-container {
         display: flex;
@@ -1179,46 +1097,18 @@ footer {
     }
 
 
-    /* TEAM FRAME MOBILE */
+    /* TEAM FRAME */
 
     .team-frame {
         padding: 10px;
     }
 
     .frame-inner {
-        padding: 20px;
-    }
-
-    .frame-heart {
-        font-size: 32px;
-
-        margin-bottom: 12px;
-    }
-
-    .frame-small {
-        font-size: 11px;
-
-        letter-spacing: 2px;
-    }
-
-    .frame-inner h2 {
-        font-size: 45px;
-    }
-
-    .frame-inner p {
-        font-size: 12px;
-
-        margin-bottom: 18px;
-    }
-
-    .frame-inner span {
-        font-size: 11px;
+        padding: 0;
     }
 
 
-    /* =====================================
-       TEAM MOBILE
-    ===================================== */
+    /* TEAM */
 
     .team-section {
         width: 100%;
@@ -1295,9 +1185,7 @@ footer {
     }
 
 
-    /* =====================================
-       WHAT WE DO MOBILE
-    ===================================== */
+    /* WHAT WE DO */
 
     .what-we-do {
         width: 100%;
@@ -1340,9 +1228,7 @@ footer {
     }
 
 
-    /* =====================================
-       CTA MOBILE
-    ===================================== */
+    /* CTA */
 
     .cta {
         padding: 45px 20px;
@@ -1353,9 +1239,7 @@ footer {
     }
 
 
-    /* =====================================
-       FOOTER MOBILE
-    ===================================== */
+    /* FOOTER */
 
     .footer-container {
         width: 100%;
@@ -1398,10 +1282,6 @@ footer {
         width: 45px;
 
         height: 45px;
-
-        max-width: 45px;
-
-        max-height: 45px;
     }
 
     .logo-her {
