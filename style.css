@@ -3,6 +3,7 @@
 ===================================== */
 
 :root {
+
     --pink: #F8C8DC;
     --blush: #FCE4EC;
     --lavender: #DCC6E0;
@@ -12,6 +13,7 @@
     --cream: #FFF9F5;
     --rose: #D99AB5;
     --text: #5F5360;
+
 }
 
 
@@ -59,13 +61,11 @@ a {
 .nav-container {
     width: 100%;
     max-width: 1200px;
-    margin: auto;
-
     min-height: 90px;
+    margin: auto;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     padding: 10px 30px;
 }
@@ -80,60 +80,95 @@ a {
     align-items: center;
     white-space: nowrap;
     text-decoration: none;
+
     flex-shrink: 0;
 }
 
+
+/* LOGO IMAGE */
+
 .logo-image {
-    width: 65px;
-    height: 65px;
+    width: 62px;
+    height: 62px;
+
     object-fit: contain;
     display: block;
+
+    margin-right: 8px;
+
     flex-shrink: 0;
-    margin-right: 10px;
 }
+
+
+/* "HER" */
 
 .logo-her {
     font-family: cursive;
-    font-size: 52px;
+    font-size: 48px;
     font-style: italic;
     color: #E87BA1;
+
     line-height: 1;
 }
+
+
+/* "CARE" */
 
 .logo-care {
     font-family: "Cormorant Garamond", serif;
-    font-size: 48px;
+    font-size: 46px;
+    font-weight: 600;
+
     color: #252333;
+
     line-height: 1;
 }
 
+
+/* "BY AYANI BHAKTA" */
+
 .logo-by {
     font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    margin-left: 5px;
+    font-size: 13px;
+    font-weight: 400;
+
+    margin-left: 6px;
+
     color: var(--text);
+
+    align-self: flex-end;
+    margin-bottom: 8px;
 }
 
 
 /* =====================================
-   NAV LINKS
+   NAVIGATION LINKS
 ===================================== */
 
 .nav-container nav {
     flex: 1;
+    margin-left: 35px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 24px;
+
+    gap: 25px;
+
+    list-style: none;
 }
 
 .nav-links a {
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 500;
+
     color: #332a38;
+
     padding: 10px 0;
+
+    white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -147,7 +182,7 @@ a {
 
 
 /* =====================================
-   MOBILE BUTTON
+   MOBILE MENU BUTTON
 ===================================== */
 
 .menu-button {
@@ -156,8 +191,8 @@ a {
     border: 1px solid #e7a9c2;
     background: var(--pink);
 
-    width: 58px;
-    height: 58px;
+    width: 52px;
+    height: 52px;
 
     font-size: 22px;
     color: #2296dc;
@@ -185,7 +220,9 @@ a {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     align-items: center;
+
     gap: 55px;
 }
 
@@ -204,6 +241,7 @@ a {
     border-radius: 30px;
 
     font-size: 15px;
+
     margin-bottom: 25px;
 }
 
@@ -228,7 +266,6 @@ a {
     max-width: 560px;
 
     font-size: 17px;
-
     line-height: 1.9;
 
     color: #746a77;
@@ -287,6 +324,9 @@ a {
     border-radius: 0 0 80px 0;
 }
 
+
+/* FRAME */
+
 .team-frame {
     border: 2px solid var(--rose);
 
@@ -296,6 +336,9 @@ a {
 
     box-shadow: 0 12px 30px rgba(217, 154, 181, 0.18);
 }
+
+
+/* INSIDE FRAME */
 
 .frame-inner {
     width: 100%;
@@ -314,18 +357,13 @@ a {
     display: flex;
 
     justify-content: center;
-
     align-items: center;
-
-    text-align: center;
-
-    padding: 0;
 
     overflow: hidden;
 }
 
 
-/* TEAM PHOTO IN HERO */
+/* TEAM PHOTO */
 
 .hero-team-photo {
     width: 100%;
@@ -333,7 +371,7 @@ a {
 
     object-fit: cover;
 
-    object-position: center top;
+    object-position: center center;
 
     display: block;
 }
@@ -437,7 +475,6 @@ a {
 
 .team-container {
     width: 100%;
-
     max-width: 1100px;
 
     margin: auto;
@@ -477,7 +514,6 @@ a {
 
 .team-photo {
     width: 100%;
-
     height: 245px;
 
     overflow: hidden;
@@ -487,7 +523,6 @@ a {
 
 .team-photo img {
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -499,14 +534,13 @@ a {
 
 
 /* =====================================
-   HEART
+   TEAM HEART
 ===================================== */
 
 .team-heart {
     position: relative;
 
     width: 40px;
-
     height: 40px;
 
     margin: -20px auto 10px;
@@ -520,7 +554,6 @@ a {
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     color: #ed7199;
@@ -568,25 +601,21 @@ a {
 
 .founder {
     background: #F9DDE8;
-
     color: #E36D96;
 }
 
 .cofounder {
     background: #DCC6E0;
-
     color: #755C7D;
 }
 
 .coordinator {
     background: #CDE8D5;
-
     color: #5D8069;
 }
 
 .financial {
     background: #C7DFF2;
-
     color: #58748A;
 }
 
@@ -637,11 +666,10 @@ a {
 }
 
 
-/* FOUR CARDS HORIZONTAL */
+/* FOUR CARDS */
 
 .what-container {
     width: 100%;
-
     max-width: 1100px;
 
     margin: auto;
@@ -674,7 +702,6 @@ a {
 
 .what-icon {
     width: 72px;
-
     height: 72px;
 
     border-radius: 50%;
@@ -682,7 +709,6 @@ a {
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     margin: 0 auto 20px;
@@ -692,25 +718,21 @@ a {
 
 .pink-icon {
     background: #FBE2EB;
-
     color: #ED7199;
 }
 
 .lavender-icon {
     background: #DCC6E0;
-
     color: #665873;
 }
 
 .blue-icon {
     background: #C7DFF2;
-
     color: #5B778B;
 }
 
 .mint-icon {
     background: #CDE8D5;
-
     color: #64836D;
 }
 
@@ -800,12 +822,17 @@ footer {
     gap: 45px;
 }
 
+
+/* FOOTER LOGO */
+
 .footer-logo {
     font-family: "Cormorant Garamond", serif;
 
     font-size: 40px;
 
     color: #302a35;
+
+    line-height: 1;
 }
 
 .footer-logo span {
@@ -815,7 +842,9 @@ footer {
 }
 
 .footer-by {
-    margin-top: -5px;
+    margin-top: 5px;
+
+    font-family: "Montserrat", sans-serif;
 
     font-size: 14px;
 }
@@ -828,6 +857,9 @@ footer {
     font-size: 14px;
 }
 
+
+/* SOCIAL ICONS */
+
 .social-icons {
     display: flex;
 
@@ -838,7 +870,6 @@ footer {
 
 .social-icons a {
     width: 38px;
-
     height: 38px;
 
     background: #F7C6D9;
@@ -848,7 +879,6 @@ footer {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 }
 
@@ -906,16 +936,21 @@ footer {
 
 @media (max-width: 768px) {
 
+
     /* NAV */
 
     .nav-container {
         min-height: 75px;
 
-        padding: 10px 20px;
+        padding: 8px 20px;
 
         width: 100%;
+
+        justify-content: space-between;
     }
 
+
+    /* MOBILE LOGO */
 
     .logo {
         display: flex;
@@ -931,14 +966,9 @@ footer {
 
     .logo-image {
         width: 50px;
-
         height: 50px;
 
-        object-fit: contain;
-
-        display: block;
-
-        margin-right: 7px;
+        margin-right: 6px;
 
         flex-shrink: 0;
     }
@@ -946,27 +976,31 @@ footer {
     .logo-her {
         font-family: cursive;
 
-        font-style: italic;
+        font-size: 35px;
 
-        font-size: 37px;
+        font-style: italic;
     }
 
     .logo-care {
         font-family: "Cormorant Garamond", serif;
 
-        font-size: 34px;
+        font-size: 33px;
+
+        font-weight: 600;
     }
 
     .logo-by {
         font-family: "Montserrat", sans-serif;
 
-        font-size: 10px;
+        font-size: 9px;
 
-        margin-left: 5px;
+        margin-left: 4px;
+
+        margin-bottom: 5px;
     }
 
 
-    /* MOBILE BUTTON */
+    /* MENU BUTTON */
 
     .menu-button {
         display: block;
@@ -975,13 +1009,12 @@ footer {
     }
 
 
-    /* MOBILE NAV */
+    /* MOBILE NAVIGATION */
 
     .nav-container nav {
         position: absolute;
 
         top: 75px;
-
         left: 0;
 
         width: 100%;
@@ -989,6 +1022,8 @@ footer {
         background: var(--cream);
 
         z-index: 1000;
+
+        margin-left: 0;
     }
 
     .nav-links {
@@ -1072,6 +1107,9 @@ footer {
         margin-bottom: 25px;
     }
 
+
+    /* BUTTONS */
+
     .hero-buttons {
         width: 100%;
 
@@ -1088,6 +1126,9 @@ footer {
         min-height: 58px;
     }
 
+
+    /* HERO IMAGE */
+
     .hero-image {
         width: 100%;
 
@@ -1096,15 +1137,12 @@ footer {
         border-radius: 0 0 55px 0;
     }
 
-
-    /* TEAM FRAME */
-
     .team-frame {
         padding: 10px;
     }
 
-    .frame-inner {
-        padding: 0;
+    .hero-team-photo {
+        object-position: center center;
     }
 
 
@@ -1269,6 +1307,7 @@ footer {
     .footer-logo {
         font-size: 40px;
     }
+
 }
 
 
@@ -1279,17 +1318,16 @@ footer {
 @media (max-width: 400px) {
 
     .logo-image {
-        width: 45px;
-
-        height: 45px;
+        width: 43px;
+        height: 43px;
     }
 
     .logo-her {
-        font-size: 32px;
+        font-size: 31px;
     }
 
     .logo-care {
-        font-size: 30px;
+        font-size: 29px;
     }
 
     .logo-by {
@@ -1306,7 +1344,6 @@ footer {
 
     .what-card {
         padding-left: 10px;
-
         padding-right: 10px;
     }
 
@@ -1317,4 +1354,5 @@ footer {
     .what-card p {
         font-size: 12px;
     }
+
 }
