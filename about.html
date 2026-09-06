@@ -7,224 +7,519 @@
 
     <title>About | Her Care</title>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-<header class="navbar">
-    <div class="nav-container">
+    <!-- =====================================
+         HEADER
+    ====================================== -->
 
-        <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="Her Care Logo" class="logo-image">
-            <span class="logo-her">Her</span>
-            <span class="logo-care">Care</span>
-            <span class="logo-by">by Ayani Bhakta</span>
-        </a>
+    <header>
+        <div class="nav-container">
 
-        <button class="menu-button">☰</button>
+            <!-- LOGO -->
+            <a href="index.html" class="logo">
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="mission.html">Our Mission</a></li>
-                <li><a href="care-kits.html">Carekits</a></li>
-                <li><a href="get-involved.html">Get Involved</a></li>
-                <li><a href="impact.html">Our Impact</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+                <img src="images/logo.png"
+                     alt="Her Care Logo"
+                     class="logo-image">
 
-    </div>
-</header>
+                <span class="logo-her">Her</span>
+
+                <span class="logo-care">Care</span>
+
+                <span class="logo-by">
+                    by Ayani Bhakta
+                </span>
+
+            </a>
 
 
-<section class="page-hero">
-    <div class="page-hero-content">
-
-        <div class="slogan">♡ OUR STORY ♡</div>
-
-        <h1>
-            The Story Behind
-            <span>Her Care</span>
-        </h1>
-
-        <p>
-            Her Care was created from a simple idea:
-            everyone deserves access to the basic products
-            they need to feel comfortable, confident, and cared for.
-        </p>
-
-    </div>
-</section>
+            <!-- MOBILE MENU -->
+            <button class="menu-button"
+                    aria-label="Open menu">
+                ☰
+            </button>
 
 
-<section class="content-section">
+            <!-- NAVIGATION -->
+            <nav>
 
-    <div class="content-card">
-        <div class="card-heart">♡</div>
+                <ul class="nav-links">
 
-        <h2>How Her Care Started</h2>
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
 
-        <p>
-            Her Care was started by Ayani Bhakta as a
-            community-based passion project focused on supporting
-            girls and women who may struggle to access basic
-            hygiene products.
-        </p>
+                    <li>
+                        <a href="about.html" class="active">
+                            About
+                        </a>
+                    </li>
 
-        <p>
-            I started Her Care because I believe basic hygiene
-            products should be a necessity, not a luxury. Many
-            girls and women experience situations where they cannot
-            easily afford or access products they need, especially
-            those experiencing financial difficulties or staying
-            in shelters.
-        </p>
-    </div>
+                    <li>
+                        <a href="mission.html">
+                            Our Mission
+                        </a>
+                    </li>
 
+                    <li>
+                        <a href="care-kits.html">
+                            Carekits
+                        </a>
+                    </li>
 
-    <div class="content-card">
+                    <li>
+                        <a href="get-involved.html">
+                            Get Involved
+                        </a>
+                    </li>
 
-        <div class="card-heart">♡</div>
+                    <li>
+                        <a href="impact.html">
+                            Our Impact
+                        </a>
+                    </li>
 
-        <h2>Why We Started</h2>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
 
-        <p>
-            I was inspired by the idea that small acts of kindness
-            can make a meaningful difference in someone's life.
-            I wanted to create something that could provide
-            practical support while also reminding girls and women
-            that they are cared for, valued, and deserving of dignity.
-        </p>
+                </ul>
 
-    </div>
-
-
-    <div class="content-card">
-
-        <div class="card-heart">♡</div>
-
-        <h2>Our Team</h2>
-
-        <div class="mini-team">
-
-            <div>
-                <h3>Ayani Bhakta</h3>
-                <span>FOUNDER</span>
-            </div>
-
-            <div>
-                <h3>Avery Pelkey-Sanchez</h3>
-                <span>CO-FOUNDER</span>
-            </div>
-
-            <div>
-                <h3>Yanis Magtibay</h3>
-                <span>COORDINATOR</span>
-            </div>
-
-            <div>
-                <h3>Kris Kumar</h3>
-                <span>FINANCIAL MANAGER</span>
-            </div>
+            </nav>
 
         </div>
-
-    </div>
-
-</section>
+    </header>
 
 
-<footer>
+    <!-- =====================================
+         MAIN
+    ====================================== -->
 
-    <div class="footer-container">
+    <main class="contact-page">
 
-        <div class="footer-brand">
 
-            <div class="footer-logo">
-                <span>Her</span>Care
+        <!-- =================================
+             ABOUT HERO
+        ================================== -->
+
+        <section class="contact-hero">
+
+            <div class="page-hero-content">
+
+                <p class="section-label">
+                    ABOUT HER CARE
+                </p>
+
+                <h1>
+                    Who We Are
+                </h1>
+
+                <p>
+                    Her Care is a community-based passion project focused on
+                    making essential hygiene products more accessible to girls
+                    and women in need.
+                </p>
+
             </div>
 
-            <div class="footer-by">
-                by Ayani Bhakta
+        </section>
+
+
+        <!-- =================================
+             ABOUT HER CARE
+        ================================== -->
+
+        <section class="contact-section">
+
+            <div class="contact-layout">
+
+
+                <!-- LEFT SIDE -->
+
+                <div class="contact-intro">
+
+                    <p class="small-title">
+                        OUR STORY
+                    </p>
+
+                    <h2>
+                        Care should never feel out of reach.
+                    </h2>
+
+                    <p>
+                        Her Care was started by Ayani Bhakta as a community-based
+                        passion project focused on supporting girls and women
+                        who may struggle to access basic hygiene products.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        I started Her Care because I believe basic hygiene
+                        products should be a necessity, not a luxury. Many
+                        girls and women experience situations where they cannot
+                        easily afford or access products they need, especially
+                        those experiencing financial difficulties or staying
+                        in shelters.
+                    </p>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+
+                <div class="contact-card">
+
+                    <p class="small-title">
+                        WHY HER CARE
+                    </p>
+
+                    <h2>
+                        Small acts can make a difference.
+                    </h2>
+
+                    <p class="contact-card-text">
+                        Her Care was inspired by the idea that small acts of
+                        kindness can make a meaningful difference in someone's
+                        life.
+                    </p>
+
+                    <div class="contact-note">
+
+                        <span>♡</span>
+
+                        <p>
+                            I wanted to create something that could provide
+                            practical support while also reminding girls and
+                            women that they are cared for, valued, and
+                            deserving of dignity.
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
+
+        </section>
+
+
+        <!-- =================================
+             FOUNDER STORY
+        ================================== -->
+
+        <section class="team-section">
+
+            <div class="team-title">
+
+                <p class="meet-team">
+                    OUR BEGINNING
+                </p>
+
+                <h2>
+                    The Heart Behind Her Care
+                </h2>
+
+                <p class="team-intro">
+                    Her Care began with one simple idea: everyone deserves
+                    access to the basic products they need.
+                </p>
+
+            </div>
+
+
+            <div class="our-team-description">
+
+                <div class="description-heart">
+                    ♡
+                </div>
+
+                <h3>
+                    Inspired by compassion
+                </h3>
+
+                <p>
+                    Her Care was created to provide practical support to girls
+                    and women while helping build a community where people
+                    feel cared for, valued, and supported.
+                </p>
+
+                <br>
+
+                <p>
+                    What started as a passion project can grow through the
+                    support of our community, volunteers, donors, and local
+                    organizations.
+                </p>
+
+            </div>
+
+
+            <!-- FOUNDER CARD -->
+
+            <div class="team-container"
+                 style="grid-template-columns: minmax(250px, 400px); justify-content: center;">
+
+                <div class="team-card">
+
+                    <div class="team-photo">
+
+                        <img src="images/ayani1.png"
+                             alt="Ayani Bhakta">
+
+                    </div>
+
+                    <div class="team-heart">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Ayani Bhakta
+                    </h3>
+
+                    <span class="role founder">
+                        FOUNDER
+                    </span>
+
+                    <p>
+                        Founder of Her Care and the person behind the idea
+                        of creating a community-based project centered on
+                        dignity, care, and accessibility.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             OUR GOALS
+        ================================== -->
+
+        <section class="what-we-do">
+
+            <p class="section-title">
+                WHERE WE ARE GOING
+                <span class="title-heart">♡</span>
+            </p>
+
+
+            <div class="what-container">
+
+
+                <!-- GOAL 1 -->
+
+                <div class="what-card">
+
+                    <div class="what-icon pink-icon">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Support
+                    </h3>
+
+                    <p>
+                        Provide hygiene care kits to girls and women who need
+                        additional support.
+                    </p>
+
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <!-- GOAL 2 -->
+
+                <div class="what-card">
+
+                    <div class="what-icon lavender-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Partnerships
+                    </h3>
+
+                    <p>
+                        Build relationships with shelters, community
+                        organizations, and local partners.
+                    </p>
+
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <!-- GOAL 3 -->
+
+                <div class="what-card">
+
+                    <div class="what-icon blue-icon">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Community
+                    </h3>
+
+                    <p>
+                        Bring people together through donation drives and
+                        community support.
+                    </p>
+
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <!-- GOAL 4 -->
+
+                <div class="what-card">
+
+                    <div class="what-icon mint-icon">
+                        ✧
+                    </div>
+
+                    <h3>
+                        Impact
+                    </h3>
+
+                    <p>
+                        Grow Her Care and create a lasting positive impact in
+                        our community.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             BOTTOM CTA
+        ================================== -->
+
+        <section class="page-cta">
+
+            <div class="page-cta-content">
+
+                <p class="section-label">
+                    HER CARE
+                </p>
+
+                <h2>
+                    Because Every Girl Deserves Dignity ♡
+                </h2>
+
+                <p>
+                    Together, we can make basic care more accessible to
+                    everyone.
+                </p>
+
+                <a href="get-involved.html"
+                   class="button primary-button">
+                    Get Involved
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>
+                Her Care
+            </h3>
 
             <p>
-                Thank you for being a part
-                of our journey.
+                Because Every Girl Deserves Dignity ♡
             </p>
+
 
             <div class="social-icons">
 
-                <a href="https://www.facebook.com/" target="_blank">ⓕ</a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61594185781032&sk=directory_contact_info&fb_profile_edit_entry_point=%7B%22feature%22%3A%22profile_directory%22%2C%22click_point%22%3A%22pencil_edit_directory_section%22%2C%22additional_metadata%22%3A%7B%22section_type%22%3A%22contact_info%22%7D%7D"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    ⓕ
+                </a>
 
-                <a href="https://www.instagram.com/" target="_blank">🅾</a>
 
-                <a href="https://www.tiktok.com/" target="_blank">♪</a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/hercare_ayani/?utm_source=ig_web_button_share_sheet"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    ◎
+                </a>
 
-                <a href="mailto:hercare4.her@gmail.com">✉</a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@hercare_ayani?is_from_webapp=1&sender_device=pc"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="TikTok">
+                    ♪
+                </a>
+
+
+                <!-- Email -->
+                <a href="mailto:hercare4.her@gmail.com"
+                   aria-label="Email">
+                    ✉
+                </a>
 
             </div>
 
-        </div>
 
-
-        <div class="footer-column">
-
-            <h4>QUICK LINKS</h4>
-
-            <a href="about.html">About</a>
-            <a href="mission.html">Our Mission</a>
-            <a href="care-kits.html">Care Kits</a>
-            <a href="get-involved.html">Get Involved</a>
-            <a href="impact.html">Our Impact</a>
-            <a href="contact.html">Contact</a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h4>GET INVOLVED</h4>
-
-            <a href="get-involved.html">Donate</a>
-            <a href="get-involved.html">Spread Awareness</a>
-            <a href="get-involved.html">Partner With Us</a>
-            <a href="get-involved.html">Volunteer</a>
-
-        </div>
-
-
-        <div class="footer-column contact">
-
-            <h4>CONTACT</h4>
-
-            <p>✉ hercare4.her@gmail.com</p>
-
-            <p>
-                ♡ Serving our community
-                with care and kindness.
+            <p class="copyright">
+                © 2026 Her Care. All rights reserved.
             </p>
 
         </div>
 
-    </div>
+    </footer>
 
-    <div class="copyright">
-        © <span id="year"></span>
-        Her Care. All rights reserved. ♡
-    </div>
 
-</footer>
-
-<script src="script.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>
