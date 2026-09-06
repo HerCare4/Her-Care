@@ -1,487 +1,1393 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =====================================
+   COLORS
+===================================== */
+
+:root {
+
+    --pink: #F8C8DC;
+    --blush: #FCE4EC;
+    --lavender: #DCC6E0;
+    --blue: #C7DFF2;
+    --mint: #CDE8D5;
+    --peach: #FAD9C1;
+    --cream: #FFF9F5;
+    --rose: #D99AB5;
+    --text: #5F5360;
+
+}
+
+
+/* =====================================
+   GENERAL
+===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+body {
+    font-family: "Montserrat", sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+}
 
-    <title>Her Care | By Ayani Bhakta</title>
+img {
+    max-width: 100%;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-</head>
+/* =====================================
+   NAVIGATION
+===================================== */
 
-<body>
+.navbar {
+    background: var(--cream);
+    border-bottom: 1px solid #efd6df;
+    width: 100%;
+}
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 
-<header class="navbar">
+    min-height: 95px;
 
-    <div class="nav-container">
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        <a href="index.html" class="logo">
-            <span class="logo-her">Her</span>
-            <span class="logo-care">Care</span>
-            <span class="logo-by">by Ayani Bhakta</span>
-        </a>
+    padding: 15px 30px;
+}
 
-        <button class="menu-button">☰</button>
 
-        <nav>
-            <ul class="nav-links">
+/* LOGO */
 
-                <li><a href="index.html" class="active">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="mission.html">our mission</a></li>
-                <li><a href="care-kits.html">carekits</a></li>
-                <li><a href="get-involved.html">get involved</a></li>
-                <li><a href="impact.html">our impact</a></li>
-                <li><a href="contact.html">contact</a></li>
+.logo {
+    display: flex;
+    align-items: baseline;
+    white-space: nowrap;
+}
 
-            </ul>
-        </nav>
+.logo-her {
+    font-family: cursive;
+    font-size: 52px;
+    font-style: italic;
+    color: #E87BA1;
+}
 
-    </div>
+.logo-care {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 48px;
+    color: #252333;
+}
 
-</header>
+.logo-by {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    margin-left: 5px;
+    color: var(--text);
+}
 
 
-<!-- =========================
-     HERO
-========================= -->
+/* NAV LINKS */
 
-<section class="hero">
+.nav-links {
+    list-style: none;
 
-    <div class="hero-container">
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
-        <div class="hero-text">
+.nav-links a {
+    font-size: 14px;
+    color: #332a38;
+    padding: 10px 0;
+}
 
-            <div class="slogan">
-                Because Every Girl Deserves Dignity ♡
-            </div>
+.nav-links a:hover,
+.nav-links a.active {
+    color: #EC7198;
+}
 
-            <h1>
-                Care should be a
-                <span>necessity,</span>
-                <br>
-                not a luxury.
-            </h1>
+.nav-links a.active {
+    border-bottom: 3px solid #EC7198;
+}
 
-            <p>
-                Her Care provides essential hygiene products
-                to girls and women in need while promoting
-                dignity, confidence, and care within our
-                community.
-            </p>
 
-            <div class="hero-buttons">
+/* MOBILE BUTTON */
 
-                <a href="about.html" class="button pink-button">
-                    LEARN MORE ♡
-                </a>
+.menu-button {
+    display: none;
 
-                <a href="get-involved.html" class="button blue-button">
-                    GET INVOLVED ♡
-                </a>
+    border: 1px solid #e7a9c2;
+    background: var(--pink);
 
-            </div>
+    width: 58px;
+    height: 58px;
 
-        </div>
+    font-size: 22px;
+    color: #2296dc;
 
+    cursor: pointer;
+}
 
-        <!-- DECORATIVE TEAM FRAME -->
 
-        <div class="hero-image team-frame">
+/* =====================================
+   HERO
+===================================== */
 
-            <div class="frame-inner">
+.hero {
+    width: 100%;
+    background: var(--cream);
+}
 
-                <div class="frame-heart">♡</div>
+.hero-container {
 
-                <div class="frame-small">
-                    HER CARE
-                </div>
+    max-width: 1200px;
+    width: 100%;
 
-                <h2>
-                    Our Team
-                </h2>
+    margin: auto;
 
-                <p>
-                    Care • Confidence • Dignity
-                </p>
+    padding: 80px 40px;
 
-                <div class="frame-line"></div>
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
 
-                <span>
-                    Together, we create change.
-                </span>
+.hero-text {
+    min-width: 0;
+}
 
-            </div>
+.slogan {
+    display: inline-block;
 
-        </div>
+    background: var(--blush);
+    color: #E56F98;
 
-    </div>
+    padding: 10px 18px;
 
-</section>
+    border-radius: 30px;
 
+    font-size: 15px;
+    margin-bottom: 25px;
+}
 
-<!-- =========================
-     MEET OUR TEAM
-========================= -->
+.hero h1 {
 
-<section class="team-section">
+    font-family: "Cormorant Garamond", serif;
 
-    <div class="team-title">
+    font-size: clamp(48px, 5vw, 72px);
 
-        <div class="meet-team">
-            ♡ MEET OUR TEAM ♡
-        </div>
+    line-height: 0.98;
 
-        <h2>
-            The heart behind
-            <span>Her Care</span>
-        </h2>
+    color: #292634;
 
-        <p class="team-intro">
-            We are a small team with a big purpose.
-            Together, we work to create change in our community.
-        </p>
+    margin-bottom: 25px;
+}
 
-    </div>
+.hero h1 span {
+    color: #E87BA1;
+    font-style: italic;
+}
 
+.hero-text p {
 
-    <!-- OUR TEAM DESCRIPTION -->
+    max-width: 560px;
 
-    <div class="our-team-description">
+    font-size: 17px;
 
-        <div class="description-heart">
-            ♡
-        </div>
+    line-height: 1.9;
 
-        <h3>
-            Our Team
-        </h3>
+    color: #746a77;
 
-        <p>
-            Our team works together to organize donations,
-            manage finances, create hygiene care kits, spread
-            awareness, and connect with community organizations.
-            While each member has a different role, we all share
-            the same goal: to make basic hygiene products more
-            accessible and remind every girl that she deserves
-            care, confidence, and dignity.
-        </p>
+    margin-bottom: 30px;
+}
 
-    </div>
 
+/* BUTTONS */
 
-    <!-- TEAM MEMBERS -->
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-    <div class="team-container">
+.button {
 
+    display: inline-flex;
 
-        <!-- AYANI -->
+    justify-content: center;
+    align-items: center;
 
-        <div class="team-card">
+    min-height: 62px;
 
-            <div class="team-photo">
-                <img src="images/ayani1.png" alt="Ayani Bhakta">
-            </div>
+    padding: 0 35px;
 
-            <div class="team-heart">♡</div>
+    font-weight: 600;
+    font-size: 14px;
 
-            <h3>Ayani Bhakta</h3>
+    letter-spacing: 1px;
+}
 
-            <div class="role founder">
-                FOUNDER
-            </div>
+.pink-button {
+    background: #ED7199;
+    color: white;
+}
 
-            <p>
-                Leads the vision and mission of Her Care.
-            </p>
+.blue-button {
+    background: var(--blue);
+    color: #4d5660;
+}
 
-        </div>
 
+/* =====================================
+   HERO TEAM FRAME
+===================================== */
 
-        <!-- AVERY -->
+.hero-image {
 
-        <div class="team-card">
+    width: 100%;
+    height: 520px;
 
-            <div class="team-photo">
-                <img src="images/avery1.png" alt="Avery Pelkey-Sanchez">
-            </div>
+    overflow: hidden;
 
-            <div class="team-heart">♡</div>
+    border-radius: 0 0 80px 0;
+}
 
-            <h3>Avery Pelkey-Sanchez</h3>
 
-            <div class="role cofounder">
-                CO-FOUNDER
-            </div>
+/* Decorative frame */
 
-            <p>
-                Supports the foundation and growth of our organization.
-            </p>
+.team-frame {
 
-        </div>
+    border: 2px solid var(--rose);
 
+    background: var(--blush);
 
-        <!-- YANIS -->
+    padding: 14px;
 
-        <div class="team-card">
+    box-shadow: 0 12px 30px rgba(217, 154, 181, 0.18);
+}
 
-            <div class="team-photo">
-                <img src="images/yanis.png" alt="Yanis Magtibay">
-            </div>
+.frame-inner {
 
-            <div class="team-heart">♡</div>
+    width: 100%;
+    height: 100%;
 
-            <h3>Yanis Magtibay</h3>
+    border: 1px solid rgba(217, 154, 181, 0.7);
 
-            <div class="role coordinator">
-                COORDINATOR
-            </div>
+    background:
+        linear-gradient(
+            135deg,
+            #FFF9F5,
+            #FCE4EC 55%,
+            #DCC6E0
+        );
 
-            <p>
-                Organizes events and keeps our team and projects
-                running smoothly.
-            </p>
+    display: flex;
+    flex-direction: column;
 
-        </div>
+    justify-content: center;
+    align-items: center;
 
+    text-align: center;
 
-        <!-- KRIS -->
+    padding: 30px;
+}
 
-        <div class="team-card">
+.frame-heart {
 
-            <div class="team-photo">
-                <img src="images/kris.png" alt="Kris Kumar">
-            </div>
+    font-size: 42px;
 
-            <div class="team-heart">♡</div>
+    color: #E8789F;
 
-            <h3>Kris Kumar</h3>
+    margin-bottom: 20px;
+}
 
-            <div class="role financial">
-                FINANCIAL MANAGER
-            </div>
+.frame-small {
 
-            <p>
-                Manages finances and ensures responsible use
-                of resources.
-            </p>
+    font-size: 13px;
 
-        </div>
+    letter-spacing: 3px;
 
-    </div>
+    color: #9B6682;
 
-</section>
+    margin-bottom: 12px;
+}
 
+.frame-inner h2 {
 
-<!-- =========================
-     WHAT WE DO
-========================= -->
+    font-family: "Cormorant Garamond", serif;
 
-<section class="what-we-do">
+    font-size: 58px;
 
-    <div class="section-title">
-        <span>WHAT WE DO</span>
-        <span class="title-heart">♡</span>
-    </div>
+    color: #4F4552;
 
-    <div class="what-container">
+    margin-bottom: 10px;
+}
 
+.frame-inner p {
 
-        <a href="mission.html" class="what-card">
+    font-size: 15px;
 
-            <div class="what-icon pink-icon">
-                ♡
-            </div>
+    letter-spacing: 1.5px;
 
-            <h3>Our Mission</h3>
+    color: #756B77;
 
-            <p>
-                Providing essential hygiene products
-                to girls and women in need.
-            </p>
+    margin-bottom: 25px;
+}
 
-        </a>
+.frame-line {
 
+    width: 80px;
 
-        <div class="divider"></div>
+    height: 1px;
 
+    background: var(--rose);
 
-        <a href="about.html" class="what-card">
+    margin-bottom: 20px;
+}
 
-            <div class="what-icon lavender-icon">
-                ♧
-            </div>
+.frame-inner span {
 
-            <h3>Our Community</h3>
+    font-size: 13px;
 
-            <p>
-                Building a stronger community through
-                care and kindness.
-            </p>
+    color: #756B77;
+}
 
-        </a>
 
+/* =====================================
+   TEAM SECTION
+===================================== */
 
-        <div class="divider"></div>
+.team-section {
 
+    background: white;
 
-        <a href="care-kits.html" class="what-card">
+    width: 100%;
 
-            <div class="what-icon blue-icon">
-                ♡
-            </div>
+    padding: 85px 30px 100px;
+}
 
-            <h3>Care Kits</h3>
+.team-title {
 
-            <p>
-                Thoughtfully assembled kits filled with
-                essential hygiene items.
-            </p>
+    max-width: 1100px;
 
-        </a>
+    margin: 0 auto 35px;
 
+    text-align: left;
+}
 
-        <div class="divider"></div>
+.meet-team {
 
+    color: #9b6682;
 
-        <a href="impact.html" class="what-card">
+    font-size: 15px;
 
-            <div class="what-icon mint-icon">
-                ♡
-            </div>
+    letter-spacing: 1px;
 
-            <h3>Make an Impact</h3>
+    margin-bottom: 5px;
+}
 
-            <p>
-                Your support helps us reach more girls
-                and women in our community.
-            </p>
+.team-title h2 {
 
-        </a>
+    font-family: "Montserrat", sans-serif;
 
-    </div>
+    font-size: 27px;
 
-</section>
+    color: #5b5361;
 
+    margin-bottom: 5px;
+}
 
-<!-- =========================
-     CTA
-========================= -->
+.team-title h2 span {
+    color: #5b5361;
+}
 
-<section class="cta">
+.team-intro {
 
-    <div class="cta-inner">
+    font-size: 16px;
 
-        <h2>
-            Small acts of care.
-            <span>Big changes in lives.</span>
-        </h2>
+    line-height: 1.5;
 
-    </div>
+    color: #776d79;
+}
 
-</section>
 
+/* OUR TEAM DESCRIPTION */
 
-<!-- =========================
-     FOOTER
-========================= -->
+.our-team-description {
 
-<footer>
+    max-width: 1100px;
 
-    <div class="footer-container">
+    margin: 0 auto 45px;
 
+    text-align: left;
+}
 
-        <div class="footer-brand">
+.description-heart {
 
-            <div class="footer-logo">
-                <span>Her</span>Care
-            </div>
+    font-size: 22px;
 
-            <div class="footer-by">
-                by Ayani Bhakta
-            </div>
+    color: #9b6682;
 
-            <p>
-                Thank you for being a part
-                of our journey.
-            </p>
+    margin-bottom: 3px;
+}
 
-            <div class="social-icons">
+.our-team-description h3 {
 
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#">✉</a>
+    font-size: 21px;
 
-            </div>
+    color: #514857;
 
-        </div>
+    margin-bottom: 5px;
+}
 
+.our-team-description p {
 
-        <div class="footer-column">
+    max-width: 1000px;
 
-            <h4>QUICK LINKS</h4>
+    font-size: 15px;
 
-            <a href="about.html">About</a>
-            <a href="mission.html">Our Mission</a>
-            <a href="care-kits.html">Care Kits</a>
-            <a href="get-involved.html">Get Involved</a>
-            <a href="impact.html">Our Impact</a>
-            <a href="contact.html">Contact</a>
+    line-height: 1.55;
 
-        </div>
+    color: #756b77;
+}
 
 
-        <div class="footer-column">
+/* TEAM GRID */
 
-            <h4>GET INVOLVED</h4>
+.team-container {
 
-            <a href="get-involved.html">Donate</a>
-            <a href="get-involved.html">Spread Awareness</a>
-            <a href="get-involved.html">Partner With Us</a>
-            <a href="get-involved.html">Volunteer</a>
+    width: 100%;
 
-        </div>
+    max-width: 1100px;
 
+    margin: auto;
 
-        <div class="footer-column contact">
+    display: grid;
 
-            <h4>CONTACT</h4>
+    grid-template-columns: repeat(4, 1fr);
 
-            <p>
-                ✉ 
-            </p>
+    gap: 25px;
+}
 
-            <p>
-                ♡ Serving our community
-                with care and kindness.
-            </p>
 
-        </div>
+/* TEAM CARD */
 
-    </div>
+.team-card {
 
+    position: relative;
 
-    <div class="copyright">
+    background: var(--cream);
 
-        © <span id="year"></span>
-        Her Care. All rights reserved. ♡
+    border: 1px solid #edbfd0;
 
-    </div>
+    text-align: center;
 
-</footer>
+    overflow: visible;
 
+    padding-bottom: 25px;
 
-<script src="script.js"></script>
+    min-width: 0;
+}
 
-</body>
-</html>
+
+/* TEAM PHOTO */
+
+.team-photo {
+
+    width: 100%;
+
+    height: 245px;
+
+    overflow: hidden;
+
+    background: #f5e7ec;
+}
+
+.team-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center 20%;
+
+    display: block;
+}
+
+
+/* HEART */
+
+.team-heart {
+
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    margin: -20px auto 10px;
+
+    background: var(--cream);
+
+    border: 1px solid #e99db9;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #ed7199;
+
+    font-size: 24px;
+
+    z-index: 2;
+}
+
+
+/* TEAM NAME */
+
+.team-card h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 27px;
+
+    color: #332b38;
+
+    margin: 0 10px 10px;
+}
+
+
+/* ROLE */
+
+.role {
+
+    display: inline-block;
+
+    padding: 6px 17px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+.founder {
+
+    background: #F9DDE8;
+
+    color: #E36D96;
+}
+
+.cofounder {
+
+    background: #DCC6E0;
+
+    color: #755C7D;
+}
+
+.coordinator {
+
+    background: #CDE8D5;
+
+    color: #5D8069;
+}
+
+.financial {
+
+    background: #C7DFF2;
+
+    color: #58748A;
+}
+
+
+/* TEAM DESCRIPTION */
+
+.team-card p {
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    color: #716774;
+
+    padding: 0 20px;
+}
+
+
+/* =====================================
+   WHAT WE DO
+===================================== */
+
+.what-we-do {
+
+    background: var(--cream);
+
+    width: 100%;
+
+    padding: 70px 30px 85px;
+}
+
+.section-title {
+
+    text-align: center;
+
+    color: #E86691;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    font-size: 17px;
+
+    margin-bottom: 50px;
+}
+
+.title-heart {
+    margin-left: 5px;
+}
+
+
+/* FOUR CARDS HORIZONTAL */
+
+.what-container {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1px
+        1fr
+        1px
+        1fr
+        1px
+        1fr;
+
+    align-items: stretch;
+}
+
+.what-card {
+
+    text-align: center;
+
+    padding: 0 25px;
+
+    transition: transform 0.2s;
+}
+
+.what-card:hover {
+    transform: translateY(-4px);
+}
+
+.what-icon {
+
+    width: 72px;
+    height: 72px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 20px;
+
+    font-size: 32px;
+}
+
+.pink-icon {
+
+    background: #FBE2EB;
+
+    color: #ED7199;
+}
+
+.lavender-icon {
+
+    background: #DCC6E0;
+
+    color: #665873;
+}
+
+.blue-icon {
+
+    background: #C7DFF2;
+
+    color: #5B778B;
+}
+
+.mint-icon {
+
+    background: #CDE8D5;
+
+    color: #64836D;
+}
+
+.what-card h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 24px;
+
+    color: #262331;
+
+    margin-bottom: 10px;
+}
+
+.what-card p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #776c78;
+}
+
+.divider {
+
+    width: 1px;
+
+    background: #E99DB9;
+
+    height: 100%;
+}
+
+
+/* =====================================
+   CTA
+===================================== */
+
+.cta {
+
+    background: #FBE1EB;
+
+    padding: 55px 25px;
+}
+
+.cta-inner {
+
+    text-align: center;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.cta h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 42px;
+
+    color: #625666;
+
+    line-height: 1.2;
+}
+
+.cta h2 span {
+
+    color: #E8789F;
+
+    font-style: italic;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    background: #FBE1EB;
+
+    border-top: 1px solid #efc5d5;
+}
+
+.footer-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 65px 30px;
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+
+    gap: 45px;
+}
+
+.footer-logo {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 40px;
+
+    color: #302a35;
+}
+
+.footer-logo span {
+
+    color: #E779A0;
+
+    font-style: italic;
+}
+
+.footer-by {
+
+    margin-top: -5px;
+
+    font-size: 14px;
+}
+
+.footer-brand p {
+
+    margin-top: 20px;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+.social-icons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.social-icons a {
+
+    width: 38px;
+    height: 38px;
+
+    background: #F7C6D9;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* FOOTER COLUMNS */
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer-column h4 {
+
+    color: #36303A;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.footer-column a,
+.footer-column p {
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #625967;
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+
+    border-top: 1px solid #e9bfd0;
+
+    padding: 18px 20px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #746976;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+
+    /* NAV */
+
+    .nav-container {
+
+        min-height: 75px;
+
+        padding: 10px 20px;
+
+        width: 100%;
+    }
+
+    .logo-her {
+        font-size: 37px;
+    }
+
+    .logo-care {
+        font-size: 34px;
+    }
+
+    .logo-by {
+        font-size: 10px;
+    }
+
+    .menu-button {
+
+        display: block;
+
+        flex-shrink: 0;
+    }
+
+    nav {
+
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        background: var(--cream);
+
+        z-index: 1000;
+    }
+
+    .nav-links {
+
+        display: none;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 0;
+
+        border-top: 1px solid #efd6df;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 16px 20px;
+
+        border-bottom: 1px solid #f0dce3;
+    }
+
+    .nav-links a.active {
+
+        border-bottom: 1px solid #f0dce3;
+
+        color: #EC7198;
+    }
+
+
+    /* HERO */
+
+    .hero-container {
+
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        padding: 55px 24px 45px;
+
+        gap: 35px;
+    }
+
+    .hero-text {
+
+        width: 100%;
+    }
+
+    .slogan {
+
+        font-size: 12px;
+
+        padding: 9px 14px;
+
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+
+        font-size: 49px;
+
+        line-height: 1;
+
+        margin-bottom: 20px;
+    }
+
+    .hero-text p {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        width: 100%;
+
+        margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .button {
+
+        width: 100%;
+
+        min-height: 58px;
+    }
+
+    .hero-image {
+
+        width: 100%;
+
+        height: 360px;
+
+        border-radius: 0 0 55px 0;
+    }
+
+
+    /* TEAM FRAME MOBILE */
+
+    .team-frame {
+
+        padding: 10px;
+    }
+
+    .frame-inner {
+
+        padding: 20px;
+    }
+
+    .frame-heart {
+
+        font-size: 32px;
+
+        margin-bottom: 12px;
+    }
+
+    .frame-small {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+    .frame-inner h2 {
+
+        font-size: 45px;
+    }
+
+    .frame-inner p {
+
+        font-size: 12px;
+
+        margin-bottom: 18px;
+    }
+
+    .frame-inner span {
+
+        font-size: 11px;
+    }
+
+
+    /* TEAM */
+
+    .team-section {
+
+        width: 100%;
+
+        padding: 55px 20px 70px;
+    }
+
+    .team-title {
+
+        width: 100%;
+
+        margin-bottom: 28px;
+    }
+
+    .team-title h2 {
+
+        font-size: 25px;
+
+        line-height: 1.25;
+    }
+
+    .team-intro {
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* DESCRIPTION */
+
+    .our-team-description {
+
+        width: 100%;
+
+        margin-bottom: 35px;
+    }
+
+    .our-team-description p {
+
+        width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    /* TEAM CARDS */
+
+    .team-container {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .team-card {
+
+        width: 100%;
+    }
+
+    .team-photo {
+
+        width: 100%;
+
+        height: 300px;
+    }
+
+    .team-card h3 {
+
+        font-size: 29px;
+    }
+
+    .team-card p {
+
+        font-size: 14px;
+
+        padding: 0 30px;
+    }
+
+
+    /* WHAT WE DO */
+
+    .what-we-do {
+
+        width: 100%;
+
+        padding: 65px 20px 70px;
+    }
+
+    .section-title {
+
+        margin-bottom: 40px;
+    }
+
+    .what-container {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 0;
+    }
+
+    .what-card {
+
+        width: 100%;
+
+        padding: 25px 15px 35px;
+    }
+
+    .what-card h3 {
+
+        font-size: 24px;
+    }
+
+    .what-card p {
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+    .divider {
+
+        display: none;
+    }
+
+
+    /* CTA */
+
+    .cta {
+
+        padding: 45px 20px;
+    }
+
+    .cta h2 {
+
+        font-size: 34px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 40px;
+
+        padding: 55px 25px;
+
+        text-align: center;
+    }
+
+    .footer-brand,
+    .footer-column {
+
+        width: 100%;
+
+        align-items: center;
+    }
+
+    .social-icons {
+
+        justify-content: center;
+    }
+
+    .footer-logo {
+
+        font-size: 40px;
+    }
+
+}
+
+
+/* =====================================
+   SMALL PHONES
+===================================== */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+
+        font-size: 43px;
+    }
+
+    .team-photo {
+
+        height: 270px;
+    }
+
+    .what-card {
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+    .what-card h3 {
+
+        font-size: 21px;
+    }
+
+    .what-card p {
+
+        font-size: 12px;
+    }
+
+}
