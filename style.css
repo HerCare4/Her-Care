@@ -37,7 +37,6 @@ body {
     color: var(--text);
     overflow-x: hidden;
 
-    /* Keeps footer at bottom */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -194,7 +193,8 @@ a {
    MOBILE MENU BUTTON
 ===================================== */
 
-.menu-button {
+.menu-button,
+.menu-toggle {
     display: none;
 
     border: 1px solid #e7a9c2;
@@ -954,6 +954,17 @@ footer {
 
 
 /* =====================================
+   CONTENT CONTAINER
+===================================== */
+
+.content-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =====================================
    CONTACT PAGE
 ===================================== */
 
@@ -962,7 +973,9 @@ footer {
 }
 
 
-/* CONTACT HERO */
+/* =====================================
+   CONTACT HERO
+===================================== */
 
 .contact-hero {
     text-align: center;
@@ -1003,7 +1016,9 @@ footer {
 }
 
 
-/* CONTACT SECTION */
+/* =====================================
+   CONTACT SECTION
+===================================== */
 
 .contact-section {
     padding: 80px 20px;
@@ -1026,7 +1041,9 @@ footer {
 }
 
 
-/* LEFT SIDE */
+/* =====================================
+   CONTACT LEFT SIDE
+===================================== */
 
 .contact-intro h2 {
     font-family: "Cormorant Garamond", serif;
@@ -1061,7 +1078,9 @@ footer {
 }
 
 
-/* LITTLE MESSAGE BOX */
+/* =====================================
+   CONTACT MESSAGE BOX
+===================================== */
 
 .contact-note {
     display: flex;
@@ -1100,7 +1119,9 @@ footer {
 }
 
 
-/* CONTACT CARD */
+/* =====================================
+   CONTACT CARD
+===================================== */
 
 .contact-card {
     background: white;
@@ -1172,7 +1193,9 @@ footer {
 }
 
 
-/* SOCIAL SYMBOL */
+/* =====================================
+   SOCIAL SYMBOL
+===================================== */
 
 .social-symbol {
     width: 42px;
@@ -1197,7 +1220,9 @@ footer {
 }
 
 
-/* SOCIAL TEXT */
+/* =====================================
+   SOCIAL TEXT
+===================================== */
 
 .contact-social strong {
     display: block;
@@ -1280,13 +1305,52 @@ footer {
 
 
 /* =====================================
+   CONTACT FOOTER
+===================================== */
+
+.footer-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 50px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.footer-content h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 36px;
+
+    color: #302a35;
+}
+
+.footer-content p {
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    color: #625967;
+}
+
+
+/* =====================================
    MOBILE
 ===================================== */
 
 @media (max-width: 768px) {
 
 
-    /* NAV */
+    /* =================================
+       NAV
+    ================================= */
 
     .nav-container {
         min-height: 75px;
@@ -1299,7 +1363,9 @@ footer {
     }
 
 
-    /* MOBILE LOGO */
+    /* =================================
+       MOBILE LOGO
+    ================================= */
 
     .logo {
         display: flex;
@@ -1350,16 +1416,21 @@ footer {
     }
 
 
-    /* MENU BUTTON */
+    /* =================================
+       MENU BUTTON
+    ================================= */
 
-    .menu-button {
+    .menu-button,
+    .menu-toggle {
         display: block;
 
         flex-shrink: 0;
     }
 
 
-    /* MOBILE NAVIGATION */
+    /* =================================
+       MOBILE NAVIGATION
+    ================================= */
 
     .nav-container nav {
         position: absolute;
@@ -1414,7 +1485,9 @@ footer {
     }
 
 
-    /* HERO */
+    /* =================================
+       HOMEPAGE HERO
+    ================================= */
 
     .hero-container {
         display: flex;
@@ -1459,7 +1532,9 @@ footer {
     }
 
 
-    /* BUTTONS */
+    /* =================================
+       BUTTONS
+    ================================= */
 
     .hero-buttons {
         width: 100%;
@@ -1478,7 +1553,9 @@ footer {
     }
 
 
-    /* HERO IMAGE */
+    /* =================================
+       HERO IMAGE
+    ================================= */
 
     .hero-image {
         width: 100%;
@@ -1497,7 +1574,9 @@ footer {
     }
 
 
-    /* TEAM */
+    /* =================================
+       TEAM
+    ================================= */
 
     .team-section {
         width: 100%;
@@ -1524,7 +1603,9 @@ footer {
     }
 
 
-    /* DESCRIPTION */
+    /* =================================
+       TEAM DESCRIPTION
+    ================================= */
 
     .our-team-description {
         width: 100%;
@@ -1541,7 +1622,9 @@ footer {
     }
 
 
-    /* TEAM CARDS */
+    /* =================================
+       TEAM CARDS
+    ================================= */
 
     .team-container {
         width: 100%;
@@ -1574,7 +1657,9 @@ footer {
     }
 
 
-    /* WHAT WE DO */
+    /* =================================
+       WHAT WE DO
+    ================================= */
 
     .what-we-do {
         width: 100%;
@@ -1617,7 +1702,9 @@ footer {
     }
 
 
-    /* HOMEPAGE CTA */
+    /* =================================
+       HOMEPAGE CTA
+    ================================= */
 
     .cta {
         padding: 45px 20px;
@@ -1668,6 +1755,10 @@ footer {
         font-size: 31px;
     }
 
+    .contact-social {
+        padding: 14px;
+    }
+
     .page-cta {
         padding: 50px 20px;
     }
@@ -1708,6 +1799,16 @@ footer {
 
     .footer-logo {
         font-size: 40px;
+    }
+
+    .footer-content {
+        width: 100%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 45px 20px;
     }
 
 }
@@ -1760,7 +1861,9 @@ footer {
     }
 
 
-    /* CONTACT SMALL PHONE */
+    /* =================================
+       CONTACT SMALL PHONE
+    ================================= */
 
     .contact-hero h1 {
         font-size: 40px;
