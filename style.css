@@ -438,6 +438,190 @@ a {
 
     display: block;
 }
+/* =====================================
+   TEAM PAGE
+===================================== */
+
+.team-page-hero {
+    width: 100%;
+    padding: 0;
+}
+
+.team-page-image {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+}
+
+.team-page-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.team-page-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: rgba(248, 200, 220, 0.55);
+}
+
+.team-page-overlay p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #d95f87;
+    margin-bottom: 10px;
+}
+
+.team-page-overlay h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 65px;
+    color: #403745;
+    margin: 0;
+}
+
+.team-page-overlay span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    color: #5f5360;
+    margin-top: 10px;
+}
+
+
+/* =====================================
+   TEAM DESCRIPTION
+===================================== */
+
+.team-page-intro {
+    background: #fff9f5;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.team-page-intro-inner {
+    max-width: 850px;
+    margin: auto;
+}
+
+.team-page-intro .meet-team {
+    color: #ed7198;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.team-page-intro h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 46px;
+    color: #403745;
+    margin: 0 0 25px;
+}
+
+.team-page-intro h2 span {
+    color: #e8789d;
+    font-style: italic;
+}
+
+.team-page-intro p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #6b6070;
+    margin: 0;
+}
+
+
+/* =====================================
+   TEAM MEMBERS
+===================================== */
+
+.team-members-page {
+    background: #fce4ec;
+    padding: 85px 5%;
+}
+
+.team-page-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.team-page-heading p {
+    font-family: "Montserrat", sans-serif;
+    color: #e8789d;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.team-page-heading h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 45px;
+    color: #403745;
+    margin: 10px 0;
+}
+
+.team-page-heading h2 span {
+    color: #e8789d;
+    font-style: italic;
+}
+
+
+/* =====================================
+   MOBILE TEAM PAGE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .team-page-image {
+        height: 400px;
+    }
+
+    .team-page-overlay h1 {
+        font-size: 45px;
+    }
+
+    .team-page-overlay span {
+        font-size: 15px;
+    }
+
+    .team-page-intro {
+        padding: 60px 24px;
+    }
+
+    .team-page-intro h2 {
+        font-size: 35px;
+    }
+
+    .team-page-intro p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .team-members-page {
+        padding: 60px 20px;
+    }
+
+    .team-page-heading h2 {
+        font-size: 35px;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+}
 
 
 /* HEART */
