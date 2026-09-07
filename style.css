@@ -2421,3 +2421,142 @@ footer {
         height: 220px; 
     } 
 } 
+/* =========================================================
+   HOMEPAGE WHAT WE DO - FINAL FIX
+   Keeps the homepage layout separate from inner page cards
+   ========================================================= */
+
+.what-we-do .what-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+
+    /* 4 cards with 3 dividers */
+    grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
+
+    align-items: stretch;
+    gap: 0;
+}
+
+.what-we-do .what-card {
+    width: 100%;
+    min-width: 0;
+
+    text-align: center;
+
+    padding: 0 25px;
+
+    border: none;
+}
+
+.what-we-do .what-card h3 {
+    margin: 18px 10px 10px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    line-height: 1.15;
+
+    color: #262331;
+}
+
+.what-we-do .what-card p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #776c78;
+
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+
+/* HOMEPAGE DIVIDERS */
+
+.what-we-do .divider {
+    width: 1px;
+    height: 100%;
+
+    background: #E99DB9;
+
+    display: block;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .what-we-do .what-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+
+    .what-we-do .what-card {
+        padding: 25px 15px 35px;
+    }
+
+    .what-we-do .divider {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .what-we-do .what-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .what-we-do .what-card {
+        width: 100%;
+        padding: 25px 15px 35px;
+    }
+
+    .what-we-do .what-card h3 {
+        font-size: 24px;
+    }
+
+    .what-we-do .what-card p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .what-we-do .divider {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .what-we-do .what-card {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .what-we-do .what-card h3 {
+        font-size: 21px;
+    }
+
+    .what-we-do .what-card p {
+        font-size: 12px;
+    }
+
+}
