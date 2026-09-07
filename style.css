@@ -495,7 +495,7 @@ a {
 
 
 /* =====================================
-   TEAM PHOTO — FIXED
+   TEAM PHOTO — UPDATED FIX
 ===================================== */
 
 .team-photo {
@@ -504,11 +504,10 @@ a {
     width: 100%;
 
     /*
-       IMPORTANT:
-       No fixed height here.
-       The container will naturally match
-       the actual image height.
+       Fixed photo area so there is no
+       large blank section underneath.
     */
+    height: 250px;
 
     overflow: hidden;
 
@@ -519,31 +518,28 @@ a {
 
 
 /* =====================================
-   TEAM IMAGE — FIXED
+   TEAM IMAGE — UPDATED FIX
 ===================================== */
 
 .team-photo img {
     width: 100%;
 
-    /*
-       IMPORTANT:
-       Do NOT use height: 100%.
-       This lets the image keep its natural
-       proportions.
-    */
-
-    height: auto;
+    height: 100%;
 
     display: block;
 
-    object-fit: contain;
+    /*
+       Makes the image completely fill
+       the photo area.
+    */
+    object-fit: cover;
 
-    object-position: center;
+    object-position: center center;
 }
 
 
 /* =====================================
-   TEAM HEART — FIXED
+   TEAM HEART — UPDATED FIX
 ===================================== */
 
 .team-heart {
@@ -1711,25 +1707,30 @@ footer {
     }
 
 
-    /*
-       IMPORTANT:
-       There is NO fixed height on .team-photo
-       anymore.
-    */
+    /* =================================
+       TEAM PHOTO MOBILE — UPDATED
+    ================================= */
 
     .team-photo {
         width: 100%;
 
-        height: auto;
+        height: 250px;
+
+        overflow: hidden;
     }
 
     .team-photo img {
         width: 100%;
 
-        height: auto;
+        height: 100%;
 
         display: block;
+
+        object-fit: cover;
+
+        object-position: center center;
     }
+
 
     .team-card h3 {
         font-size: 29px;
@@ -2005,20 +2006,28 @@ footer {
     }
 
 
-    /*
-       IMPORTANT:
-       No fixed .team-photo height here.
-       The picture determines the height.
-    */
+    /* =================================
+       TEAM PHOTO SMALL PHONE — UPDATED
+    ================================= */
 
     .team-photo {
-        height: auto;
+        width: 100%;
+
+        height: 250px;
+
+        overflow: hidden;
     }
 
     .team-photo img {
-        height: auto;
-
         width: 100%;
+
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+        object-position: center center;
     }
 
     .team-heart {
