@@ -2560,3 +2560,395 @@ footer {
     }
 
 }
+/* =========================================================
+   CARE KITS - NEW CLEAN DESIGN
+   ========================================================= */
+
+.care-kit-items {
+    width: 100%;
+    padding: 65px 30px 70px;
+    background: var(--cream);
+}
+
+.care-kit-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.care-kit-heading .section-label {
+    color: #E86691;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   DONATION ITEMS GRID
+   ========================================================= */
+
+.care-items-grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    column-gap: 0;
+    row-gap: 50px;
+}
+
+
+/* =========================================================
+   ITEM
+   ========================================================= */
+
+.care-item {
+    position: relative;
+
+    text-align: center;
+
+    min-width: 0;
+
+    padding: 0 20px;
+}
+
+.care-item:not(:nth-child(5n)) {
+    border-right: 1px solid #E99DB9;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.care-icon {
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.pink-care {
+    background: #FBE2EB;
+    color: #ED7199;
+}
+
+.lavender-care {
+    background: #DCC6E0;
+    color: #755C7D;
+}
+
+.blue-care {
+    background: #C7DFF2;
+    color: #5B778B;
+}
+
+.mint-care {
+    background: #CDE8D5;
+    color: #64836D;
+}
+
+.peach-care {
+    background: #FAD9C1;
+    color: #9B6650;
+}
+
+
+/* =========================================================
+   LINE
+   ========================================================= */
+
+.care-line {
+    width: 100%;
+    max-width: 190px;
+    height: 1px;
+
+    background: #E99DB9;
+
+    margin: 0 auto 20px;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.care-item h3,
+.provided-item h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 27px;
+    font-weight: 600;
+
+    line-height: 1.15;
+
+    color: #262331;
+
+    margin-bottom: 10px;
+}
+
+.care-item p,
+.provided-item p {
+    max-width: 200px;
+
+    margin: 0 auto;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    color: #776C78;
+}
+
+
+/* =========================================================
+   FEATURED CARE KIT
+   ========================================================= */
+
+.featured-care {
+    background: #FCEEF3;
+
+    padding-top: 15px;
+    padding-bottom: 25px;
+
+    border-radius: 12px;
+}
+
+.featured-care .care-icon {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   PROVIDED BY US
+   ========================================================= */
+
+.provided-care {
+    width: 100%;
+
+    padding: 0 30px 35px;
+
+    background: var(--cream);
+}
+
+.provided-content {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 28px 38px;
+
+    background: #FCEEF3;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.provided-content .section-label {
+    margin-bottom: 5px;
+
+    color: #E86691;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.provided-content h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 40px;
+
+    line-height: 1.1;
+
+    color: #302A35;
+
+    margin-bottom: 8px;
+}
+
+.provided-content > div:first-child > p:last-child {
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #776C78;
+}
+
+.provided-heart {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 85px;
+
+    line-height: 1;
+
+    color: #ED7199;
+
+    padding-right: 25px;
+}
+
+
+/* =========================================================
+   PROVIDED ITEMS
+   ========================================================= */
+
+.provided-items {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 35px 0 80px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.provided-item {
+    text-align: center;
+
+    padding: 0 30px;
+}
+
+.provided-item:not(:last-child) {
+    border-right: 1px solid #E99DB9;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .care-items-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        row-gap: 40px;
+    }
+
+    .care-item {
+        border-right: none !important;
+    }
+
+    .care-item:nth-child(odd) {
+        border-right: 1px solid #E99DB9 !important;
+    }
+
+    .provided-content h2 {
+        font-size: 34px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .care-kit-items {
+        padding: 55px 20px 60px;
+    }
+
+    .care-items-grid {
+        grid-template-columns: 1fr;
+
+        row-gap: 35px;
+    }
+
+    .care-item {
+        padding: 0 15px 30px;
+
+        border-right: none !important;
+
+        border-bottom: 1px solid #E99DB9;
+    }
+
+    .care-item:last-child {
+        border-bottom: none;
+    }
+
+    .care-item h3 {
+        font-size: 28px;
+    }
+
+    .care-item p {
+        font-size: 13px;
+        max-width: 250px;
+    }
+
+    .featured-care {
+        padding-top: 20px;
+        border-radius: 12px;
+    }
+
+
+    /* PROVIDED BANNER */
+
+    .provided-care {
+        padding: 0 20px 25px;
+    }
+
+    .provided-content {
+        padding: 25px 22px;
+
+        display: block;
+
+        text-align: left;
+    }
+
+    .provided-content h2 {
+        font-size: 32px;
+    }
+
+    .provided-content > div:first-child > p:last-child {
+        font-size: 13px;
+    }
+
+    .provided-heart {
+        display: none;
+    }
+
+
+    /* PROVIDED ITEMS */
+
+    .provided-items {
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-bottom: 60px;
+    }
+
+    .provided-item {
+        padding: 0 15px 30px;
+
+        border-right: none !important;
+
+        border-bottom: 1px solid #E99DB9;
+    }
+
+    .provided-item:last-child {
+        border-bottom: none;
+    }
+
+}
