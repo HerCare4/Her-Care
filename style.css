@@ -500,7 +500,7 @@ a {
 .team-photo {
     position: relative;
     width: 100%;
-    height: 320px;
+    height: 250px;
     overflow: hidden;
     background: #FFF9F5;
 }
@@ -522,10 +522,6 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     font-size: 42px;
     color: #D99AB5;
