@@ -1,6 +1,6 @@
-/* =========================
+/* =====================================
    COLORS
-========================= */
+===================================== */
 
 :root {
     --pink: #F8C8DC;
@@ -12,12 +12,17 @@
     --cream: #FFF9F5;
     --rose: #D99AB5;
     --text: #5F5360;
+
+    --dark: #332b38;
+    --purple: #755C7D;
+    --muted: #776C78;
+    --line: #E99DB9;
+    --pink-dark: #ED7199;
 }
 
-
-/* =========================
+/* =====================================
    GENERAL
-========================= */
+===================================== */
 
 * {
     box-sizing: border-box;
@@ -30,13 +35,13 @@ html {
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    overflow-x: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    background: var(--cream);
+    color: var(--text);
+    font-family: "Montserrat", sans-serif;
 }
 
 main {
@@ -52,10 +57,9 @@ a {
     text-decoration: none;
 }
 
-
-/* =========================
+/* =====================================
    NAVIGATION
-========================= */
+===================================== */
 
 .navbar {
     width: 100%;
@@ -76,41 +80,39 @@ a {
 .logo {
     display: flex;
     align-items: center;
-    white-space: nowrap;
     flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .logo-image {
     width: 62px;
     height: 62px;
-    object-fit: contain;
-    display: block;
     margin-right: 8px;
+    object-fit: contain;
     flex-shrink: 0;
 }
 
 .logo-her {
+    color: #E87BA1;
     font-family: cursive;
     font-size: 48px;
     font-style: italic;
     line-height: 1;
-    color: #E87BA1;
 }
 
 .logo-care {
+    color: #252333;
     font-family: "Cormorant Garamond", serif;
     font-size: 46px;
     font-weight: 600;
     line-height: 1;
-    color: #252333;
 }
 
 .logo-by {
-    font-size: 13px;
-    font-weight: 400;
-    margin-left: 6px;
-    margin-bottom: 8px;
     align-self: flex-end;
+    margin: 0 0 8px 6px;
+    color: var(--text);
+    font-size: 13px;
 }
 
 .nav-container nav {
@@ -120,17 +122,17 @@ a {
 
 .nav-links {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
     gap: 25px;
     list-style: none;
 }
 
 .nav-links a {
     padding: 10px 0;
+    color: #332a38;
     font-size: 13px;
     font-weight: 500;
-    color: #332a38;
     white-space: nowrap;
 }
 
@@ -150,15 +152,14 @@ a {
     height: 52px;
     border: 1px solid #e7a9c2;
     background: var(--pink);
-    font-size: 22px;
     color: #2296dc;
+    font-size: 22px;
     cursor: pointer;
 }
 
-
-/* =========================
+/* =====================================
    HERO
-========================= */
+===================================== */
 
 .hero {
     width: 100%;
@@ -182,20 +183,20 @@ a {
 
 .slogan {
     display: inline-block;
-    padding: 10px 18px;
     margin-bottom: 25px;
-    background: var(--blush);
+    padding: 10px 18px;
     border-radius: 30px;
+    background: var(--blush);
     color: #E56F98;
     font-size: 15px;
 }
 
 .hero h1 {
+    margin-bottom: 25px;
+    color: #292634;
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(48px, 5vw, 72px);
     line-height: .98;
-    color: #292634;
-    margin-bottom: 25px;
 }
 
 .hero h1 span {
@@ -206,20 +207,19 @@ a {
 .hero-text p {
     max-width: 560px;
     margin-bottom: 30px;
+    color: #746a77;
     font-size: 17px;
     line-height: 1.9;
-    color: #746a77;
 }
 
-
-/* =========================
+/* =====================================
    BUTTONS
-========================= */
+===================================== */
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .button {
@@ -246,9 +246,6 @@ a {
 .primary-button {
     min-height: auto;
     padding: 13px 28px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     background: white;
     color: var(--text);
     font-size: 12px;
@@ -259,13 +256,12 @@ a {
 
 .primary-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(95, 83, 96, .15);
+    box-shadow: 0 8px 20px rgba(95,83,96,.15);
 }
 
-
-/* =========================
+/* =====================================
    HERO TEAM FRAME
-========================= */
+===================================== */
 
 .hero-image {
     width: 100%;
@@ -278,18 +274,18 @@ a {
     padding: 14px;
     border: 2px solid var(--rose);
     background: var(--blush);
-    box-shadow: 0 12px 30px rgba(217, 154, 181, .18);
+    box-shadow: 0 12px 30px rgba(217,154,181,.18);
 }
 
 .frame-inner {
     width: 100%;
     height: 100%;
-    border: 1px solid rgba(217, 154, 181, .7);
-    background: linear-gradient(135deg, #FFF9F5, #FCE4EC 55%, #DCC6E0);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border: 1px solid rgba(217,154,181,.7);
+    background: linear-gradient(135deg,#FFF9F5,#FCE4EC 55%,#DCC6E0);
 }
 
 .hero-team-photo {
@@ -297,13 +293,12 @@ a {
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center center;
+    object-position: center;
 }
 
-
-/* =========================
+/* =====================================
    TEAM
-========================= */
+===================================== */
 
 .team-section {
     width: 100%;
@@ -312,17 +307,15 @@ a {
 }
 
 .team-title,
-.our-team-description,
-.team-container {
-    width: 100%;
+.our-team-description {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
 }
 
 .team-title {
     margin-bottom: 35px;
-    text-align: left;
 }
 
 .meet-team {
@@ -334,9 +327,9 @@ a {
 
 .team-title h2 {
     margin-bottom: 5px;
+    color: #5b5361;
     font-family: "Montserrat", sans-serif;
     font-size: 27px;
-    color: #5b5361;
 }
 
 .team-title h2 span {
@@ -344,59 +337,64 @@ a {
 }
 
 .team-intro {
+    color: #776d79;
     font-size: 16px;
     line-height: 1.5;
-    color: #776d79;
 }
 
 .our-team-description {
     margin-bottom: 45px;
-    text-align: left;
 }
 
 .description-heart {
     margin-bottom: 3px;
-    font-size: 22px;
     color: #9b6682;
+    font-size: 22px;
 }
 
 .our-team-description h3 {
     margin-bottom: 5px;
-    font-size: 21px;
     color: #514857;
+    font-size: 21px;
 }
 
 .our-team-description p {
     max-width: 1000px;
+    color: #756b77;
     font-size: 15px;
     line-height: 1.55;
-    color: #756b77;
 }
 
+/* =====================================
+   TEAM GRID + CARDS
+===================================== */
+
 .team-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 25px;
 }
 
 .team-card {
-    position: relative;
     width: 100%;
     min-width: 0;
+    position: relative;
     padding-bottom: 25px;
+    overflow: visible;
     background: var(--cream);
     border: 1px solid #edbfd0;
     text-align: center;
-    box-sizing: border-box;
-    overflow: visible;
 }
 
 .team-photo {
     position: relative;
     width: 100%;
     height: 250px;
-    overflow: visible;
     display: block;
+    overflow: visible;
     background: #FFF9F5;
     border-bottom: 1px solid #edbfd0;
 }
@@ -413,34 +411,41 @@ a {
     position: absolute;
     left: 50%;
     bottom: -27px;
-    transform: translateX(-50%);
     width: 54px;
     height: 54px;
-    border-radius: 50%;
-    border: 2px solid var(--rose);
-    background: var(--cream);
+    transform: translateX(-50%);
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
+    border: 2px solid var(--rose);
+    border-radius: 50%;
+    background: var(--cream);
+    color: var(--rose);
     font-size: 28px;
     line-height: 1;
-    color: var(--rose);
-    box-shadow: 0 5px 12px rgba(217, 154, 181, .16);
+    box-shadow: 0 5px 12px rgba(217,154,181,.16);
     pointer-events: none;
 }
 
 .team-card h3 {
     margin: 42px 10px 10px;
-    font-family: "Cormorant Garamond", serif;
+    color: var(--dark);
+    font-family: "Cormorant Garamond",serif;
     font-size: 27px;
-    color: #332b38;
+}
+
+.team-card p {
+    padding: 0 20px;
+    color: #716774;
+    font-size: 13px;
+    line-height: 1.55;
 }
 
 .role {
     display: inline-block;
-    padding: 6px 17px;
     margin-bottom: 12px;
+    padding: 6px 17px;
     border-radius: 20px;
     font-size: 11px;
     font-weight: 600;
@@ -453,38 +458,23 @@ a {
 }
 
 .cofounder {
-    background: #DCC6E0;
-    color: #755C7D;
+    background: var(--lavender);
+    color: var(--purple);
 }
 
 .coordinator {
-    background: #CDE8D5;
+    background: var(--mint);
     color: #5D8069;
 }
 
 .financial {
-    background: #C7DFF2;
+    background: var(--blue);
     color: #58748A;
 }
 
-.team-card p {
-    padding: 0 20px;
-    font-size: 13px;
-    line-height: 1.55;
-    color: #716774;
-}
-
-.team-card .role {
-    width: auto;
-    margin-left: 15px;
-    margin-right: 15px;
-    line-height: 1.7;
-}
-
-
-/* =========================
+/* =====================================
    WHAT WE DO
-========================= */
+===================================== */
 
 .what-we-do {
     width: 100%;
@@ -494,37 +484,35 @@ a {
 
 .section-title {
     margin-bottom: 50px;
-    text-align: center;
     color: #E86691;
     font-size: 17px;
     font-weight: 600;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .title-heart {
     margin-left: 5px;
 }
 
-.what-we-do .what-container {
+.what-container {
     width: 100%;
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
-    gap: 0;
-    align-items: stretch;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
 }
 
-.what-we-do .what-card {
+.what-card {
     width: 100%;
     min-width: 0;
     padding: 0 25px;
     text-align: center;
-    border: none;
     transition: transform .2s;
 }
 
-.what-we-do .what-card:hover {
+.what-card:hover {
     transform: translateY(-4px);
 }
 
@@ -533,18 +521,15 @@ a {
     width: 72px;
     height: 72px;
     margin: 0 auto 20px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
 }
 
 .what-icon {
     font-size: 32px;
-}
-
-.care-icon {
-    font-size: 30px;
 }
 
 .pink-icon,
@@ -553,72 +538,74 @@ a {
     color: #ED7199;
 }
 
-.lavender-icon {
-    background: #DCC6E0;
-    color: #665873;
-}
-
+.lavender-icon,
 .lavender-care {
-    background: #DCC6E0;
-    color: #755C7D;
+    background: var(--lavender);
+    color: var(--purple);
 }
 
 .blue-icon,
 .blue-care {
-    background: #C7DFF2;
+    background: var(--blue);
     color: #5B778B;
 }
 
 .mint-icon,
 .mint-care {
-    background: #CDE8D5;
+    background: var(--mint);
     color: #64836D;
 }
 
 .peach-care {
-    background: #FAD9C1;
+    background: var(--peach);
     color: #9B6650;
 }
 
-.what-we-do .what-card h3,
 .what-card h3 {
-    margin: 18px 10px 10px;
-    font-family: "Cormorant Garamond", serif;
+    margin-bottom: 10px;
+    color: #262331;
+    font-family: "Cormorant Garamond",serif;
     font-size: 24px;
     line-height: 1.15;
-    color: #262331;
 }
 
-.what-we-do .what-card p,
 .what-card p {
-    margin: 0;
+    color: #776c78;
     font-size: 14px;
     line-height: 1.7;
-    color: #776c78;
+}
+
+.divider {
+    width: 1px;
+    height: 100%;
+    background: var(--line);
+}
+
+/* Homepage keeps the 4 items + dividers */
+.what-we-do .what-container {
+    grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
+    gap: 0;
+    align-items: stretch;
+}
+
+.what-we-do .what-card {
+    padding: 0 25px;
+    border: none;
+}
+
+.what-we-do .what-card h3 {
+    margin: 18px 10px 10px;
+}
+
+.what-we-do .what-card p {
+    margin: 0;
     word-break: normal;
     overflow-wrap: normal;
 }
 
-.what-card .role {
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0;
-    text-transform: none;
-    color: var(--text);
-}
-
-.divider,
-.what-we-do .divider {
-    width: 1px;
-    height: 100%;
-    background: #E99DB9;
-}
-
-
-/* =========================
+/* =====================================
    HOMEPAGE CTA
-========================= */
+===================================== */
 
 .cta {
     padding: 55px 25px;
@@ -632,10 +619,10 @@ a {
 }
 
 .cta h2 {
-    font-family: "Cormorant Garamond", serif;
+    color: #625666;
+    font-family: "Cormorant Garamond",serif;
     font-size: 42px;
     line-height: 1.2;
-    color: #625666;
 }
 
 .cta h2 span {
@@ -643,10 +630,9 @@ a {
     font-style: italic;
 }
 
-
-/* =========================
+/* =====================================
    FOOTER
-========================= */
+===================================== */
 
 footer {
     width: 100%;
@@ -658,7 +644,7 @@ footer {
 
 .footer-container {
     max-width: 1100px;
-    margin: 0 auto;
+    margin: auto;
     padding: 65px 30px;
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
@@ -668,7 +654,7 @@ footer {
 .footer-content {
     width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: auto;
     padding: 25px 20px 12px;
     display: flex;
     flex-direction: column;
@@ -680,23 +666,71 @@ footer {
 
 .footer-content h3 {
     margin: 0;
-    font-family: "Cormorant Garamond", serif;
+    color: #302a35;
+    font-family: "Cormorant Garamond",serif;
     font-size: 27px;
     font-weight: 600;
-    color: #302a35;
 }
 
 .footer-content > p {
     margin: 0;
-    font-size: 10px;
     color: #625967;
+    font-size: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.footer-content .social-icons {
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 3px;
+}
+
+.social-icons a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #F7C6D9;
+    transition: .25s ease;
+}
+
+.footer-content .social-icons a {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+.footer-content .social-icons a:hover {
+    transform: translateY(-2px);
+}
+
+.footer-content .copyright {
+    width: 100%;
+    margin-top: 3px;
+    padding: 7px 10px 0;
+    border-top: 1px solid #e9bfd0;
+    color: #746976;
+    font-size: 9px;
 }
 
 .footer-logo {
-    font-family: "Cormorant Garamond", serif;
+    color: #302a35;
+    font-family: "Cormorant Garamond",serif;
     font-size: 40px;
     line-height: 1;
-    color: #302a35;
 }
 
 .footer-logo span {
@@ -715,39 +749,6 @@ footer {
     line-height: 1.6;
 }
 
-.social-icons {
-    display: flex;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: #F7C6D9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .25s ease;
-}
-
-.social-icons a:hover {
-    transform: translateY(-3px);
-    background: #EBA9C4;
-}
-
-.footer-content .social-icons {
-    gap: 8px;
-    margin-top: 3px;
-}
-
-.footer-content .social-icons a {
-    width: 30px;
-    height: 30px;
-    font-size: 13px;
-}
-
 .footer-column {
     display: flex;
     flex-direction: column;
@@ -756,15 +757,15 @@ footer {
 
 .footer-column h4 {
     margin-bottom: 5px;
-    font-size: 16px;
     color: #36303A;
+    font-size: 16px;
 }
 
 .footer-column a,
 .footer-column p {
+    color: #625967;
     font-size: 14px;
     line-height: 1.5;
-    color: #625967;
 }
 
 .footer-column a:hover {
@@ -772,47 +773,43 @@ footer {
 }
 
 .copyright {
-    border-top: 1px solid #e9bfd0;
     padding: 18px 20px;
-    text-align: center;
-    font-size: 12px;
+    border-top: 1px solid #e9bfd0;
     color: #746976;
+    font-size: 12px;
+    text-align: center;
 }
 
-.footer-content .copyright {
-    width: 100%;
-    margin-top: 3px;
-    padding: 7px 10px 0;
-    font-size: 9px;
-}
-
-
-/* =========================
-   CONTENT / CONTACT
-========================= */
+/* =====================================
+   CONTENT
+===================================== */
 
 .content-container {
     width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .contact-page {
     min-height: calc(100vh - 150px);
 }
 
+/* =====================================
+   CONTACT / INNER PAGE HERO
+===================================== */
+
 .contact-hero {
     padding: 80px 20px 65px;
+    background: linear-gradient(135deg,var(--blush),var(--lavender));
     text-align: center;
-    background: linear-gradient(135deg, var(--blush), var(--lavender));
 }
 
 .contact-hero h1 {
     margin: 10px 0 15px;
-    font-family: "Cormorant Garamond", serif !important;
+    color: var(--text);
+    font-family: "Cormorant Garamond",serif !important;
     font-size: 58px;
     font-weight: 600;
-    color: var(--text);
 }
 
 .contact-hero h1 span {
@@ -821,10 +818,14 @@ footer {
 
 .contact-hero p:last-child {
     max-width: 650px;
-    margin: 0 auto;
+    margin: auto;
     font-size: 16px;
     line-height: 1.8;
 }
+
+/* =====================================
+   CONTACT SECTION
+===================================== */
 
 .contact-section {
     padding: 80px 20px;
@@ -836,29 +837,29 @@ footer {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
     align-items: center;
+    gap: 70px;
 }
 
 .contact-intro h2 {
     margin: 10px 0 20px;
-    font-family: "Cormorant Garamond", serif;
+    color: var(--text);
+    font-family: "Cormorant Garamond",serif;
     font-size: 45px;
     font-weight: 600;
-    color: var(--text);
 }
 
 .contact-intro > p:not(.small-title) {
+    color: var(--text);
     font-size: 15px;
     line-height: 1.9;
-    color: var(--text);
 }
 
 .small-title {
+    color: var(--rose);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 3px;
-    color: var(--rose);
 }
 
 .contact-note {
@@ -868,16 +869,16 @@ footer {
     padding: 22px;
     background: white;
     border-left: 4px solid var(--pink);
-    box-shadow: 0 8px 25px rgba(95, 83, 96, .08);
+    box-shadow: 0 8px 25px rgba(95,83,96,.08);
 }
 
 .contact-note > span {
-    font-size: 28px;
     color: var(--rose);
+    font-size: 28px;
 }
 
 .contact-note strong {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 22px;
 }
 
@@ -891,31 +892,34 @@ footer {
     padding: 40px;
     background: white;
     border-top: 5px solid var(--pink);
-    box-shadow: 0 15px 40px rgba(95, 83, 96, .10);
+    box-shadow: 0 15px 40px rgba(95,83,96,.10);
 }
 
 .contact-card h2,
 .contact-card h3 {
-    font-family: "Cormorant Garamond", serif !important;
-    font-weight: 600;
     color: var(--text);
+    font-family: "Cormorant Garamond",serif;
 }
 
 .contact-card h2 {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
     font-size: 34px;
 }
 
 .contact-card h3 {
-    margin-bottom: 5px;
+    margin: 0 0 5px;
     font-size: 34px;
 }
 
 .contact-card-text {
     margin-bottom: 25px;
-    font-size: 14px;
     color: #766c77;
+    font-size: 14px;
 }
+
+/* =====================================
+   CONTACT SOCIALS
+===================================== */
 
 .contact-socials {
     display: flex;
@@ -937,20 +941,20 @@ footer {
 .contact-social:hover {
     transform: translateX(5px);
     background: var(--blush);
-    box-shadow: 0 5px 15px rgba(95, 83, 96, .08);
+    box-shadow: 0 5px 15px rgba(95,83,96,.08);
 }
 
 .social-symbol {
     width: 42px;
     height: 42px;
     flex-shrink: 0;
-    border-radius: 50%;
-    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    border-radius: 50%;
+    background: white;
     color: var(--rose);
+    font-size: 22px;
 }
 
 .contact-social strong {
@@ -962,37 +966,40 @@ footer {
 .contact-social small {
     display: block;
     margin-top: 3px;
-    font-size: 11px;
     color: #877b86;
+    font-size: 11px;
 }
 
 .contact-social .social-arrow {
     margin-left: auto;
-    font-size: 18px;
     color: var(--rose);
+    font-size: 18px;
 }
+
+/* =====================================
+   PAGE CTA
+===================================== */
 
 .page-cta {
     padding: 65px 20px;
-    text-align: center;
     background: var(--pink);
+    text-align: center;
 }
 
 .page-cta h2 {
     margin: 8px 0 25px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 38px;
     color: var(--text);
+    font-family: "Cormorant Garamond",serif;
+    font-size: 38px;
 }
 
 .page-cta p {
     margin-bottom: 20px;
 }
 
-
-/* =========================
-   INNER PAGE CARDS
-========================= */
+/* =====================================
+   INNER CARD SYSTEM
+===================================== */
 
 .inner-card-section {
     width: 100%;
@@ -1012,50 +1019,48 @@ footer {
 
 .inner-section-heading h2 {
     margin: 0 0 5px;
-    font-family: "Montserrat", sans-serif;
+    color: #4d4054;
     font-size: 28px;
     font-weight: 700;
-    color: #4d4054;
 }
 
 .inner-section-heading > p:last-child {
     margin: 0;
+    color: #705f70;
     font-size: 15px;
     line-height: 1.6;
-    color: #705f70;
 }
 
 .inner-card-grid {
     width: 90%;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: auto;
     display: grid;
-    gap: 24px;
     align-items: stretch;
+    gap: 24px;
 }
 
 .care-kits-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5,1fr);
 }
 
 .four-card-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
 }
 
 .three-card-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 
 .inner-card {
     min-width: 0;
     min-height: 255px;
-    padding-bottom: 10px;
-    background: var(--cream);
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     overflow: visible;
+    background: var(--cream);
+    text-align: center;
 }
 
 .inner-card-top {
@@ -1069,39 +1074,43 @@ footer {
 }
 
 .inner-card-top span {
+    color: var(--rose);
     font-size: 26px;
-    color: #D99AB5;
 }
 
 .inner-card h3 {
     margin: 25px 8px 10px;
-    font-family: "Cormorant Garamond", serif;
+    color: var(--dark);
+    font-family: "Cormorant Garamond",serif;
     font-size: 25px;
     font-weight: 600;
     line-height: 1.15;
-    color: #332b38;
 }
 
 .inner-card p {
     max-width: 190px;
     margin: 0;
+    color: #756675;
     font-size: 13px;
     line-height: 1.65;
-    color: #756675;
 }
+
+/* =====================================
+   LARGE INNER CARDS
+===================================== */
 
 .large-inner-card {
     position: relative;
     min-width: 0;
     min-height: 435px;
     padding-bottom: 30px;
-    background: var(--cream);
-    border: 1px solid #edbfd0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     overflow: visible;
+    background: var(--cream);
+    border: 1px solid #edbfd0;
+    text-align: center;
 }
 
 .large-card-top {
@@ -1117,37 +1126,37 @@ footer {
     position: absolute;
     left: 50%;
     bottom: -28px;
-    transform: translateX(-50%);
     width: 54px;
     height: 54px;
-    border-radius: 50%;
-    border: 2px solid var(--rose);
-    background: var(--cream);
+    transform: translateX(-50%);
+    z-index: 5;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 5;
+    border: 2px solid var(--rose);
+    border-radius: 50%;
+    background: var(--cream);
+    color: var(--rose);
     font-size: 28px;
     line-height: 1;
-    color: var(--rose);
-    box-shadow: 0 5px 12px rgba(217, 154, 181, .16);
+    box-shadow: 0 5px 12px rgba(217,154,181,.16);
 }
 
 .large-inner-card h3 {
     margin: 48px 15px 10px;
-    font-family: "Cormorant Garamond", serif;
+    color: var(--dark);
+    font-family: "Cormorant Garamond",serif;
     font-size: 28px;
     font-weight: 600;
     line-height: 1.15;
-    color: #332b38;
 }
 
 .large-inner-card p {
     max-width: 235px;
-    margin: 0 auto;
+    margin: auto;
+    color: #756675;
     font-size: 13px;
     line-height: 1.65;
-    color: #756675;
 }
 
 .card-button {
@@ -1158,17 +1167,16 @@ footer {
 
 .mission-goals-section,
 .impact-section {
-    background: #FFFFFF;
+    background: white;
 }
 
 .get-involved-section {
     background: var(--cream);
 }
 
-
-/* =========================
+/* =====================================
    CARE KITS
-========================= */
+===================================== */
 
 .care-kit-items {
     width: 100%;
@@ -1181,7 +1189,8 @@ footer {
     text-align: center;
 }
 
-.care-kit-heading .section-label {
+.care-kit-heading .section-label,
+.provided-content .section-label {
     color: #E86691;
     font-size: 17px;
     font-weight: 600;
@@ -1191,22 +1200,22 @@ footer {
 .care-items-grid {
     width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5,1fr);
     column-gap: 0;
     row-gap: 50px;
 }
 
 .care-item {
-    position: relative;
     min-width: 0;
     padding: 0 20px;
+    position: relative;
     text-align: center;
 }
 
 .care-item:not(:nth-child(5n)) {
-    border-right: 1px solid #E99DB9;
+    border-right: 1px solid var(--line);
 }
 
 .care-line {
@@ -1214,41 +1223,58 @@ footer {
     max-width: 190px;
     height: 1px;
     margin: 0 auto 20px;
-    background: #E99DB9;
+    background: var(--line);
 }
 
 .care-item h3,
 .provided-item h3 {
     margin-bottom: 10px;
-    font-family: "Cormorant Garamond", serif;
+    color: #262331;
+    font-family: "Cormorant Garamond",serif;
     font-size: 27px;
     font-weight: 600;
     line-height: 1.15;
-    color: #262331;
 }
 
 .care-item p,
 .provided-item p {
     max-width: 200px;
-    margin: 0 auto;
+    margin: auto;
+    color: var(--muted);
     font-size: 13px;
     line-height: 1.65;
-    color: #776C78;
 }
 
+/* Center the final 3 items on desktop */
+@media (min-width: 901px) {
+    .care-item:nth-child(6) {
+        grid-column: 2;
+    }
+
+    .care-item:nth-child(7) {
+        grid-column: 3;
+    }
+
+    .care-item:nth-child(8) {
+        grid-column: 4;
+    }
+}
+
+/* Care Kits matches all other items */
 .featured-care {
-    padding-top: 15px;
+    padding-top: 0;
     padding-bottom: 25px;
-    background: #FCEEF3;
-    border-radius: 12px;
+    background: transparent;
+    border-radius: 0;
 }
 
 .featured-care .care-icon {
     margin-top: 0;
 }
 
-
-/* PROVIDED BY US */
+/* =====================================
+   PROVIDED BY US
+===================================== */
 
 .provided-care {
     width: 100%;
@@ -1259,52 +1285,49 @@ footer {
 .provided-content {
     width: 100%;
     max-width: 1180px;
-    margin: 0 auto;
+    margin: auto;
     padding: 28px 38px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #FCEEF3;
     border-radius: 12px;
+    background: #FCEEF3;
 }
 
 .provided-content .section-label {
     margin-bottom: 5px;
-    color: #E86691;
     font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 1px;
 }
 
 .provided-content h2 {
     margin-bottom: 8px;
-    font-family: "Cormorant Garamond", serif;
+    color: #302A35;
+    font-family: "Cormorant Garamond",serif;
     font-size: 40px;
     line-height: 1.1;
-    color: #302A35;
 }
 
 .provided-content > div:first-child > p:last-child {
+    color: var(--muted);
     font-size: 14px;
     line-height: 1.6;
-    color: #776C78;
 }
 
 .provided-heart {
     padding-right: 25px;
-    font-family: "Cormorant Garamond", serif;
+    color: #ED7199;
+    font-family: "Cormorant Garamond",serif;
     font-size: 85px;
     line-height: 1;
-    color: #ED7199;
 }
 
 .provided-items {
     width: 90%;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: auto;
     padding: 35px 0 80px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 
 .provided-item {
@@ -1313,31 +1336,51 @@ footer {
 }
 
 .provided-item:not(:last-child) {
-    border-right: 1px solid #E99DB9;
+    border-right: 1px solid var(--line);
 }
 
-
-/* =========================
+/* =====================================
    TABLET
-========================= */
+===================================== */
 
 @media (max-width: 1000px) {
     .care-kits-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3,1fr);
     }
 
     .four-card-grid,
     .three-card-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
 @media (max-width: 900px) {
-
-    .what-we-do .what-container,
+    .what-container,
     .team-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
         gap: 20px;
+    }
+
+    .care-items-grid {
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 40px;
+    }
+
+    .care-item {
+        border-right: none !important;
+    }
+
+    .care-item:nth-child(odd) {
+        border-right: 1px solid var(--line) !important;
+    }
+
+    .provided-content h2 {
+        font-size: 34px;
+    }
+
+    .what-we-do .what-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
     }
 
     .what-we-do .what-card {
@@ -1347,43 +1390,19 @@ footer {
     .what-we-do .divider {
         display: none;
     }
-
-    .care-items-grid {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 40px;
-    }
-
-    .care-item {
-        border-right: none !important;
-    }
-
-    .care-item:nth-child(odd) {
-        border-right: 1px solid #E99DB9 !important;
-    }
-
-    .provided-content h2 {
-        font-size: 34px;
-    }
 }
 
-
-/* =========================
+/* =====================================
    MOBILE
-========================= */
+===================================== */
 
 @media (max-width: 768px) {
-
-    /* NAV */
 
     .nav-container {
         width: 100%;
         min-height: 75px;
         padding: 8px 20px;
         justify-content: space-between;
-    }
-
-    .logo {
-        min-width: 0;
     }
 
     .logo-image {
@@ -1401,9 +1420,9 @@ footer {
     }
 
     .logo-by {
-        font-size: 9px;
         margin-left: 4px;
         margin-bottom: 5px;
+        font-size: 9px;
     }
 
     .menu-button,
@@ -1434,22 +1453,20 @@ footer {
         display: flex;
     }
 
-    .nav-links li {
+    .nav-links li,
+    .nav-links a {
         width: 100%;
     }
 
     .nav-links a {
         display: block;
-        width: 100%;
         padding: 16px 20px;
         border-bottom: 1px solid #f0dce3;
     }
 
     .nav-links a.active {
         border-bottom: 1px solid #f0dce3;
-        color: #EC7198;
     }
-
 
     /* HERO */
 
@@ -1466,15 +1483,15 @@ footer {
     }
 
     .slogan {
-        padding: 9px 14px;
         margin-bottom: 20px;
+        padding: 9px 14px;
         font-size: 12px;
     }
 
     .hero h1 {
+        margin-bottom: 20px;
         font-size: 49px;
         line-height: 1;
-        margin-bottom: 20px;
     }
 
     .hero-text p {
@@ -1505,11 +1522,6 @@ footer {
         padding: 10px;
     }
 
-    .hero-team-photo {
-        object-position: center center;
-    }
-
-
     /* TEAM */
 
     .team-section {
@@ -1529,7 +1541,6 @@ footer {
 
     .team-intro {
         font-size: 14px;
-        line-height: 1.5;
     }
 
     .our-team-description {
@@ -1549,32 +1560,27 @@ footer {
         gap: 28px;
     }
 
-    .team-card {
-        width: 100%;
-    }
-
     .team-photo {
         width: 100%;
         height: 250px;
-        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
         background: #FFF9F5;
     }
 
     .team-photo img {
         width: 100%;
         height: 100%;
-        display: block;
         object-fit: contain;
-        object-position: center center;
+        object-position: center;
         background: #FFF9F5;
     }
 
     .team-card h3 {
-        font-size: 29px;
         margin-top: 42px;
+        font-size: 29px;
     }
 
     .team-card p {
@@ -1591,11 +1597,9 @@ footer {
         font-size: 28px;
     }
 
-
     /* WHAT WE DO */
 
     .what-we-do {
-        width: 100%;
         padding: 65px 20px 70px;
     }
 
@@ -1604,12 +1608,10 @@ footer {
     }
 
     .what-we-do .what-container {
-        grid-template-columns: 1fr;
-        gap: 0;
+        grid-template-columns: 1fr 1fr;
     }
 
     .what-we-do .what-card {
-        width: 100%;
         padding: 25px 15px 35px;
     }
 
@@ -1622,11 +1624,6 @@ footer {
         line-height: 1.6;
     }
 
-    .what-we-do .divider {
-        display: none;
-    }
-
-
     /* CTA */
 
     .cta {
@@ -1636,7 +1633,6 @@ footer {
     .cta h2 {
         font-size: 34px;
     }
-
 
     /* CONTACT */
 
@@ -1691,7 +1687,6 @@ footer {
         font-size: 32px;
     }
 
-
     /* FOOTER */
 
     .footer-container {
@@ -1722,25 +1717,20 @@ footer {
         width: 100%;
         max-width: 100%;
         padding: 25px 15px 10px;
-        margin: 0 auto;
         gap: 5px;
-        align-items: center;
-        text-align: center;
     }
 
     .footer-content h3 {
-        margin: 0;
         font-size: 24px;
     }
 
     .footer-content > p {
-        margin: 0;
         font-size: 9px;
     }
 
     .footer-content .social-icons {
-        margin: 3px auto 0;
         gap: 7px;
+        margin: 3px auto 0;
     }
 
     .footer-content .social-icons a {
@@ -1750,12 +1740,9 @@ footer {
     }
 
     .footer-content .copyright {
-        width: 100%;
-        margin-top: 3px;
-        padding: 7px 8px 0;
         font-size: 8px;
+        padding: 7px 8px 0;
     }
-
 
     /* CARE KITS */
 
@@ -1771,7 +1758,7 @@ footer {
     .care-item {
         padding: 0 15px 30px;
         border-right: none !important;
-        border-bottom: 1px solid #E99DB9;
+        border-bottom: 1px solid var(--line);
     }
 
     .care-item:last-child {
@@ -1784,13 +1771,14 @@ footer {
 
     .care-item p {
         max-width: 250px;
-        font-size: 13px;
     }
 
     .featured-care {
-        padding-top: 20px;
-        border-radius: 12px;
+        padding-top: 0;
+        border-radius: 0;
     }
+
+    /* PROVIDED */
 
     .provided-care {
         padding: 0 20px 25px;
@@ -1824,13 +1812,12 @@ footer {
     .provided-item {
         padding: 0 15px 30px;
         border-right: none !important;
-        border-bottom: 1px solid #E99DB9;
+        border-bottom: 1px solid var(--line);
     }
 
     .provided-item:last-child {
         border-bottom: none;
     }
-
 
     /* INNER CARDS */
 
@@ -1879,14 +1866,36 @@ footer {
 
     .large-inner-card p {
         max-width: 250px;
-        font-size: 13px;
     }
 }
 
-
-/* =========================
+/* =====================================
    SMALL PHONES
-========================= */
+===================================== */
+
+@media (max-width: 600px) {
+
+    .what-we-do .what-container {
+        grid-template-columns: 1fr;
+    }
+
+    .what-we-do .what-card {
+        width: 100%;
+        padding: 25px 15px 35px;
+    }
+
+    .what-we-do .what-card h3 {
+        font-size: 24px;
+    }
+
+    .what-we-do .what-card p {
+        font-size: 13px;
+    }
+
+    .what-we-do .divider {
+        display: none;
+    }
+}
 
 @media (max-width: 400px) {
 
@@ -1909,6 +1918,29 @@ footer {
 
     .hero h1 {
         font-size: 43px;
+    }
+
+    .team-photo {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        background: #FFF9F5;
+    }
+
+    .team-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .team-heart {
+        left: 50%;
+        bottom: -27px;
+        width: 54px;
+        height: 54px;
+        transform: translateX(-50%);
+        font-size: 28px;
     }
 
     .what-we-do .what-card {
