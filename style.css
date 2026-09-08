@@ -306,9 +306,11 @@ header {
 }
 
 .team-title h2 {
-    font-size: 27px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    line-height: 1.15;
     color: #5b5361;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .team-intro {
@@ -801,6 +803,41 @@ header {
 .primary-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(95,83,96,.15);
+}
+
+/* =========================================================
+   DONATIONS & COMMUNITY SERVICE
+========================================================= */
+
+.donation-hours {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+    padding: 35px 30px 10px;
+    text-align: center;
+}
+
+.donation-hours .section-label {
+    margin-bottom: 6px;
+    color: #E86691;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.donation-hours h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.donation-hours p:last-child {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted);
 }
 
 /* =========================================================
@@ -1846,5 +1883,79 @@ footer {
 
     .large-card-top {
         height: 220px;
+    }
+}
+
+
+/* =========================================================
+   FINAL UPDATES FROM PROJECT NOTES
+========================================================= */
+
+.get-involved .large-card-heart,
+.large-inner-card .large-card-heart {
+    font-family: "Montserrat", sans-serif;
+    font-size: 34px;
+    line-height: 1;
+}
+
+.donation-hours {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .provided-items {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+
+    .provided-item:nth-child(odd) {
+        border-right: 1px solid #E99DB9;
+    }
+
+    .provided-item:nth-child(even) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .donation-hours {
+        width: 100%;
+        padding: 35px 20px 5px;
+    }
+
+    .donation-hours h2 {
+        font-size: 34px;
+    }
+
+    .donation-hours p:last-child {
+        font-size: 13px;
+    }
+
+    .provided-items {
+        grid-template-columns: 1fr;
+        row-gap: 35px;
+    }
+
+    .provided-item:nth-child(odd),
+    .provided-item:nth-child(even) {
+        border-right: none;
+        border-bottom: 1px solid #E99DB9;
+    }
+
+    .provided-item:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .donation-hours h2 {
+        font-size: 30px;
+    }
+}
+
+
+@media (min-width: 901px) {
+    .care-items-grid .care-item:nth-child(6) {
+        grid-column: 2;
     }
 }
