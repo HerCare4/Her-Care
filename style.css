@@ -306,11 +306,9 @@ header {
 }
 
 .team-title h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 38px;
-    line-height: 1.15;
+    font-size: 27px;
     color: #5b5361;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .team-intro {
@@ -806,6 +804,98 @@ header {
 }
 
 /* =========================================================
+   CARE KITS
+========================================================= */
+
+.care-kit-items {
+    width: 100%;
+    padding: 65px 30px 70px;
+    background: var(--cream);
+}
+
+.care-kit-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.care-kit-heading .section-label {
+    color: #E86691;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* The community-service message is displayed in the dedicated
+   donation-hours section instead of being repeated here. */
+.care-kit-heading::after {
+    content: none;
+}
+
+/* CARE KIT GRID */
+
+.care-items-grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 0;
+    row-gap: 50px;
+}
+
+.care-item {
+    position: relative;
+    text-align: center;
+    min-width: 0;
+    padding: 0 20px;
+}
+
+.care-item:not(:nth-child(5n)) {
+    border-right: 1px solid var(--line);
+}
+
+/* Center the final item when there are 9 care-kit cards. */
+.care-item:nth-child(9) {
+    grid-column: 2;
+}
+
+.care-line {
+    width: 100%;
+    max-width: 190px;
+    height: 1px;
+    background: var(--line);
+    margin: 0 auto 20px;
+}
+
+.care-item h3,
+.provided-item h3 {
+    font: 600 27px/1.15 "Cormorant Garamond",serif;
+    color: #262331;
+    margin-bottom: 10px;
+}
+
+.care-item p,
+.provided-item p {
+    max-width: 200px;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 1.65;
+    color: #776C78;
+}
+
+.featured-care {
+    background: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.featured-care .care-icon {
+    margin-top: 0;
+}
+
+/* =========================================================
    DONATIONS & COMMUNITY SERVICE
 ========================================================= */
 
@@ -838,98 +928,6 @@ header {
     font-size: 14px;
     line-height: 1.7;
     color: var(--muted);
-}
-
-/* =========================================================
-   CARE KITS
-========================================================= */
-
-.care-kit-items {
-    width: 100%;
-    padding: 65px 30px 70px;
-    background: var(--cream);
-}
-
-.care-kit-heading {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.care-kit-heading .section-label {
-    color: #E86691;
-    font-size: 17px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-/* DONATION MESSAGE — ADDED */
-.care-kit-heading::after {
-    content: "Donations of these items may qualify for community service hours. Please check with your school or organization for approval.";
-    display: block;
-    max-width: 700px;
-    margin: 14px auto 0;
-    padding: 10px 20px;
-    color: #776C78;
-    font-size: 12px;
-    line-height: 1.6;
-}
-
-/* CARE KIT GRID */
-
-.care-items-grid {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    column-gap: 0;
-    row-gap: 50px;
-}
-
-.care-item {
-    position: relative;
-    text-align: center;
-    min-width: 0;
-    padding: 0 20px;
-}
-
-.care-item:not(:nth-child(5n)) {
-    border-right: 1px solid var(--line);
-}
-
-.care-line {
-    width: 100%;
-    max-width: 190px;
-    height: 1px;
-    background: var(--line);
-    margin: 0 auto 20px;
-}
-
-.care-item h3,
-.provided-item h3 {
-    font: 600 27px/1.15 "Cormorant Garamond",serif;
-    color: #262331;
-    margin-bottom: 10px;
-}
-
-.care-item p,
-.provided-item p {
-    max-width: 200px;
-    margin: 0 auto;
-    font-size: 13px;
-    line-height: 1.65;
-    color: #776C78;
-}
-
-.featured-care {
-    background: #FCEEF3;
-    padding-top: 15px;
-    padding-bottom: 25px;
-    border-radius: 12px;
-}
-
-.featured-care .care-icon {
-    margin-top: 0;
 }
 
 /* =========================================================
@@ -990,7 +988,7 @@ header {
     margin: auto;
     padding: 35px 0 80px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .provided-item {
@@ -1245,6 +1243,18 @@ footer {
 
     .care-item:nth-child(odd) {
         border-right: 1px solid var(--line) !important;
+    }
+
+    .care-item:nth-child(9) {
+        grid-column: 1 / 3;
+    }
+
+    .donation-hours {
+        padding: 35px 25px 10px;
+    }
+
+    .donation-hours h2 {
+        font-size: 36px;
     }
 
     .provided-content h2 {
@@ -1624,12 +1634,6 @@ footer {
         margin-bottom: 40px;
     }
 
-    .care-kit-heading::after {
-        max-width: 500px;
-        font-size: 11px;
-        padding: 8px 15px;
-    }
-
     .care-items-grid {
         grid-template-columns: 1fr;
         row-gap: 35px;
@@ -1645,6 +1649,10 @@ footer {
         border-bottom: none;
     }
 
+    .care-item:nth-child(9) {
+        grid-column: auto;
+    }
+
     .care-item h3 {
         font-size: 28px;
     }
@@ -1655,8 +1663,22 @@ footer {
     }
 
     .featured-care {
-        padding-top: 20px;
-        border-radius: 12px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-radius: 0;
+    }
+
+    .donation-hours {
+        width: 100%;
+        padding: 30px 20px 10px;
+    }
+
+    .donation-hours h2 {
+        font-size: 34px;
+    }
+
+    .donation-hours p:last-child {
+        font-size: 13px;
     }
 
     /* PROVIDED */
@@ -1868,11 +1890,6 @@ footer {
         padding: 6px 6px 0;
     }
 
-    .care-kit-heading::after {
-        font-size: 10px;
-        line-height: 1.5;
-        padding: 8px 10px;
-    }
 
     .inner-card-grid,
     .care-kits-grid,
@@ -1883,79 +1900,5 @@ footer {
 
     .large-card-top {
         height: 220px;
-    }
-}
-
-
-/* =========================================================
-   FINAL UPDATES FROM PROJECT NOTES
-========================================================= */
-
-.get-involved .large-card-heart,
-.large-inner-card .large-card-heart {
-    font-family: "Montserrat", sans-serif;
-    font-size: 34px;
-    line-height: 1;
-}
-
-.donation-hours {
-    text-align: center;
-}
-
-@media (max-width: 900px) {
-    .provided-items {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 40px;
-    }
-
-    .provided-item:nth-child(odd) {
-        border-right: 1px solid #E99DB9;
-    }
-
-    .provided-item:nth-child(even) {
-        border-right: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .donation-hours {
-        width: 100%;
-        padding: 35px 20px 5px;
-    }
-
-    .donation-hours h2 {
-        font-size: 34px;
-    }
-
-    .donation-hours p:last-child {
-        font-size: 13px;
-    }
-
-    .provided-items {
-        grid-template-columns: 1fr;
-        row-gap: 35px;
-    }
-
-    .provided-item:nth-child(odd),
-    .provided-item:nth-child(even) {
-        border-right: none;
-        border-bottom: 1px solid #E99DB9;
-    }
-
-    .provided-item:last-child {
-        border-bottom: none;
-    }
-}
-
-@media (max-width: 400px) {
-    .donation-hours h2 {
-        font-size: 30px;
-    }
-}
-
-
-@media (min-width: 901px) {
-    .care-items-grid .care-item:nth-child(6) {
-        grid-column: 2;
     }
 }
