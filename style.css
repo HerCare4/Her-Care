@@ -1980,3 +1980,46 @@ footer {
     content: none !important;
     display: none !important;
 }
+
+/* =========================================================
+   FINAL CARE KITS LAYOUT FIX
+   Desktop: 5 items on row 1, 4 centered on row 2.
+========================================================= */
+
+@media (min-width: 901px) {
+    .care-items-grid {
+        grid-template-columns: repeat(5, 1fr) !important;
+        grid-auto-flow: row;
+    }
+
+    .care-item {
+        border-right: 1px solid var(--line) !important;
+    }
+
+    .care-item:nth-child(5),
+    .care-item:nth-child(9) {
+        border-right: none !important;
+    }
+
+    .care-item:nth-child(6) {
+        grid-column: 2 !important;
+    }
+
+    .care-item:nth-child(7),
+    .care-item:nth-child(8),
+    .care-item:nth-child(9) {
+        grid-column: auto;
+    }
+
+    .featured-care {
+        background: transparent !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+/* Remove the old extra donation message under WHAT WE DO. */
+.care-kit-heading::after {
+    content: none !important;
+    display: none !important;
+}
