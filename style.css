@@ -862,8 +862,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* DONATION MESSAGE — ADDED */
-
 /* CARE KIT GRID */
 
 .care-items-grid {
@@ -980,7 +978,7 @@ header {
     margin: auto;
     padding: 35px 0 80px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
 }
 
 .provided-item {
@@ -1246,6 +1244,19 @@ footer {
     .four-card-grid,
     .three-card-grid {
         grid-template-columns: repeat(2,1fr);
+    }
+
+    .provided-items {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+
+    .provided-item:nth-child(odd) {
+        border-right: 1px solid #E99DB9;
+    }
+
+    .provided-item:nth-child(even) {
+        border-right: none;
     }
 }
 
@@ -1614,12 +1625,6 @@ footer {
         margin-bottom: 40px;
     }
 
-    .care-kit-heading::after {
-        max-width: 500px;
-        font-size: 11px;
-        padding: 8px 15px;
-    }
-
     .care-items-grid {
         grid-template-columns: 1fr;
         row-gap: 35px;
@@ -1858,12 +1863,6 @@ footer {
         padding: 6px 6px 0;
     }
 
-    .care-kit-heading::after {
-        font-size: 10px;
-        line-height: 1.5;
-        padding: 8px 10px;
-    }
-
     .inner-card-grid,
     .care-kits-grid,
     .four-card-grid,
@@ -1890,21 +1889,6 @@ footer {
 
 .donation-hours {
     text-align: center;
-}
-
-@media (max-width: 900px) {
-    .provided-items {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 40px;
-    }
-
-    .provided-item:nth-child(odd) {
-        border-right: 1px solid #E99DB9;
-    }
-
-    .provided-item:nth-child(even) {
-        border-right: none;
-    }
 }
 
 @media (max-width: 600px) {
@@ -1943,47 +1927,9 @@ footer {
     }
 }
 
-
-
 /* =========================================================
    CARE KITS FINAL DESKTOP FIX
    5 items on the first row, 4 centered on the second row.
-========================================================= */
-
-@media (min-width: 901px) {
-    .care-items-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .care-item {
-        border-right: 1px solid var(--line) !important;
-    }
-
-    .care-item:nth-child(5),
-    .care-item:nth-child(9) {
-        border-right: none !important;
-    }
-
-    .care-item:nth-child(6) {
-        grid-column: 2;
-    }
-
-    .featured-care {
-        background: transparent !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-    }
-}
-
-/* Remove the old duplicate donation message. */
-.care-kit-heading::after {
-    content: none !important;
-    display: none !important;
-}
-
-/* =========================================================
-   FINAL CARE KITS LAYOUT FIX
-   Desktop: 5 items on row 1, 4 centered on row 2.
 ========================================================= */
 
 @media (min-width: 901px) {
