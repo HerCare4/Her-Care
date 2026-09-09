@@ -329,9 +329,6 @@ header {
     margin-bottom: 3px;
 }
 
-/* About page team section label was inheriting the tiny 12px base
-   .section-label size while every other section label on the site
-   is 16-17px — bring it in line. */
 .team-title .section-label {
     font-size: 16px;
     letter-spacing: 1px;
@@ -878,8 +875,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* CARE KIT GRID */
-
 .care-items-grid {
     width: 100%;
     max-width: 1100px;
@@ -930,10 +925,6 @@ header {
     padding-top: 0;
     padding-bottom: 0;
     border-radius: 0;
-}
-
-.featured-care .care-icon {
-    margin-top: 0;
 }
 
 /* =========================================================
@@ -1088,7 +1079,7 @@ header {
 }
 
 /* =========================================================
-   FOOTER
+   FOOTER — SAME STYLE AS HOME
 ========================================================= */
 
 footer {
@@ -1099,125 +1090,108 @@ footer {
     text-align: center;
 }
 
-.footer-container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 65px 30px;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
-    gap: 45px;
+/* Hide the old large four-column footer layout */
+footer .footer-container {
+    display: none !important;
 }
 
-.footer-content {
+/* Main compact Home footer */
+footer .footer-content {
     width: 100%;
     max-width: 1100px;
-    margin: auto;
-    padding: 25px 20px 12px;
+    margin: 0 auto;
+    padding: 28px 20px 12px;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+
+    gap: 5px;
     text-align: center;
 }
 
-.footer-content h3 {
-    font-family: "Cormorant Garamond",serif;
-    font-size: 27px;
-    font-weight: 600;
-    color: #302a35;
+/* HerCare title */
+footer .footer-content h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1;
+    color: #302A35;
     margin: 0;
 }
 
-.footer-content > p {
+/* Make footer logo look like the Home design */
+footer .footer-content h3::first-letter {
+    color: #E779A0;
+}
+
+/* Footer tagline */
+footer .footer-content > p {
     margin: 0;
     font-size: 10px;
-    color: #625967;
-}
-
-.footer-content .social-icons,
-.social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 3px;
-}
-
-.footer-content .social-icons a,
-.social-icons a {
-    width: 30px;
-    height: 30px;
-    background: #F7C6D9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    transition: .25s ease;
-}
-
-.footer-content .social-icons a:hover,
-.social-icons a:hover {
-    transform: translateY(-3px);
-    background: #EBA9C4;
-}
-
-.footer-content .copyright,
-.copyright {
-    width: 100%;
-    border-top: 1px solid #e9bfd0;
-    padding: 7px 10px 0;
-    margin-top: 3px;
-    text-align: center;
-    font-size: 9px;
-    color: #746976;
-}
-
-.footer-logo {
-    font-family: "Cormorant Garamond",serif;
-    font-size: 40px;
-    color: #302a35;
-    line-height: 1;
-}
-
-.footer-logo span {
-    color: #E779A0;
-    font-style: italic;
-}
-
-.footer-by {
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-.footer-brand p {
-    margin-top: 20px;
-    line-height: 1.6;
-    font-size: 14px;
-}
-
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.footer-column h4 {
-    color: #36303A;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.footer-column a,
-.footer-column p {
-    font-size: 14px;
     line-height: 1.5;
     color: #625967;
 }
 
-.footer-column a:hover {
-    color: #E66F98;
+/* Social icons */
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+footer .social-icons a {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #F7C6D9;
+    border-radius: 50%;
+
+    color: #625967;
+    font-size: 13px;
+
+    transition: .25s ease;
+}
+
+footer .social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+/* Copyright */
+footer .footer-content .copyright {
+    width: 100%;
+    max-width: 1000px;
+
+    border-top: 1px solid #E9BFD0;
+
+    padding: 7px 10px 0;
+    margin-top: 4px;
+
+    text-align: center;
+
+    font-size: 9px;
+    line-height: 1.4;
+    color: #746976;
+}
+
+/* =========================================================
+   OLD FOOTER ELEMENTS
+   Keep these hidden if an older HTML footer still exists.
+========================================================= */
+
+.footer-logo,
+.footer-by,
+.footer-brand,
+.footer-column {
+    display: none;
 }
 
 /* =========================================================
@@ -1225,11 +1199,48 @@ footer {
 ========================================================= */
 
 @media (min-width: 901px) {
-    /* Give the donation/community-service block more breathing
-       room on the left instead of sitting flush against center. */
+
     .donation-hours {
         padding-left: 90px;
         padding-right: 30px;
+    }
+
+    /* Care kits: 5 on top, 4 centered underneath */
+    .care-items-grid {
+        grid-template-columns: repeat(10, 1fr) !important;
+        grid-auto-flow: row;
+    }
+
+    .care-item {
+        grid-column: span 2;
+        border-right: 1px solid var(--line) !important;
+    }
+
+    .care-item:nth-child(5) {
+        border-right: none !important;
+    }
+
+    .care-item:nth-child(6) {
+        grid-column: 2 / span 2 !important;
+    }
+
+    .care-item:nth-child(7) {
+        grid-column: 4 / span 2 !important;
+    }
+
+    .care-item:nth-child(8) {
+        grid-column: 6 / span 2 !important;
+    }
+
+    .care-item:nth-child(9) {
+        grid-column: 8 / span 2 !important;
+        border-right: none !important;
+    }
+
+    .featured-care {
+        background: transparent !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
     }
 }
 
@@ -1591,51 +1602,32 @@ footer {
 
     /* FOOTER */
 
-    .footer-container {
+    footer .footer-content {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        padding: 55px 25px;
-    }
-
-    .footer-brand,
-    .footer-column {
-        width: 100%;
-        align-items: center;
-    }
-
-    .footer-logo {
-        font-size: 40px;
-    }
-
-    .footer-content {
-        width: 100%;
-        max-width: 100%;
-        padding: 25px 15px 10px;
+        padding: 28px 15px 10px;
         gap: 5px;
     }
 
-    .footer-content h3 {
-        font-size: 24px;
+    footer .footer-content h3 {
+        font-size: 27px;
     }
 
-    .footer-content > p {
+    footer .footer-content > p {
         font-size: 9px;
     }
 
-    .footer-content .social-icons {
+    footer .social-icons {
         gap: 7px;
         margin-top: 3px;
     }
 
-    .footer-content .social-icons a {
+    footer .social-icons a {
         width: 28px;
         height: 28px;
         font-size: 12px;
     }
 
-    .footer-content .copyright {
+    footer .footer-content .copyright {
         font-size: 8px;
         padding: 7px 8px 0;
     }
@@ -1860,30 +1852,32 @@ footer {
         height: 38px;
     }
 
-    .footer-content {
-        padding: 20px 12px 9px;
+    /* FOOTER — SMALL PHONE */
+
+    footer .footer-content {
+        padding: 23px 12px 9px;
         gap: 4px;
     }
 
-    .footer-content h3 {
-        font-size: 22px;
+    footer .footer-content h3 {
+        font-size: 24px;
     }
 
-    .footer-content > p {
+    footer .footer-content > p {
         font-size: 8px;
     }
 
-    .footer-content .social-icons {
+    footer .social-icons {
         gap: 6px;
     }
 
-    .footer-content .social-icons a {
+    footer .social-icons a {
         width: 27px;
         height: 27px;
         font-size: 11px;
     }
 
-    .footer-content .copyright {
+    footer .footer-content .copyright {
         font-size: 7px;
         padding: 6px 6px 0;
     }
@@ -1897,51 +1891,5 @@ footer {
 
     .large-card-top {
         height: 220px;
-    }
-}
-
-/* =========================================================
-   CARE KITS FINAL DESKTOP FIX
-   5 items on the first row, 4 centered on the second row.
-========================================================= */
-
-@media (min-width: 901px) {
-    /* 10 virtual tracks (2 per card) so a 4-item row can be
-       offset by half a card-width on each side for true centering */
-    .care-items-grid {
-        grid-template-columns: repeat(10, 1fr) !important;
-        grid-auto-flow: row;
-    }
-
-    .care-item {
-        grid-column: span 2;
-        border-right: 1px solid var(--line) !important;
-    }
-
-    .care-item:nth-child(5) {
-        border-right: none !important;
-    }
-
-    .care-item:nth-child(6) {
-        grid-column: 2 / span 2 !important;
-    }
-
-    .care-item:nth-child(7) {
-        grid-column: 4 / span 2 !important;
-    }
-
-    .care-item:nth-child(8) {
-        grid-column: 6 / span 2 !important;
-    }
-
-    .care-item:nth-child(9) {
-        grid-column: 8 / span 2 !important;
-        border-right: none !important;
-    }
-
-    .featured-care {
-        background: transparent !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
     }
 }
