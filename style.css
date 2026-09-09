@@ -1,3 +1,4 @@
+
 /* =========================================================
    HER CARE — STYLE.CSS
 ========================================================= */
@@ -927,6 +928,10 @@ header {
     border-radius: 0;
 }
 
+.featured-care .care-icon {
+    margin-top: 0;
+}
+
 /* =========================================================
    PROVIDED BY US
 ========================================================= */
@@ -1079,7 +1084,7 @@ header {
 }
 
 /* =========================================================
-   FOOTER — SAME STYLE AS HOME
+   FOOTER — HOME STYLE
 ========================================================= */
 
 footer {
@@ -1090,108 +1095,161 @@ footer {
     text-align: center;
 }
 
-/* Hide the old large four-column footer layout */
-footer .footer-container {
-    display: none !important;
-}
-
-/* Main compact Home footer */
-footer .footer-content {
+.footer-content {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 28px 20px 12px;
+    padding: 55px 30px 15px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 45px;
 
-    gap: 5px;
+    align-items: start;
     text-align: center;
 }
 
-/* HerCare title */
-footer .footer-content h3 {
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
     font-family: "Cormorant Garamond", serif;
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 1;
+    font-size: 40px;
     color: #302A35;
-    margin: 0;
+    line-height: 1;
 }
 
-/* Make footer logo look like the Home design */
-footer .footer-content h3::first-letter {
+.footer-logo span {
     color: #E779A0;
+    font-style: italic;
 }
 
-/* Footer tagline */
-footer .footer-content > p {
-    margin: 0;
-    font-size: 10px;
-    line-height: 1.5;
+.footer-by {
+    margin-top: 5px;
+    font-size: 12px;
     color: #625967;
 }
 
-/* Social icons */
-footer .social-icons {
+.footer-brand p {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #625967;
+}
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-column h4 {
+    color: #302A35;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.footer-column a,
+.footer-column p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #625967;
+}
+
+.footer-column a:hover {
+    color: #E66F98;
+}
+
+/* =========================================================
+   FOOTER SOCIAL ICONS
+========================================================= */
+
+.footer-content .social-icons,
+.social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
-footer .social-icons a {
-    width: 30px;
-    height: 30px;
-
+.footer-content .social-icons a,
+.social-icons a {
+    width: 32px;
+    height: 32px;
+    background: #F7C6D9;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: #F7C6D9;
-    border-radius: 50%;
-
-    color: #625967;
     font-size: 13px;
-
+    color: #5F5360;
     transition: .25s ease;
 }
 
-footer .social-icons a:hover {
+.footer-content .social-icons a:hover,
+.social-icons a:hover {
     transform: translateY(-3px);
     background: #EBA9C4;
 }
 
-/* Copyright */
-footer .footer-content .copyright {
+/* =========================================================
+   FOOTER COPYRIGHT
+========================================================= */
+
+.footer-content .copyright,
+.copyright {
+    grid-column: 1 / -1;
     width: 100%;
-    max-width: 1000px;
-
-    border-top: 1px solid #E9BFD0;
-
-    padding: 7px 10px 0;
-    margin-top: 4px;
-
+    border-top: 1px solid #e9bfd0;
+    padding: 10px 10px 0;
+    margin-top: 10px;
     text-align: center;
-
-    font-size: 9px;
-    line-height: 1.4;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
     color: #746976;
 }
 
 /* =========================================================
-   OLD FOOTER ELEMENTS
-   Keep these hidden if an older HTML footer still exists.
+   OLD FOOTER CONTAINER SUPPORT
 ========================================================= */
 
-.footer-logo,
-.footer-by,
-.footer-brand,
-.footer-column {
-    display: none;
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 55px 30px 15px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.footer-container .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 /* =========================================================
@@ -1205,7 +1263,11 @@ footer .footer-content .copyright {
         padding-right: 30px;
     }
 
-    /* Care kits: 5 on top, 4 centered underneath */
+    /* CARE KIT DESKTOP:
+       5 items on first row
+       4 centered on second row
+    */
+
     .care-items-grid {
         grid-template-columns: repeat(10, 1fr) !important;
         grid-auto-flow: row;
@@ -1293,6 +1355,13 @@ footer .footer-content .copyright {
 
     .provided-item:nth-child(even) {
         border-right: none;
+    }
+
+    /* FOOTER TABLET */
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
     }
 }
 
@@ -1602,34 +1671,62 @@ footer .footer-content .copyright {
 
     /* FOOTER */
 
-    footer .footer-content {
+    .footer-content {
         width: 100%;
-        padding: 28px 15px 10px;
-        gap: 5px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        padding: 45px 20px 15px;
     }
 
-    footer .footer-content h3 {
-        font-size: 27px;
+    .footer-brand,
+    .footer-column {
+        width: 100%;
+        align-items: center;
     }
 
-    footer .footer-content > p {
-        font-size: 9px;
+    .footer-logo {
+        font-size: 38px;
     }
 
-    footer .social-icons {
-        gap: 7px;
-        margin-top: 3px;
+    .footer-by {
+        font-size: 11px;
     }
 
-    footer .social-icons a {
-        width: 28px;
-        height: 28px;
+    .footer-brand p {
+        font-size: 12px;
+        margin-top: 12px;
+    }
+
+    .footer-column h4 {
+        font-size: 13px;
+    }
+
+    .footer-column a,
+    .footer-column p {
+        font-size: 11px;
+    }
+
+    .footer-content .social-icons,
+    .social-icons {
+        margin-top: 5px;
+    }
+
+    .footer-content .social-icons a,
+    .social-icons a {
+        width: 30px;
+        height: 30px;
         font-size: 12px;
     }
 
-    footer .footer-content .copyright {
-        font-size: 8px;
-        padding: 7px 8px 0;
+    .footer-content .copyright,
+    .copyright {
+        width: 100%;
+        font-size: 9px;
+        padding-top: 8px;
+        margin-top: 5px;
     }
 
     /* CARE KITS */
@@ -1852,34 +1949,36 @@ footer .footer-content .copyright {
         height: 38px;
     }
 
-    /* FOOTER — SMALL PHONE */
+    /* SMALL PHONE FOOTER */
 
-    footer .footer-content {
-        padding: 23px 12px 9px;
-        gap: 4px;
+    .footer-content {
+        padding: 40px 15px 12px;
+        gap: 24px;
     }
 
-    footer .footer-content h3 {
-        font-size: 24px;
+    .footer-logo {
+        font-size: 34px;
     }
 
-    footer .footer-content > p {
-        font-size: 8px;
+    .footer-column h4 {
+        font-size: 12px;
     }
 
-    footer .social-icons {
-        gap: 6px;
+    .footer-column a,
+    .footer-column p {
+        font-size: 10px;
     }
 
-    footer .social-icons a {
-        width: 27px;
-        height: 27px;
+    .footer-content .social-icons a,
+    .social-icons a {
+        width: 28px;
+        height: 28px;
         font-size: 11px;
     }
 
-    footer .footer-content .copyright {
-        font-size: 7px;
-        padding: 6px 6px 0;
+    .footer-content .copyright,
+    .copyright {
+        font-size: 8px;
     }
 
     .inner-card-grid,
