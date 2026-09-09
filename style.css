@@ -541,9 +541,9 @@ header {
 }
 
 .white-care {
-    background: #FFFFFF;
+    background: #FFFFFF !important;
     border: 2px solid #F0C7D6;
-    color: #ED7199;
+    color: #ED7199 !important;
 }
 
 .what-we-do .what-card h3 {
@@ -1224,6 +1224,15 @@ footer {
    TABLET
 ========================================================= */
 
+@media (min-width: 901px) {
+    /* Give the donation/community-service block more breathing
+       room on the left instead of sitting flush against center. */
+    .donation-hours {
+        padding-left: 90px;
+        padding-right: 30px;
+    }
+}
+
 @media (max-width: 900px) {
 
     .what-we-do .what-container {
@@ -1891,58 +1900,6 @@ footer {
     }
 }
 
-
-/* =========================================================
-   FINAL UPDATES FROM PROJECT NOTES
-========================================================= */
-
-.get-involved .large-card-heart,
-.large-inner-card .large-card-heart {
-    font-family: "Montserrat", sans-serif;
-    font-size: 34px;
-    line-height: 1;
-}
-
-.donation-hours {
-    text-align: center;
-}
-
-@media (max-width: 600px) {
-    .donation-hours {
-        width: 100%;
-        padding: 35px 20px 5px;
-    }
-
-    .donation-hours h2 {
-        font-size: 34px;
-    }
-
-    .donation-hours p:last-child {
-        font-size: 13px;
-    }
-
-    .provided-items {
-        grid-template-columns: 1fr;
-        row-gap: 35px;
-    }
-
-    .provided-item:nth-child(odd),
-    .provided-item:nth-child(even) {
-        border-right: none;
-        border-bottom: 1px solid #E99DB9;
-    }
-
-    .provided-item:last-child {
-        border-bottom: none;
-    }
-}
-
-@media (max-width: 400px) {
-    .donation-hours h2 {
-        font-size: 30px;
-    }
-}
-
 /* =========================================================
    CARE KITS FINAL DESKTOP FIX
    5 items on the first row, 4 centered on the second row.
@@ -1987,10 +1944,4 @@ footer {
         border-radius: 0 !important;
         box-shadow: none !important;
     }
-}
-
-/* Remove the old extra donation message under WHAT WE DO. */
-.care-kit-heading::after {
-    content: none !important;
-    display: none !important;
 }
