@@ -1221,7 +1221,10 @@ footer {
     margin-top: 10px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-size: 10px;
+
+    /* FIXED COPYRIGHT SIZE */
+    font-size: 14px;
+
     color: #746976;
 }
 
@@ -1306,6 +1309,10 @@ footer {
     }
 }
 
+/* =========================================================
+   TABLET / SMALL DESKTOP
+========================================================= */
+
 @media (max-width: 900px) {
 
     .what-we-do .what-container {
@@ -1362,6 +1369,11 @@ footer {
     .footer-content {
         grid-template-columns: 1fr 1fr;
         gap: 35px;
+    }
+
+    .footer-content .copyright,
+    .copyright {
+        font-size: 13px;
     }
 }
 
@@ -1721,10 +1733,12 @@ footer {
         font-size: 12px;
     }
 
+    /* FIXED MOBILE COPYRIGHT */
+
     .footer-content .copyright,
     .copyright {
         width: 100%;
-        font-size: 9px;
+        font-size: 11px;
         padding-top: 8px;
         margin-top: 5px;
     }
@@ -1976,9 +1990,12 @@ footer {
         font-size: 11px;
     }
 
+    /* FIXED SMALL PHONE COPYRIGHT */
+
     .footer-content .copyright,
     .copyright {
-        font-size: 8px;
+        font-size: 10px;
+        padding-top: 8px;
     }
 
     .inner-card-grid,
@@ -1992,3 +2009,4 @@ footer {
         height: 220px;
     }
 }
+
