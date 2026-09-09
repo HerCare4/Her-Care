@@ -1,4 +1,3 @@
-
 /* =========================================================
    HER CARE — STYLE.CSS
 ========================================================= */
@@ -1212,6 +1211,7 @@ footer {
    FOOTER COPYRIGHT
 ========================================================= */
 
+footer .copyright,
 .footer-content .copyright,
 .copyright {
     grid-column: 1 / -1;
@@ -1221,11 +1221,9 @@ footer {
     margin-top: 10px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
-
-    /* FIXED COPYRIGHT SIZE */
     font-size: 14px;
-
     color: #746976;
+    display: block;
 }
 
 /* =========================================================
@@ -1371,8 +1369,12 @@ footer {
         gap: 35px;
     }
 
+    footer .copyright,
     .footer-content .copyright,
     .copyright {
+        grid-column: 1 / -1;
+        width: 100%;
+        border-top: 1px solid #e9bfd0;
         font-size: 13px;
     }
 }
@@ -1735,12 +1737,17 @@ footer {
 
     /* FIXED MOBILE COPYRIGHT */
 
+    footer .copyright,
     .footer-content .copyright,
     .copyright {
+        grid-column: auto;
         width: 100%;
+        border-top: 1px solid #e9bfd0;
         font-size: 11px;
-        padding-top: 8px;
+        padding: 8px 10px 0;
         margin-top: 5px;
+        text-align: center;
+        display: block;
     }
 
     /* CARE KITS */
@@ -1992,10 +1999,17 @@ footer {
 
     /* FIXED SMALL PHONE COPYRIGHT */
 
+    footer .copyright,
     .footer-content .copyright,
     .copyright {
+        grid-column: auto;
+        width: 100%;
+        border-top: 1px solid #e9bfd0;
         font-size: 10px;
-        padding-top: 8px;
+        padding: 8px 10px 0;
+        margin-top: 5px;
+        text-align: center;
+        display: block;
     }
 
     .inner-card-grid,
@@ -2009,4 +2023,3 @@ footer {
         height: 220px;
     }
 }
-
