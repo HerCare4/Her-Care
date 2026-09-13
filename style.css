@@ -347,7 +347,7 @@ header {
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
@@ -362,8 +362,8 @@ header {
 }
 
 /* =========================================================
-   TEAM PHOTOS — DESKTOP
-   Shows the full photo without cutting off the subject.
+   TEAM PHOTO FIX
+   Uses a portrait ratio so the photos are not cropped.
 ========================================================= */
 
 .team-photo {
@@ -373,9 +373,7 @@ header {
     height: auto;
     overflow: visible;
     background: #FFF9F5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     border-bottom: 1px solid #edbfd0;
 }
 
@@ -383,9 +381,16 @@ header {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center center;
-    background: #FFF9F5;
+}
+
+/* Keep each portrait centered */
+.team-card:nth-child(1) .team-photo img,
+.team-card:nth-child(2) .team-photo img,
+.team-card:nth-child(3) .team-photo img,
+.team-card:nth-child(4) .team-photo img {
+    object-position: center center;
 }
 
 .team-heart {
@@ -541,7 +546,7 @@ header {
 
 .what-we-do .what-card h3 {
     margin: 18px 10px 10px;
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 24px;
     line-height: 1.15;
     color: #262331;
@@ -577,7 +582,7 @@ header {
 }
 
 .cta h2 {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 42px;
     color: #625666;
     line-height: 1.2;
@@ -613,7 +618,7 @@ header {
 }
 
 .contact-hero h1 {
-    font-family: "Cormorant Garamond",serif !important;
+    font-family: "Cormorant Garamond", serif !important;
     font-size: 58px;
     font-weight: 600;
     margin: 10px 0 15px;
@@ -646,7 +651,7 @@ header {
 }
 
 .contact-intro h2 {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 45px;
     font-weight: 600;
     margin: 10px 0 20px;
@@ -683,7 +688,7 @@ header {
 }
 
 .contact-note strong {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 22px;
 }
 
@@ -702,7 +707,7 @@ header {
 
 .contact-card h2,
 .contact-card h3 {
-    font-family: "Cormorant Garamond",serif !important;
+    font-family: "Cormorant Garamond", serif !important;
     color: var(--text);
 }
 
@@ -785,7 +790,7 @@ header {
 }
 
 .page-cta h2 {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 38px;
     margin: 8px 0 25px;
     color: var(--text);
@@ -902,7 +907,7 @@ header {
 
 .care-item h3,
 .provided-item h3 {
-    font: 600 27px/1.15 "Cormorant Garamond",serif;
+    font: 600 27px/1.15 "Cormorant Garamond", serif;
     color: #262331;
     margin-bottom: 10px;
 }
@@ -958,7 +963,7 @@ header {
 }
 
 .provided-content h2 {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 40px;
     line-height: 1.1;
     color: var(--dark);
@@ -972,7 +977,7 @@ header {
 }
 
 .provided-heart {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 85px;
     line-height: 1;
     color: #ED7199;
@@ -985,7 +990,7 @@ header {
     margin: auto;
     padding: 35px 0 80px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .provided-item {
@@ -1014,7 +1019,7 @@ header {
 }
 
 .inner-section-heading h2 {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 40px;
     color: var(--text);
     margin-bottom: 10px;
@@ -1034,12 +1039,12 @@ header {
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
 .four-card-grid {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .inner-card {
@@ -1067,8 +1072,16 @@ header {
     overflow: hidden;
 }
 
+.large-card-top img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center center;
+}
+
 .large-inner-card h3 {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 29px;
     margin: 48px 15px 10px;
     color: #262331;
@@ -1080,14 +1093,6 @@ header {
     font-size: 13px;
     line-height: 1.65;
     color: var(--muted);
-}
-
-.large-card-top img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
-    object-position: center center;
 }
 
 /* =========================================================
@@ -1103,7 +1108,6 @@ footer {
 }
 
 .footer-container {
-    width: 100%;
     max-width: 1100px;
     margin: auto;
     padding: 65px 30px;
@@ -1112,15 +1116,78 @@ footer {
     gap: 45px;
 }
 
-.footer-brand {
+.footer-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 20px 12px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #302a35;
+    margin: 0;
+}
+
+.footer-content > p {
+    margin: 0;
+    font-size: 10px;
+    color: #625967;
+}
+
+.footer-content .social-icons,
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 3px;
+}
+
+.footer-content .social-icons a,
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    background: #F7C6D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: .25s ease;
+}
+
+.footer-content .social-icons a:hover,
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+.footer-content .copyright,
+footer > .copyright,
+footer .footer-container + .copyright,
+footer .copyright {
+    display: block !important;
+    width: 100% !important;
+    border-top: 1px solid #e9bfd0 !important;
+    padding: 10px 10px 0 !important;
+    margin: 10px 0 0 !important;
+    text-align: center !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 14px !important;
+    color: #746976 !important;
 }
 
 .footer-logo {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 40px;
     color: #302a35;
     line-height: 1;
@@ -1145,8 +1212,6 @@ footer {
 .footer-column {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
     gap: 12px;
 }
 
@@ -1165,80 +1230,6 @@ footer {
 
 .footer-column a:hover {
     color: #E66F98;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    margin-top: 15px;
-}
-
-.social-icons a {
-    width: 30px;
-    height: 30px;
-    background: #F7C6D9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    transition: .25s ease;
-}
-
-.social-icons a:hover {
-    transform: translateY(-3px);
-    background: #EBA9C4;
-}
-
-.copyright {
-    display: block;
-    width: 100%;
-    border-top: 1px solid #e9bfd0;
-    padding: 10px 10px 0;
-    margin: 0;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 9px;
-    color: #746976;
-}
-
-/* =========================================================
-   OLD FOOTER CONTENT
-   Only applies when an older footer structure is present.
-========================================================= */
-
-.footer-content {
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 25px 20px 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    text-align: center;
-}
-
-.footer-content h3 {
-    font-family: "Cormorant Garamond",serif;
-    font-size: 27px;
-    font-weight: 600;
-    color: #302a35;
-    margin: 0;
-}
-
-.footer-content > p {
-    margin: 0;
-    font-size: 10px;
-    color: #625967;
-}
-
-.footer-content .social-icons {
-    justify-content: center;
-    margin-top: 3px;
 }
 
 /* =========================================================
@@ -1260,7 +1251,7 @@ footer {
     }
 
     .care-items-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
     }
 
@@ -1276,40 +1267,24 @@ footer {
         font-size: 34px;
     }
 
+    .provided-items {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+
+    .provided-item:nth-child(odd) {
+        border-right: 1px solid #E99DB9;
+    }
+
+    .provided-item:nth-child(even) {
+        border-right: none;
+    }
+
     .inner-card-grid,
     .care-kits-grid,
     .four-card-grid,
     .three-card-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    /* TABLET TEAM PHOTOS */
-
-    .team-container {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .team-photo {
-        aspect-ratio: 3 / 4;
-        height: auto;
-    }
-
-    .team-photo img {
-        object-fit: contain;
-        object-position: center center;
-    }
-
-    /* TABLET FOOTER */
-
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-
-    .footer-brand,
-    .footer-column {
-        align-items: flex-start;
-        text-align: left;
     }
 }
 
@@ -1438,7 +1413,8 @@ footer {
 
     .hero-image {
         width: 100%;
-        height: 360px;
+        height: auto;
+        aspect-ratio: 1 / 1;
         border-radius: 0 0 55px 0;
     }
 
@@ -1488,25 +1464,26 @@ footer {
         width: 100%;
     }
 
-    /* MOBILE TEAM PHOTO
-       Keeps the whole image visible.
+    /*
+       IMPORTANT:
+       Keep the team photos portrait on phones.
+       This prevents the images from becoming tiny,
+       stretched, or heavily cropped.
     */
 
     .team-photo {
         width: 100%;
-        height: 250px;
-        aspect-ratio: auto;
+        aspect-ratio: 3 / 4;
+        height: auto;
         overflow: visible;
         background: #FFF9F5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
     }
 
     .team-photo img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         object-position: center center;
         background: #FFF9F5;
     }
@@ -1622,7 +1599,7 @@ footer {
         font-size: 32px;
     }
 
-    /* FOOTER — MOBILE ONLY */
+    /* FOOTER */
 
     .footer-container {
         width: 100%;
@@ -1636,19 +1613,10 @@ footer {
     .footer-column {
         width: 100%;
         align-items: center;
-        text-align: center;
     }
 
     .footer-logo {
         font-size: 40px;
-    }
-
-    .footer-brand p {
-        text-align: center;
-    }
-
-    .social-icons {
-        justify-content: center;
     }
 
     .footer-content {
@@ -1677,7 +1645,7 @@ footer {
         font-size: 12px;
     }
 
-    .copyright {
+    .footer-content .copyright {
         font-size: 8px;
         padding: 7px 8px 0;
     }
@@ -1817,6 +1785,21 @@ footer {
         font-size: 13px;
         max-width: 250px;
     }
+
+    /* DONATION HOURS */
+
+    .donation-hours {
+        width: 100%;
+        padding: 35px 20px 5px;
+    }
+
+    .donation-hours h2 {
+        font-size: 34px;
+    }
+
+    .donation-hours p:last-child {
+        font-size: 13px;
+    }
 }
 
 /* =========================================================
@@ -1846,10 +1829,14 @@ footer {
         font-size: 43px;
     }
 
+    /*
+       Keep team portraits proportional on small phones.
+    */
+
     .team-photo {
         width: 100%;
-        height: 250px;
-        aspect-ratio: auto;
+        aspect-ratio: 3 / 4;
+        height: auto;
         overflow: visible;
         background: #FFF9F5;
     }
@@ -1857,7 +1844,7 @@ footer {
     .team-photo img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         object-position: center center;
     }
 
@@ -1932,7 +1919,7 @@ footer {
         font-size: 11px;
     }
 
-    .copyright {
+    .footer-content .copyright {
         font-size: 7px;
         padding: 6px 6px 0;
     }
@@ -1975,62 +1962,7 @@ footer {
 }
 
 /* =========================================================
-   PROVIDED ITEMS — TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .provided-items {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 40px;
-    }
-
-    .provided-item:nth-child(odd) {
-        border-right: 1px solid #E99DB9;
-    }
-
-    .provided-item:nth-child(even) {
-        border-right: none;
-    }
-}
-
-/* =========================================================
-   MOBILE DONATION / PROVIDED
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .donation-hours {
-        width: 100%;
-        padding: 35px 20px 5px;
-    }
-
-    .donation-hours h2 {
-        font-size: 34px;
-    }
-
-    .donation-hours p:last-child {
-        font-size: 13px;
-    }
-
-    .provided-items {
-        grid-template-columns: 1fr;
-        row-gap: 35px;
-    }
-
-    .provided-item:nth-child(odd),
-    .provided-item:nth-child(even) {
-        border-right: none;
-        border-bottom: 1px solid #E99DB9;
-    }
-
-    .provided-item:last-child {
-        border-bottom: none;
-    }
-}
-
-/* =========================================================
-   CARE KITS — DESKTOP
+   CARE KITS FINAL DESKTOP FIX
    5 items on first row, 4 centered on second row.
 ========================================================= */
 
@@ -2067,9 +1999,7 @@ footer {
     }
 }
 
-/* =========================================================
-   REMOVE OLD DONATION MESSAGE
-========================================================= */
+/* Remove old duplicate donation message. */
 
 .care-kit-heading::after {
     content: none !important;
@@ -2077,36 +2007,20 @@ footer {
 }
 
 /* =========================================================
-   MISSION IMAGE FIX
-========================================================= */
-
-.large-card-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.large-card-top img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
-    object-position: center center;
-}
-
-/* =========================================================
-   TEAM PHOTO FINAL FIX
+   FINAL TEAM PHOTO POSITION
 ========================================================= */
 
 .team-photo img {
-    object-fit: contain;
     object-position: center center;
 }
 
 /* =========================================================
-   KEEP MISSION IMAGES CENTERED ON MOBILE
+   MISSION IMAGE FIX
 ========================================================= */
+
+.large-card-top img {
+    object-position: center center;
+}
 
 @media (max-width: 768px) {
 
@@ -2118,9 +2032,6 @@ footer {
     }
 
     .team-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
         object-position: center center;
     }
 }
