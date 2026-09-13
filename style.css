@@ -261,7 +261,12 @@ header {
     width: 100%;
     height: 100%;
     border: 1px solid rgba(217,154,181,.7);
-    background: linear-gradient(135deg,#FFF9F5,#FCE4EC 55%,#DCC6E0);
+    background: linear-gradient(
+        135deg,
+        #FFF9F5,
+        #FCE4EC 55%,
+        #DCC6E0
+    );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,7 +352,7 @@ header {
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
@@ -532,7 +537,7 @@ header {
 
 .what-we-do .what-card h3 {
     margin: 18px 10px 10px;
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 24px;
     line-height: 1.15;
     color: #262331;
@@ -568,7 +573,7 @@ header {
 }
 
 .cta h2 {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 42px;
     color: #625666;
     line-height: 1.2;
@@ -600,11 +605,15 @@ header {
 .contact-hero {
     text-align: center;
     padding: 80px 20px 65px;
-    background: linear-gradient(135deg,var(--blush),var(--lavender));
+    background: linear-gradient(
+        135deg,
+        var(--blush),
+        var(--lavender)
+    );
 }
 
 .contact-hero h1 {
-    font-family: "Cormorant Garamond",serif !important;
+    font-family: "Cormorant Garamond", serif !important;
     font-size: 58px;
     font-weight: 600;
     margin: 10px 0 15px;
@@ -637,7 +646,7 @@ header {
 }
 
 .contact-intro h2 {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 45px;
     font-weight: 600;
     margin: 10px 0 20px;
@@ -674,7 +683,7 @@ header {
 }
 
 .contact-note strong {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 22px;
 }
 
@@ -693,7 +702,7 @@ header {
 
 .contact-card h2,
 .contact-card h3 {
-    font-family: "Cormorant Garamond",serif !important;
+    font-family: "Cormorant Garamond", serif !important;
     color: var(--text);
 }
 
@@ -776,7 +785,7 @@ header {
 }
 
 .page-cta h2 {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 38px;
     margin: 8px 0 25px;
     color: var(--text);
@@ -893,7 +902,7 @@ header {
 
 .care-item h3,
 .provided-item h3 {
-    font: 600 27px/1.15 "Cormorant Garamond",serif;
+    font: 600 27px/1.15 "Cormorant Garamond", serif;
     color: #262331;
     margin-bottom: 10px;
 }
@@ -949,7 +958,7 @@ header {
 }
 
 .provided-content h2 {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 40px;
     line-height: 1.1;
     color: var(--dark);
@@ -963,7 +972,7 @@ header {
 }
 
 .provided-heart {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 85px;
     line-height: 1;
     color: #ED7199;
@@ -976,7 +985,7 @@ header {
     margin: auto;
     padding: 35px 0 80px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .provided-item {
@@ -1005,7 +1014,7 @@ header {
 }
 
 .inner-section-heading h2 {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 40px;
     color: var(--text);
     margin-bottom: 10px;
@@ -1025,12 +1034,12 @@ header {
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
 .four-card-grid {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .inner-card {
@@ -1067,7 +1076,7 @@ header {
 }
 
 .large-inner-card h3 {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 29px;
     margin: 48px 15px 10px;
     color: #262331;
@@ -1093,7 +1102,9 @@ footer {
     text-align: center;
 }
 
-/* NEW HOME-STYLE FOOTER */
+/* =========================================================
+   NEW HOME FOOTER
+========================================================= */
 
 .footer-container {
     width: 100%;
@@ -1113,7 +1124,7 @@ footer {
 }
 
 .footer-logo {
-    font-family: "Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 40px;
     color: #302a35;
     line-height: 1;
@@ -1183,7 +1194,9 @@ footer {
     background: #EBA9C4;
 }
 
-/* COPYRIGHT */
+/* =========================================================
+   COPYRIGHT
+========================================================= */
 
 footer > .copyright,
 footer .footer-content > .copyright,
@@ -1202,63 +1215,187 @@ footer .copyright {
 
 /* =========================================================
    OLD FOOTER COMPATIBILITY
-   Makes older pages look like the Home footer instead
-   of collapsing everything into one giant column.
+   Converts older footer HTML into a Home-style layout.
 ========================================================= */
 
 .footer-content {
     width: 100%;
     max-width: 1100px;
     margin: auto;
-    padding: 65px 30px 20px;
-    text-align: center;
+    padding: 60px 30px 25px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    grid-auto-flow: row;
+    column-gap: 45px;
+    row-gap: 8px;
+    text-align: left;
+    align-items: start;
 }
 
+/* Old footer logo */
+
 .footer-content h3 {
-    font-family: "Cormorant Garamond",serif;
+    grid-column: 1;
+    grid-row: 1;
+    font-family: "Cormorant Garamond", serif;
     font-size: 40px;
     font-weight: 500;
     color: #302a35;
-    margin: 0 0 4px;
+    margin: 0;
+    line-height: 1;
 }
 
-.footer-content > p {
-    margin: 0 0 8px;
+/* Old footer paragraphs */
+
+.footer-content > p:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #625967;
+    line-height: 1.5;
+}
+
+.footer-content > p:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 15px 0 0;
     font-size: 14px;
     color: #625967;
     line-height: 1.6;
 }
 
-/* Old footer headings */
+/* =========================================================
+   OLD FOOTER HEADINGS
+========================================================= */
 
 .footer-content h4 {
     color: #36303A;
     font-size: 16px;
-    margin: 25px 0 10px;
+    margin: 0 0 7px;
+    line-height: 1.3;
 }
 
-/* Old footer links */
+/* EXPLORE */
 
-.footer-content a {
+.footer-content h4:nth-of-type(1) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* GET INVOLVED */
+
+.footer-content h4:nth-of-type(2) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/* FOLLOW HERCARE */
+
+.footer-content h4:nth-of-type(3) {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+/* =========================================================
+   OLD FOOTER LINKS
+========================================================= */
+
+.footer-content > a {
     color: #625967;
     font-size: 14px;
+    line-height: 1.5;
+    width: fit-content;
 }
 
-.footer-content a:hover {
+.footer-content > a:hover {
     color: #E66F98;
 }
 
-/* Old footer social icons */
+/* Explore links */
 
-.footer-content .social-icons {
-    justify-content: center;
-    margin-top: 15px;
+.footer-content > a:nth-of-type(1) {
+    grid-column: 2;
+    grid-row: 2;
 }
 
-/* Old footer copyright */
+.footer-content > a:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 3;
+}
 
-.footer-content .copyright {
-    margin-top: 25px !important;
+.footer-content > a:nth-of-type(3) {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.footer-content > a:nth-of-type(4) {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+/* Get involved links */
+
+.footer-content > a:nth-of-type(5) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.footer-content > a:nth-of-type(6) {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.footer-content > a:nth-of-type(7) {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.footer-content > a:nth-of-type(8) {
+    grid-column: 3;
+    grid-row: 5;
+}
+
+/* =========================================================
+   OLD FOOTER FOLLOW SECTION
+========================================================= */
+
+.footer-content h4:nth-of-type(3) ~ p {
+    grid-column: 4;
+    grid-row: 2;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #625967;
+}
+
+.footer-content h4:nth-of-type(3) ~ .social-icons {
+    grid-column: 4;
+    grid-row: 3;
+    justify-content: flex-start;
+    margin-top: 8px;
+}
+
+/* =========================================================
+   OLD FOOTER SOCIAL ICONS
+========================================================= */
+
+.footer-content .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-content .social-icons a {
+    width: 30px;
+    height: 30px;
+    background: #F7C6D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #625967;
 }
 
 /* =========================================================
@@ -1280,7 +1417,7 @@ footer .copyright {
     }
 
     .care-items-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
     }
 
@@ -1313,14 +1450,49 @@ footer .copyright {
     .care-kits-grid,
     .four-card-grid,
     .three-card-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    /* FOOTER */
+    /* NEW FOOTER */
 
     .footer-container {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
+    }
+
+    /* OLD FOOTER */
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+    }
+
+    .footer-content h3,
+    .footer-content > p:nth-of-type(1),
+    .footer-content > p:nth-of-type(2) {
+        grid-column: 1;
+    }
+
+    .footer-content h4:nth-of-type(1),
+    .footer-content > a:nth-of-type(1),
+    .footer-content > a:nth-of-type(2),
+    .footer-content > a:nth-of-type(3),
+    .footer-content > a:nth-of-type(4) {
+        grid-column: 2;
+    }
+
+    .footer-content h4:nth-of-type(2),
+    .footer-content > a:nth-of-type(5),
+    .footer-content > a:nth-of-type(6),
+    .footer-content > a:nth-of-type(7),
+    .footer-content > a:nth-of-type(8) {
+        grid-column: 1;
+    }
+
+    .footer-content h4:nth-of-type(3),
+    .footer-content h4:nth-of-type(3) ~ p,
+    .footer-content h4:nth-of-type(3) ~ .social-icons {
+        grid-column: 2;
     }
 }
 
@@ -1403,7 +1575,9 @@ footer .copyright {
         border-bottom: 1px solid #f0dce3;
     }
 
-    /* HERO */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero-container {
         display: flex;
@@ -1447,37 +1621,41 @@ footer .copyright {
         min-height: 58px;
     }
 
-    /* MOBILE HERO IMAGE */
+    /* =====================================================
+       MOBILE HERO IMAGE
+    ===================================================== */
 
     .hero-image {
         width: 100%;
-        height: auto;
-        min-height: 0;
-        overflow: visible;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
         border-radius: 0 0 55px 0;
     }
 
     .team-frame {
         width: 100%;
-        height: auto;
+        height: auto !important;
         padding: 10px;
     }
 
     .frame-inner {
         width: 100%;
-        height: auto;
+        height: auto !important;
         overflow: hidden;
     }
 
     .hero-team-photo {
-        width: 100%;
-        height: auto;
-        min-height: 0;
-        object-fit: contain;
-        object-position: center;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        object-fit: contain !important;
+        object-position: center !important;
     }
 
-    /* TEAM */
+    /* =====================================================
+       TEAM
+    ===================================================== */
 
     .team-section {
         width: 100%;
@@ -1521,7 +1699,7 @@ footer .copyright {
 
     .team-photo {
         width: 100%;
-        height: auto;
+        height: auto !important;
         min-height: 250px;
         overflow: visible;
         background: #FFF9F5;
@@ -1531,12 +1709,12 @@ footer .copyright {
     }
 
     .team-photo img {
-        width: 100%;
-        height: auto;
+        width: 100% !important;
+        height: auto !important;
         min-height: 250px;
         display: block;
-        object-fit: contain;
-        object-position: center center;
+        object-fit: contain !important;
+        object-position: center center !important;
         background: #FFF9F5;
     }
 
@@ -1559,7 +1737,9 @@ footer .copyright {
         font-size: 28px;
     }
 
-    /* WHAT WE DO */
+    /* =====================================================
+       WHAT WE DO
+    ===================================================== */
 
     .what-we-do {
         width: 100%;
@@ -1592,7 +1772,9 @@ footer .copyright {
         display: none;
     }
 
-    /* CTA */
+    /* =====================================================
+       CTA
+    ===================================================== */
 
     .cta {
         padding: 45px 20px;
@@ -1602,7 +1784,9 @@ footer .copyright {
         font-size: 34px;
     }
 
-    /* CONTACT */
+    /* =====================================================
+       CONTACT
+    ===================================================== */
 
     .contact-hero {
         padding: 60px 20px 50px;
@@ -1652,7 +1836,7 @@ footer .copyright {
     }
 
     /* =====================================================
-       FOOTER MOBILE
+       NEW FOOTER MOBILE
     ===================================================== */
 
     .footer-container {
@@ -1684,40 +1868,113 @@ footer .copyright {
         justify-content: center;
     }
 
-    /* OLD FOOTER MOBILE */
+    /* =====================================================
+       OLD FOOTER MOBILE
+       Stack cleanly like the Home footer.
+    ===================================================== */
 
     .footer-content {
         width: 100%;
         max-width: 100%;
-        padding: 45px 20px 15px;
+        padding: 50px 25px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
         text-align: center;
     }
 
     .footer-content h3 {
+        order: 1;
         font-size: 40px;
+        margin-bottom: 4px;
     }
 
-    .footer-content > p {
-        font-size: 13px;
+    .footer-content > p:nth-of-type(1) {
+        order: 2;
+        margin: 0 0 8px;
+        font-size: 14px;
+    }
+
+    .footer-content > p:nth-of-type(2) {
+        order: 3;
+        margin: 10px 0 20px;
+        font-size: 14px;
+        max-width: 320px;
     }
 
     .footer-content h4 {
-        font-size: 15px;
-        margin-top: 25px;
+        width: 100%;
+        font-size: 16px;
+        margin: 20px 0 10px;
     }
 
-    .footer-content .social-icons {
-        gap: 7px;
-        margin-top: 15px;
+    .footer-content h4:nth-of-type(1) {
+        order: 4;
     }
 
-    .footer-content .social-icons a {
-        width: 30px;
-        height: 30px;
-        font-size: 12px;
+    .footer-content h4:nth-of-type(2) {
+        order: 9;
     }
 
-    /* CARE KITS */
+    .footer-content h4:nth-of-type(3) {
+        order: 14;
+    }
+
+    .footer-content > a {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .footer-content > a:nth-of-type(1) {
+        order: 5;
+    }
+
+    .footer-content > a:nth-of-type(2) {
+        order: 6;
+    }
+
+    .footer-content > a:nth-of-type(3) {
+        order: 7;
+    }
+
+    .footer-content > a:nth-of-type(4) {
+        order: 8;
+    }
+
+    .footer-content > a:nth-of-type(5) {
+        order: 10;
+    }
+
+    .footer-content > a:nth-of-type(6) {
+        order: 11;
+    }
+
+    .footer-content > a:nth-of-type(7) {
+        order: 12;
+    }
+
+    .footer-content > a:nth-of-type(8) {
+        order: 13;
+    }
+
+    .footer-content h4:nth-of-type(3) ~ p {
+        order: 15;
+        margin: 0 0 10px;
+        max-width: 320px;
+        font-size: 14px;
+    }
+
+    .footer-content h4:nth-of-type(3) ~ .social-icons {
+        order: 16;
+        justify-content: center;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    /* =====================================================
+       CARE KITS
+    ===================================================== */
 
     .care-kit-items {
         padding: 55px 20px 60px;
@@ -1761,7 +2018,9 @@ footer .copyright {
         border-radius: 12px;
     }
 
-    /* PROVIDED */
+    /* =====================================================
+       PROVIDED
+    ===================================================== */
 
     .provided-care {
         padding: 0 20px 25px;
@@ -1802,7 +2061,9 @@ footer .copyright {
         border-bottom: none;
     }
 
-    /* INNER CARDS */
+    /* =====================================================
+       INNER CARDS
+    ===================================================== */
 
     .inner-card-section {
         padding: 55px 0 70px;
@@ -1889,18 +2150,18 @@ footer .copyright {
 
     .team-photo {
         width: 100%;
-        height: auto;
+        height: auto !important;
         min-height: 230px;
         overflow: visible;
         background: #FFF9F5;
     }
 
     .team-photo img {
-        width: 100%;
-        height: auto;
+        width: 100% !important;
+        height: auto !important;
         min-height: 230px;
-        object-fit: contain;
-        object-position: center center;
+        object-fit: contain !important;
+        object-position: center center !important;
     }
 
     .team-heart {
@@ -1952,7 +2213,7 @@ footer .copyright {
     }
 
     .footer-content {
-        padding: 40px 15px 12px;
+        padding: 40px 15px 15px;
     }
 
     .footer-content h3 {
@@ -2019,7 +2280,7 @@ footer .copyright {
 
 /* =========================================================
    CARE KITS FINAL DESKTOP FIX
-   5 items on first row, 4 centered on second row.
+   5 items first row, 4 centered second row.
 ========================================================= */
 
 @media (min-width: 901px) {
@@ -2055,7 +2316,9 @@ footer .copyright {
     }
 }
 
-/* Remove old duplicate donation message */
+/* =========================================================
+   REMOVE OLD DUPLICATE DONATION MESSAGE
+========================================================= */
 
 .care-kit-heading::after {
     content: none !important;
