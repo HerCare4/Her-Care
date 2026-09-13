@@ -261,12 +261,7 @@ header {
     width: 100%;
     height: 100%;
     border: 1px solid rgba(217,154,181,.7);
-    background: linear-gradient(
-        135deg,
-        #FFF9F5,
-        #FCE4EC 55%,
-        #DCC6E0
-    );
+    background: linear-gradient(135deg,#FFF9F5,#FCE4EC 55%,#DCC6E0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -352,7 +347,7 @@ header {
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 25px;
 }
 
@@ -537,7 +532,7 @@ header {
 
 .what-we-do .what-card h3 {
     margin: 18px 10px 10px;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 24px;
     line-height: 1.15;
     color: #262331;
@@ -573,7 +568,7 @@ header {
 }
 
 .cta h2 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 42px;
     color: #625666;
     line-height: 1.2;
@@ -605,15 +600,11 @@ header {
 .contact-hero {
     text-align: center;
     padding: 80px 20px 65px;
-    background: linear-gradient(
-        135deg,
-        var(--blush),
-        var(--lavender)
-    );
+    background: linear-gradient(135deg,var(--blush),var(--lavender));
 }
 
 .contact-hero h1 {
-    font-family: "Cormorant Garamond", serif !important;
+    font-family: "Cormorant Garamond",serif !important;
     font-size: 58px;
     font-weight: 600;
     margin: 10px 0 15px;
@@ -646,7 +637,7 @@ header {
 }
 
 .contact-intro h2 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 45px;
     font-weight: 600;
     margin: 10px 0 20px;
@@ -683,7 +674,7 @@ header {
 }
 
 .contact-note strong {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 22px;
 }
 
@@ -702,7 +693,7 @@ header {
 
 .contact-card h2,
 .contact-card h3 {
-    font-family: "Cormorant Garamond", serif !important;
+    font-family: "Cormorant Garamond",serif !important;
     color: var(--text);
 }
 
@@ -785,7 +776,7 @@ header {
 }
 
 .page-cta h2 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 38px;
     margin: 8px 0 25px;
     color: var(--text);
@@ -871,6 +862,8 @@ header {
     letter-spacing: 1px;
 }
 
+/* CARE KIT GRID */
+
 .care-items-grid {
     width: 100%;
     max-width: 1100px;
@@ -902,7 +895,7 @@ header {
 
 .care-item h3,
 .provided-item h3 {
-    font: 600 27px/1.15 "Cormorant Garamond", serif;
+    font: 600 27px/1.15 "Cormorant Garamond",serif;
     color: #262331;
     margin-bottom: 10px;
 }
@@ -958,7 +951,7 @@ header {
 }
 
 .provided-content h2 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 40px;
     line-height: 1.1;
     color: var(--dark);
@@ -972,7 +965,7 @@ header {
 }
 
 .provided-heart {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 85px;
     line-height: 1;
     color: #ED7199;
@@ -985,7 +978,7 @@ header {
     margin: auto;
     padding: 35px 0 80px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 
 .provided-item {
@@ -1014,7 +1007,7 @@ header {
 }
 
 .inner-section-heading h2 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 40px;
     color: var(--text);
     margin-bottom: 10px;
@@ -1034,12 +1027,12 @@ header {
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 25px;
 }
 
 .four-card-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
 }
 
 .inner-card {
@@ -1061,22 +1054,10 @@ header {
 .large-card-top {
     height: 230px;
     background: var(--blush);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.large-card-top img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
-    object-position: center center;
 }
 
 .large-inner-card h3 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 29px;
     margin: 48px 15px 10px;
     color: #262331;
@@ -1091,7 +1072,7 @@ header {
 }
 
 /* =========================================================
-   FOOTER — HOME STYLE
+   FOOTER
 ========================================================= */
 
 footer {
@@ -1103,7 +1084,7 @@ footer {
 }
 
 /* =========================================================
-   NEW HOME FOOTER
+   MAIN HOME-STYLE FOOTER
 ========================================================= */
 
 .footer-container {
@@ -1124,7 +1105,7 @@ footer {
 }
 
 .footer-logo {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 40px;
     color: #302a35;
     line-height: 1;
@@ -1169,6 +1150,10 @@ footer {
     color: #E66F98;
 }
 
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
 .social-icons {
     display: flex;
     justify-content: flex-start;
@@ -1195,195 +1180,76 @@ footer {
 }
 
 /* =========================================================
-   COPYRIGHT
+   COPYRIGHT — ALWAYS CENTERED
 ========================================================= */
 
 footer > .copyright,
-footer .footer-content > .copyright,
 footer .footer-container + .copyright,
+footer .footer-content > .copyright,
 footer .copyright {
-    display: block !important;
-    width: 100% !important;
-    border-top: 1px solid #e9bfd0 !important;
-    padding: 10px 10px 0 !important;
-    margin: 0 !important;
+    width: 100%;
+    max-width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border-top: 1px solid #e9bfd0;
+
+    padding: 10px 15px;
+    margin: 0 auto;
+
     text-align: center !important;
-    font-family: "Montserrat", sans-serif !important;
-    font-size: 14px !important;
-    color: #746976 !important;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #746976;
+
+    grid-column: 1 / -1;
 }
 
 /* =========================================================
-   OLD FOOTER COMPATIBILITY
-   Converts older footer HTML into a Home-style layout.
+   OLD / ALTERNATIVE FOOTER SUPPORT
 ========================================================= */
 
 .footer-content {
     width: 100%;
     max-width: 1100px;
     margin: auto;
-    padding: 60px 30px 25px;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
-    grid-auto-flow: row;
-    column-gap: 45px;
-    row-gap: 8px;
-    text-align: left;
-    align-items: start;
-}
+    padding: 45px 30px 15px;
 
-/* Old footer logo */
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    align-items: start;
+    justify-content: center;
+
+    column-gap: 45px;
+    row-gap: 25px;
+
+    text-align: center;
+}
 
 .footer-content h3 {
-    grid-column: 1;
-    grid-row: 1;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 40px;
-    font-weight: 500;
+    font-family: "Cormorant Garamond",serif;
+    font-size: 27px;
+    font-weight: 600;
     color: #302a35;
     margin: 0;
-    line-height: 1;
 }
 
-/* Old footer paragraphs */
-
-.footer-content > p:nth-of-type(1) {
-    grid-column: 1;
-    grid-row: 2;
-    margin: 5px 0 0;
-    font-size: 14px;
-    color: #625967;
-    line-height: 1.5;
-}
-
-.footer-content > p:nth-of-type(2) {
-    grid-column: 1;
-    grid-row: 3;
-    margin: 15px 0 0;
-    font-size: 14px;
-    color: #625967;
-    line-height: 1.6;
-}
-
-/* =========================================================
-   OLD FOOTER HEADINGS
-========================================================= */
-
-.footer-content h4 {
-    color: #36303A;
-    font-size: 16px;
-    margin: 0 0 7px;
-    line-height: 1.3;
-}
-
-/* EXPLORE */
-
-.footer-content h4:nth-of-type(1) {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-/* GET INVOLVED */
-
-.footer-content h4:nth-of-type(2) {
-    grid-column: 3;
-    grid-row: 1;
-}
-
-/* FOLLOW HERCARE */
-
-.footer-content h4:nth-of-type(3) {
-    grid-column: 4;
-    grid-row: 1;
-}
-
-/* =========================================================
-   OLD FOOTER LINKS
-========================================================= */
-
-.footer-content > a {
-    color: #625967;
-    font-size: 14px;
-    line-height: 1.5;
-    width: fit-content;
-}
-
-.footer-content > a:hover {
-    color: #E66F98;
-}
-
-/* Explore links */
-
-.footer-content > a:nth-of-type(1) {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.footer-content > a:nth-of-type(2) {
-    grid-column: 2;
-    grid-row: 3;
-}
-
-.footer-content > a:nth-of-type(3) {
-    grid-column: 2;
-    grid-row: 4;
-}
-
-.footer-content > a:nth-of-type(4) {
-    grid-column: 2;
-    grid-row: 5;
-}
-
-/* Get involved links */
-
-.footer-content > a:nth-of-type(5) {
-    grid-column: 3;
-    grid-row: 2;
-}
-
-.footer-content > a:nth-of-type(6) {
-    grid-column: 3;
-    grid-row: 3;
-}
-
-.footer-content > a:nth-of-type(7) {
-    grid-column: 3;
-    grid-row: 4;
-}
-
-.footer-content > a:nth-of-type(8) {
-    grid-column: 3;
-    grid-row: 5;
-}
-
-/* =========================================================
-   OLD FOOTER FOLLOW SECTION
-========================================================= */
-
-.footer-content h4:nth-of-type(3) ~ p {
-    grid-column: 4;
-    grid-row: 2;
+.footer-content > p {
     margin: 0;
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 10px;
     color: #625967;
 }
-
-.footer-content h4:nth-of-type(3) ~ .social-icons {
-    grid-column: 4;
-    grid-row: 3;
-    justify-content: flex-start;
-    margin-top: 8px;
-}
-
-/* =========================================================
-   OLD FOOTER SOCIAL ICONS
-========================================================= */
 
 .footer-content .social-icons {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 8px;
+    margin-top: 3px;
 }
 
 .footer-content .social-icons a {
@@ -1395,7 +1261,23 @@ footer .copyright {
     align-items: center;
     justify-content: center;
     font-size: 13px;
-    color: #625967;
+    transition: .25s ease;
+}
+
+.footer-content .social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+.footer-content .copyright,
+.copyright {
+    width: 100%;
+    border-top: 1px solid #e9bfd0;
+    padding: 7px 10px 0;
+    margin-top: 3px;
+    text-align: center;
+    font-size: 9px;
+    color: #746976;
 }
 
 /* =========================================================
@@ -1417,7 +1299,7 @@ footer .copyright {
     }
 
     .care-items-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
         row-gap: 40px;
     }
 
@@ -1433,66 +1315,23 @@ footer .copyright {
         font-size: 34px;
     }
 
-    .provided-items {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 40px;
-    }
-
-    .provided-item:nth-child(odd) {
-        border-right: 1px solid #E99DB9;
-    }
-
-    .provided-item:nth-child(even) {
-        border-right: none;
-    }
-
     .inner-card-grid,
     .care-kits-grid,
     .four-card-grid,
     .three-card-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 
-    /* NEW FOOTER */
+    /* FOOTER */
 
     .footer-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
     }
-
-    /* OLD FOOTER */
 
     .footer-content {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 40px;
-    }
-
-    .footer-content h3,
-    .footer-content > p:nth-of-type(1),
-    .footer-content > p:nth-of-type(2) {
-        grid-column: 1;
-    }
-
-    .footer-content h4:nth-of-type(1),
-    .footer-content > a:nth-of-type(1),
-    .footer-content > a:nth-of-type(2),
-    .footer-content > a:nth-of-type(3),
-    .footer-content > a:nth-of-type(4) {
-        grid-column: 2;
-    }
-
-    .footer-content h4:nth-of-type(2),
-    .footer-content > a:nth-of-type(5),
-    .footer-content > a:nth-of-type(6),
-    .footer-content > a:nth-of-type(7),
-    .footer-content > a:nth-of-type(8) {
-        grid-column: 1;
-    }
-
-    .footer-content h4:nth-of-type(3),
-    .footer-content h4:nth-of-type(3) ~ p,
-    .footer-content h4:nth-of-type(3) ~ .social-icons {
-        grid-column: 2;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 }
 
@@ -1575,9 +1414,7 @@ footer .copyright {
         border-bottom: 1px solid #f0dce3;
     }
 
-    /* =====================================================
-       HERO
-    ===================================================== */
+    /* HERO */
 
     .hero-container {
         display: flex;
@@ -1621,41 +1458,17 @@ footer .copyright {
         min-height: 58px;
     }
 
-    /* =====================================================
-       MOBILE HERO IMAGE
-    ===================================================== */
-
     .hero-image {
         width: 100%;
-        height: auto !important;
-        min-height: 0 !important;
-        overflow: visible !important;
+        height: 360px;
         border-radius: 0 0 55px 0;
     }
 
     .team-frame {
-        width: 100%;
-        height: auto !important;
         padding: 10px;
     }
 
-    .frame-inner {
-        width: 100%;
-        height: auto !important;
-        overflow: hidden;
-    }
-
-    .hero-team-photo {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 0 !important;
-        object-fit: contain !important;
-        object-position: center !important;
-    }
-
-    /* =====================================================
-       TEAM
-    ===================================================== */
+    /* TEAM */
 
     .team-section {
         width: 100%;
@@ -1699,8 +1512,7 @@ footer .copyright {
 
     .team-photo {
         width: 100%;
-        height: auto !important;
-        min-height: 250px;
+        height: 250px;
         overflow: visible;
         background: #FFF9F5;
         display: flex;
@@ -1709,12 +1521,10 @@ footer .copyright {
     }
 
     .team-photo img {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 250px;
-        display: block;
-        object-fit: contain !important;
-        object-position: center center !important;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
         background: #FFF9F5;
     }
 
@@ -1737,9 +1547,7 @@ footer .copyright {
         font-size: 28px;
     }
 
-    /* =====================================================
-       WHAT WE DO
-    ===================================================== */
+    /* WHAT WE DO */
 
     .what-we-do {
         width: 100%;
@@ -1772,9 +1580,7 @@ footer .copyright {
         display: none;
     }
 
-    /* =====================================================
-       CTA
-    ===================================================== */
+    /* CTA */
 
     .cta {
         padding: 45px 20px;
@@ -1784,9 +1590,7 @@ footer .copyright {
         font-size: 34px;
     }
 
-    /* =====================================================
-       CONTACT
-    ===================================================== */
+    /* CONTACT */
 
     .contact-hero {
         padding: 60px 20px 50px;
@@ -1836,7 +1640,7 @@ footer .copyright {
     }
 
     /* =====================================================
-       NEW FOOTER MOBILE
+       FOOTER — PHONE
     ===================================================== */
 
     .footer-container {
@@ -1852,6 +1656,7 @@ footer .copyright {
     .footer-column {
         width: 100%;
         align-items: center;
+        text-align: center;
     }
 
     .footer-logo {
@@ -1859,122 +1664,73 @@ footer .copyright {
     }
 
     .footer-brand p {
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
+        text-align: center;
     }
 
     .social-icons {
         justify-content: center;
+        align-items: center;
     }
-
-    /* =====================================================
-       OLD FOOTER MOBILE
-       Stack cleanly like the Home footer.
-    ===================================================== */
 
     .footer-content {
         width: 100%;
         max-width: 100%;
-        padding: 50px 25px 20px;
+        padding: 25px 15px 10px;
+
         display: flex;
         flex-direction: column;
+
+        justify-content: center;
         align-items: center;
-        gap: 0;
+
+        gap: 6px;
         text-align: center;
     }
 
     .footer-content h3 {
-        order: 1;
-        font-size: 40px;
-        margin-bottom: 4px;
+        font-size: 24px;
     }
 
-    .footer-content > p:nth-of-type(1) {
-        order: 2;
-        margin: 0 0 8px;
-        font-size: 14px;
+    .footer-content > p {
+        font-size: 9px;
     }
 
-    .footer-content > p:nth-of-type(2) {
-        order: 3;
-        margin: 10px 0 20px;
-        font-size: 14px;
-        max-width: 320px;
+    .footer-content .social-icons {
+        gap: 7px;
+        margin-top: 3px;
     }
 
-    .footer-content h4 {
-        width: 100%;
-        font-size: 16px;
-        margin: 20px 0 10px;
+    .footer-content .social-icons a {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
     }
 
-    .footer-content h4:nth-of-type(1) {
-        order: 4;
+    /* MOBILE COPYRIGHT */
+
+    footer > .copyright,
+    footer .footer-container + .copyright,
+    footer .footer-content > .copyright,
+    footer .copyright {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+
+        grid-column: auto !important;
+
+        margin: 0 auto !important;
+        padding: 10px 15px !important;
     }
 
-    .footer-content h4:nth-of-type(2) {
-        order: 9;
+    .footer-content .copyright {
+        font-size: 8px;
+        padding: 7px 8px 0;
     }
 
-    .footer-content h4:nth-of-type(3) {
-        order: 14;
-    }
-
-    .footer-content > a {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    .footer-content > a:nth-of-type(1) {
-        order: 5;
-    }
-
-    .footer-content > a:nth-of-type(2) {
-        order: 6;
-    }
-
-    .footer-content > a:nth-of-type(3) {
-        order: 7;
-    }
-
-    .footer-content > a:nth-of-type(4) {
-        order: 8;
-    }
-
-    .footer-content > a:nth-of-type(5) {
-        order: 10;
-    }
-
-    .footer-content > a:nth-of-type(6) {
-        order: 11;
-    }
-
-    .footer-content > a:nth-of-type(7) {
-        order: 12;
-    }
-
-    .footer-content > a:nth-of-type(8) {
-        order: 13;
-    }
-
-    .footer-content h4:nth-of-type(3) ~ p {
-        order: 15;
-        margin: 0 0 10px;
-        max-width: 320px;
-        font-size: 14px;
-    }
-
-    .footer-content h4:nth-of-type(3) ~ .social-icons {
-        order: 16;
-        justify-content: center;
-        margin-top: 5px;
-        margin-bottom: 10px;
-    }
-
-    /* =====================================================
-       CARE KITS
-    ===================================================== */
+    /* CARE KITS */
 
     .care-kit-items {
         padding: 55px 20px 60px;
@@ -1985,8 +1741,9 @@ footer .copyright {
     }
 
     .care-kit-heading::after {
-        content: none !important;
-        display: none !important;
+        max-width: 500px;
+        font-size: 11px;
+        padding: 8px 15px;
     }
 
     .care-items-grid {
@@ -2018,9 +1775,7 @@ footer .copyright {
         border-radius: 12px;
     }
 
-    /* =====================================================
-       PROVIDED
-    ===================================================== */
+    /* PROVIDED */
 
     .provided-care {
         padding: 0 20px 25px;
@@ -2061,9 +1816,7 @@ footer .copyright {
         border-bottom: none;
     }
 
-    /* =====================================================
-       INNER CARDS
-    ===================================================== */
+    /* INNER CARDS */
 
     .inner-card-section {
         padding: 55px 0 70px;
@@ -2101,13 +1854,6 @@ footer .copyright {
 
     .large-card-top {
         height: 230px;
-    }
-
-    .large-card-top img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center center;
     }
 
     .large-inner-card h3 {
@@ -2150,18 +1896,16 @@ footer .copyright {
 
     .team-photo {
         width: 100%;
-        height: auto !important;
-        min-height: 230px;
+        height: 250px;
         overflow: visible;
         background: #FFF9F5;
     }
 
     .team-photo img {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 230px;
-        object-fit: contain !important;
-        object-position: center center !important;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
     }
 
     .team-heart {
@@ -2213,19 +1957,16 @@ footer .copyright {
     }
 
     .footer-content {
-        padding: 40px 15px 15px;
+        padding: 20px 12px 9px;
+        gap: 4px;
     }
 
     .footer-content h3 {
-        font-size: 36px;
+        font-size: 22px;
     }
 
     .footer-content > p {
-        font-size: 12px;
-    }
-
-    .footer-content h4 {
-        font-size: 14px;
+        font-size: 8px;
     }
 
     .footer-content .social-icons {
@@ -2233,22 +1974,20 @@ footer .copyright {
     }
 
     .footer-content .social-icons a {
-        width: 28px;
-        height: 28px;
+        width: 27px;
+        height: 27px;
         font-size: 11px;
     }
 
-    footer > .copyright,
-    footer .footer-content > .copyright,
-    footer .footer-container + .copyright,
-    footer .copyright {
-        font-size: 11px !important;
-        padding: 9px 8px 0 !important;
+    .footer-content .copyright {
+        font-size: 7px;
+        padding: 6px 6px 0;
     }
 
     .care-kit-heading::after {
-        content: none !important;
-        display: none !important;
+        font-size: 10px;
+        line-height: 1.5;
+        padding: 8px 10px;
     }
 
     .inner-card-grid,
@@ -2264,7 +2003,7 @@ footer .copyright {
 }
 
 /* =========================================================
-   FINAL PROJECT UPDATES
+   FINAL UPDATES FROM PROJECT NOTES
 ========================================================= */
 
 .get-involved .large-card-heart,
@@ -2278,9 +2017,103 @@ footer .copyright {
     text-align: center;
 }
 
+@media (max-width: 900px) {
+
+    .provided-items {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+
+    .provided-item:nth-child(odd) {
+        border-right: 1px solid #E99DB9;
+    }
+
+    .provided-item:nth-child(even) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .donation-hours {
+        width: 100%;
+        padding: 35px 20px 5px;
+    }
+
+    .donation-hours h2 {
+        font-size: 34px;
+    }
+
+    .donation-hours p:last-child {
+        font-size: 13px;
+    }
+
+    .provided-items {
+        grid-template-columns: 1fr;
+        row-gap: 35px;
+    }
+
+    .provided-item:nth-child(odd),
+    .provided-item:nth-child(even) {
+        border-right: none;
+        border-bottom: 1px solid #E99DB9;
+    }
+
+    .provided-item:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .donation-hours h2 {
+        font-size: 30px;
+    }
+}
+
 /* =========================================================
    CARE KITS FINAL DESKTOP FIX
-   5 items first row, 4 centered second row.
+   5 items on the first row, 4 centered on the second row.
+========================================================= */
+
+@media (min-width: 901px) {
+
+    .care-items-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .care-item {
+        border-right: 1px solid var(--line) !important;
+    }
+
+    .care-item:nth-child(5),
+    .care-item:nth-child(9) {
+        border-right: none !important;
+    }
+
+    .care-item:nth-child(6) {
+        grid-column: 2;
+    }
+
+    .featured-care {
+        background: transparent !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+/* =========================================================
+   REMOVE OLD DUPLICATE DONATION MESSAGE
+========================================================= */
+
+.care-kit-heading::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* =========================================================
+   FINAL CARE KITS LAYOUT FIX
+   Desktop: 5 items on row 1, 4 centered on row 2.
 ========================================================= */
 
 @media (min-width: 901px) {
@@ -2317,7 +2150,7 @@ footer .copyright {
 }
 
 /* =========================================================
-   REMOVE OLD DUPLICATE DONATION MESSAGE
+   REMOVE OLD EXTRA DONATION MESSAGE
 ========================================================= */
 
 .care-kit-heading::after {
@@ -2326,21 +2159,7 @@ footer .copyright {
 }
 
 /* =========================================================
-   TEAM PHOTO FINAL FIX
-========================================================= */
-
-.team-photo img {
-    object-position: center center;
-}
-
-/* Avery */
-
-.team-card:nth-child(2) .team-photo img {
-    object-position: center bottom;
-}
-
-/* =========================================================
-   MISSION IMAGE FINAL FIX
+   MISSION CARD IMAGE FIX
 ========================================================= */
 
 .large-card-top {
@@ -2359,52 +2178,96 @@ footer .copyright {
 }
 
 /* =========================================================
+   TEAM PHOTO FIX
+========================================================= */
+
+.team-photo img {
+    object-position: center center;
+}
+
+/* Avery's photo */
+
+.team-card:nth-child(2) .team-photo img {
+    object-position: center bottom;
+}
+
+/* =========================================================
    FINAL MOBILE IMAGE FIX
 ========================================================= */
 
 @media (max-width: 768px) {
-
-    .hero-image {
-        height: auto !important;
-        min-height: 0 !important;
-        overflow: visible !important;
-    }
-
-    .team-frame {
-        height: auto !important;
-    }
-
-    .frame-inner {
-        height: auto !important;
-    }
-
-    .hero-team-photo {
-        height: auto !important;
-        width: 100% !important;
-        object-fit: contain !important;
-    }
-
-    .team-photo {
-        height: auto !important;
-        min-height: 250px;
-    }
-
-    .team-photo img {
-        height: auto !important;
-        min-height: 250px;
-        width: 100% !important;
-        object-fit: contain !important;
-        object-position: center center !important;
-    }
-
-    .team-card:nth-child(2) .team-photo img {
-        object-position: center center !important;
-    }
 
     .large-card-top img {
         width: 100%;
         height: 100%;
         object-fit: contain;
         object-position: center center;
+    }
+
+    .team-card:nth-child(2) .team-photo img {
+        object-position: center bottom;
+    }
+
+    .team-photo {
+        width: 100%;
+        height: 250px;
+        overflow: visible;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFF9F5;
+    }
+
+    .team-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain !important;
+        object-position: center center !important;
+        background: #FFF9F5;
+    }
+}
+
+/* =========================================================
+   FINAL COPYRIGHT CENTER FIX
+========================================================= */
+
+footer > .copyright,
+footer .footer-container + .copyright,
+footer .footer-content > .copyright,
+footer .copyright {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    text-align: center !important;
+
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+
+    footer > .copyright,
+    footer .footer-container + .copyright,
+    footer .footer-content > .copyright,
+    footer .copyright {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        text-align: center !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
 }
