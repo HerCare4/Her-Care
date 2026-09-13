@@ -376,7 +376,7 @@ header {
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center center;
+    object-position: center top;
 }
 
 .team-heart {
@@ -862,6 +862,18 @@ header {
     letter-spacing: 1px;
 }
 
+/* DONATION MESSAGE — ADDED */
+.care-kit-heading::after {
+    content: "Donations of these items may qualify for community service hours. Please check with your school or organization for approval.";
+    display: block;
+    max-width: 700px;
+    margin: 14px auto 0;
+    padding: 10px 20px;
+    color: #776C78;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
 /* CARE KIT GRID */
 
 .care-items-grid {
@@ -869,7 +881,7 @@ header {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5,1fr);
     column-gap: 0;
     row-gap: 50px;
 }
@@ -881,7 +893,7 @@ header {
     padding: 0 20px;
 }
 
-.care-item:not(:nth-child(4n)) {
+.care-item:not(:nth-child(5n)) {
     border-right: 1px solid var(--line);
 }
 
@@ -910,10 +922,10 @@ header {
 }
 
 .featured-care {
-    background: transparent;
-    padding-top: 0;
-    padding-bottom: 0;
-    border-radius: 0;
+    background: #FCEEF3;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    border-radius: 12px;
 }
 
 .featured-care .care-icon {
@@ -1083,25 +1095,79 @@ footer {
     text-align: center;
 }
 
-/* =========================================================
-   MAIN HOME-STYLE FOOTER
-========================================================= */
-
 .footer-container {
-    width: 100%;
     max-width: 1100px;
     margin: auto;
     padding: 65px 30px;
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
     gap: 45px;
-    text-align: left;
 }
 
-.footer-brand {
+.footer-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 20px 12px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-family: "Cormorant Garamond",serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #302a35;
+    margin: 0;
+}
+
+.footer-content > p {
+    margin: 0;
+    font-size: 10px;
+    color: #625967;
+}
+
+.footer-content .social-icons,
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 3px;
+}
+
+.footer-content .social-icons a,
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    background: #F7C6D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: .25s ease;
+}
+
+.footer-content .social-icons a:hover,
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+.footer-content .copyright,
+.copyright {
+    width: 100%;
+    border-top: 1px solid #e9bfd0;
+    padding: 7px 10px 0;
+    margin-top: 3px;
+    text-align: center;
+    font-size: 9px;
+    color: #746976;
 }
 
 .footer-logo {
@@ -1151,136 +1217,6 @@ footer {
 }
 
 /* =========================================================
-   SOCIAL ICONS
-========================================================= */
-
-.social-icons {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    width: 30px;
-    height: 30px;
-    background: #F7C6D9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    transition: .25s ease;
-}
-
-.social-icons a:hover {
-    transform: translateY(-3px);
-    background: #EBA9C4;
-}
-
-/* =========================================================
-   COPYRIGHT — ALWAYS CENTERED
-========================================================= */
-
-footer > .copyright,
-footer .footer-container + .copyright,
-footer .footer-content > .copyright,
-footer .copyright {
-    width: 100%;
-    max-width: 100%;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-
-    box-sizing: border-box;
-
-    border-top: 1px solid #e9bfd0;
-
-    padding: 10px 15px;
-    margin: 0 auto;
-
-    text-align: center !important;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    color: #746976;
-
-    grid-column: 1 / -1;
-}
-
-/* =========================================================
-   OLD / ALTERNATIVE FOOTER SUPPORT
-========================================================= */
-
-.footer-content {
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 45px 30px 15px;
-
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
-    align-items: start;
-    justify-content: center;
-
-    column-gap: 45px;
-    row-gap: 25px;
-
-    text-align: center;
-}
-
-.footer-content h3 {
-    font-family: "Cormorant Garamond",serif;
-    font-size: 27px;
-    font-weight: 600;
-    color: #302a35;
-    margin: 0;
-}
-
-.footer-content > p {
-    margin: 0;
-    font-size: 10px;
-    color: #625967;
-}
-
-.footer-content .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 3px;
-}
-
-.footer-content .social-icons a {
-    width: 30px;
-    height: 30px;
-    background: #F7C6D9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    transition: .25s ease;
-}
-
-.footer-content .social-icons a:hover {
-    transform: translateY(-3px);
-    background: #EBA9C4;
-}
-
-.footer-content .copyright,
-.copyright {
-    width: 100%;
-    border-top: 1px solid #e9bfd0;
-    padding: 7px 10px 0;
-    margin-top: 3px;
-    text-align: center;
-    font-size: 9px;
-    color: #746976;
-}
-
-/* =========================================================
    TABLET
 ========================================================= */
 
@@ -1320,18 +1256,6 @@ footer .copyright {
     .four-card-grid,
     .three-card-grid {
         grid-template-columns: repeat(2,1fr);
-    }
-
-    /* FOOTER */
-
-    .footer-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 35px;
-    }
-
-    .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
     }
 }
 
@@ -1639,9 +1563,7 @@ footer .copyright {
         font-size: 32px;
     }
 
-    /* =====================================================
-       FOOTER — PHONE
-    ===================================================== */
+    /* FOOTER */
 
     .footer-container {
         width: 100%;
@@ -1649,42 +1571,23 @@ footer .copyright {
         flex-direction: column;
         gap: 40px;
         padding: 55px 25px;
-        text-align: center;
     }
 
     .footer-brand,
     .footer-column {
         width: 100%;
         align-items: center;
-        text-align: center;
     }
 
     .footer-logo {
         font-size: 40px;
     }
 
-    .footer-brand p {
-        text-align: center;
-    }
-
-    .social-icons {
-        justify-content: center;
-        align-items: center;
-    }
-
     .footer-content {
         width: 100%;
         max-width: 100%;
         padding: 25px 15px 10px;
-
-        display: flex;
-        flex-direction: column;
-
-        justify-content: center;
-        align-items: center;
-
-        gap: 6px;
-        text-align: center;
+        gap: 5px;
     }
 
     .footer-content h3 {
@@ -1704,25 +1607,6 @@ footer .copyright {
         width: 28px;
         height: 28px;
         font-size: 12px;
-    }
-
-    /* MOBILE COPYRIGHT */
-
-    footer > .copyright,
-    footer .footer-container + .copyright,
-    footer .footer-content > .copyright,
-    footer .copyright {
-        width: 100% !important;
-        max-width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        text-align: center !important;
-
-        grid-column: auto !important;
-
-        margin: 0 auto !important;
-        padding: 10px 15px !important;
     }
 
     .footer-content .copyright {
@@ -2002,6 +1886,7 @@ footer .copyright {
     }
 }
 
+
 /* =========================================================
    FINAL UPDATES FROM PROJECT NOTES
 ========================================================= */
@@ -2018,7 +1903,6 @@ footer .copyright {
 }
 
 @media (max-width: 900px) {
-
     .provided-items {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
@@ -2034,7 +1918,6 @@ footer .copyright {
 }
 
 @media (max-width: 600px) {
-
     .donation-hours {
         width: 100%;
         padding: 35px 20px 5px;
@@ -2065,108 +1948,30 @@ footer .copyright {
 }
 
 @media (max-width: 400px) {
-
     .donation-hours h2 {
         font-size: 30px;
     }
 }
 
-/* =========================================================
-   CARE KITS FINAL DESKTOP FIX
-   5 items on the first row, 4 centered on the second row.
-========================================================= */
 
 @media (min-width: 901px) {
-
-    .care-items-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .care-item {
-        border-right: 1px solid var(--line) !important;
-    }
-
-    .care-item:nth-child(5),
-    .care-item:nth-child(9) {
-        border-right: none !important;
-    }
-
-    .care-item:nth-child(6) {
+    .care-items-grid .care-item:nth-child(6) {
         grid-column: 2;
     }
-
-    .featured-care {
-        background: transparent !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-    }
 }
 
 /* =========================================================
-   REMOVE OLD DUPLICATE DONATION MESSAGE
+   PHOTO FIXES ONLY — MISSION + TEAM PHOTOS
+   No other page styles are changed here.
 ========================================================= */
 
-.care-kit-heading::after {
-    content: none !important;
-    display: none !important;
-}
-
-/* =========================================================
-   FINAL CARE KITS LAYOUT FIX
-   Desktop: 5 items on row 1, 4 centered on row 2.
-========================================================= */
-
-@media (min-width: 901px) {
-
-    .care-items-grid {
-        grid-template-columns: repeat(5, 1fr) !important;
-        grid-auto-flow: row;
-    }
-
-    .care-item {
-        border-right: 1px solid var(--line) !important;
-    }
-
-    .care-item:nth-child(5),
-    .care-item:nth-child(9) {
-        border-right: none !important;
-    }
-
-    .care-item:nth-child(6) {
-        grid-column: 2 !important;
-    }
-
-    .care-item:nth-child(7),
-    .care-item:nth-child(8),
-    .care-item:nth-child(9) {
-        grid-column: auto;
-    }
-
-    .featured-care {
-        background: transparent !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-    }
-}
-
-/* =========================================================
-   REMOVE OLD EXTRA DONATION MESSAGE
-========================================================= */
-
-.care-kit-heading::after {
-    content: none !important;
-    display: none !important;
-}
-
-/* =========================================================
-   MISSION CARD IMAGE FIX
-========================================================= */
-
+/* Mission page photo */
 .large-card-top {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: var(--blush);
 }
 
 .large-card-top img {
@@ -2177,26 +1982,30 @@ footer .copyright {
     object-position: center center;
 }
 
-/* =========================================================
-   TEAM PHOTO FIX
-========================================================= */
+/* Team photos */
+.team-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #FFF9F5;
+}
 
 .team-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center center;
+    background: #FFF9F5;
+}
+
+/* Keep the second team photo centered as well */
+.team-card:nth-child(2) .team-photo img {
     object-position: center center;
 }
 
-/* Avery's photo */
-
-.team-card:nth-child(2) .team-photo img {
-    object-position: center bottom;
-}
-
-/* =========================================================
-   FINAL MOBILE IMAGE FIX
-========================================================= */
-
 @media (max-width: 768px) {
-
     .large-card-top img {
         width: 100%;
         height: 100%;
@@ -2204,70 +2013,26 @@ footer .copyright {
         object-position: center center;
     }
 
-    .team-card:nth-child(2) .team-photo img {
-        object-position: center bottom;
-    }
-
-    .team-photo {
-        width: 100%;
-        height: 250px;
-        overflow: visible;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #FFF9F5;
-    }
-
     .team-photo img {
         width: 100%;
         height: 100%;
-        object-fit: contain !important;
-        object-position: center center !important;
-        background: #FFF9F5;
+        object-fit: contain;
+        object-position: center center;
+    }
+
+    .team-card:nth-child(2) .team-photo img {
+        object-position: center center;
     }
 }
 
-/* =========================================================
-   FINAL COPYRIGHT CENTER FIX
-========================================================= */
+@media (max-width: 400px) {
+    .large-card-top img {
+        object-fit: contain;
+        object-position: center center;
+    }
 
-footer > .copyright,
-footer .footer-container + .copyright,
-footer .footer-content > .copyright,
-footer .copyright {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-
-    width: 100% !important;
-    max-width: 100% !important;
-
-    margin-left: auto !important;
-    margin-right: auto !important;
-
-    text-align: center !important;
-
-    box-sizing: border-box !important;
-}
-
-@media (max-width: 768px) {
-
-    footer > .copyright,
-    footer .footer-container + .copyright,
-    footer .footer-content > .copyright,
-    footer .copyright {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin-left: auto !important;
-        margin-right: auto !important;
-
-        text-align: center !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+    .team-photo img {
+        object-fit: contain;
+        object-position: center center;
     }
 }
