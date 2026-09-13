@@ -361,13 +361,21 @@ header {
     min-width: 0;
 }
 
+/* =========================================================
+   TEAM PHOTOS — DESKTOP
+   Shows the full photo without cutting off the subject.
+========================================================= */
+
 .team-photo {
     position: relative;
     width: 100%;
-    height: 250px;
+    aspect-ratio: 3 / 4;
+    height: auto;
     overflow: visible;
     background: #FFF9F5;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-bottom: 1px solid #edbfd0;
 }
 
@@ -375,8 +383,9 @@ header {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center center;
+    background: #FFF9F5;
 }
 
 .team-heart {
@@ -862,8 +871,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* CARE KIT GRID */
-
 .care-items-grid {
     width: 100%;
     max-width: 1100px;
@@ -1054,6 +1061,10 @@ header {
 .large-card-top {
     height: 230px;
     background: var(--blush);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .large-inner-card h3 {
@@ -1071,6 +1082,14 @@ header {
     color: var(--muted);
 }
 
+.large-card-top img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center center;
+}
+
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -1083,8 +1102,6 @@ footer {
     text-align: center;
 }
 
-/* HOME / FULL DESKTOP FOOTER */
-
 .footer-container {
     width: 100%;
     max-width: 1100px;
@@ -1093,80 +1110,13 @@ footer {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
     gap: 45px;
-    text-align: left;
 }
 
 .footer-brand {
-    text-align: left;
-}
-
-.footer-content {
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 25px 20px 12px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    text-align: center;
-}
-
-.footer-content h3 {
-    font-family: "Cormorant Garamond",serif;
-    font-size: 27px;
-    font-weight: 600;
-    color: #302a35;
-    margin: 0;
-}
-
-.footer-content > p {
-    margin: 0;
-    font-size: 10px;
-    color: #625967;
-}
-
-.footer-content .social-icons,
-.social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 3px;
-}
-
-.footer-content .social-icons a,
-.social-icons a {
-    width: 30px;
-    height: 30px;
-    background: #F7C6D9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    transition: .25s ease;
-}
-
-.footer-content .social-icons a:hover,
-.social-icons a:hover {
-    transform: translateY(-3px);
-    background: #EBA9C4;
-}
-
-.footer-content .copyright,
-footer > .copyright,
-.footer-container + .copyright,
-footer .copyright {
-    width: 100%;
-    border-top: 1px solid #e9bfd0;
-    padding: 10px 10px 0;
-    margin: 10px 0 0;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    color: #746976;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .footer-logo {
@@ -1195,6 +1145,8 @@ footer .copyright {
 .footer-column {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     gap: 12px;
 }
 
@@ -1213,6 +1165,80 @@ footer .copyright {
 
 .footer-column a:hover {
     color: #E66F98;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    background: #F7C6D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: .25s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+.copyright {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #e9bfd0;
+    padding: 10px 10px 0;
+    margin: 0;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    color: #746976;
+}
+
+/* =========================================================
+   OLD FOOTER CONTENT
+   Only applies when an older footer structure is present.
+========================================================= */
+
+.footer-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 20px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-family: "Cormorant Garamond",serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #302a35;
+    margin: 0;
+}
+
+.footer-content > p {
+    margin: 0;
+    font-size: 10px;
+    color: #625967;
+}
+
+.footer-content .social-icons {
+    justify-content: center;
+    margin-top: 3px;
 }
 
 /* =========================================================
@@ -1257,9 +1283,33 @@ footer .copyright {
         grid-template-columns: repeat(2,1fr);
     }
 
-    .footer-container {
+    /* TABLET TEAM PHOTOS */
+
+    .team-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 35px;
+    }
+
+    .team-photo {
+        aspect-ratio: 3 / 4;
+        height: auto;
+    }
+
+    .team-photo img {
+        object-fit: contain;
+        object-position: center center;
+    }
+
+    /* TABLET FOOTER */
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand,
+    .footer-column {
+        align-items: flex-start;
+        text-align: left;
     }
 }
 
@@ -1342,9 +1392,7 @@ footer .copyright {
         border-bottom: 1px solid #f0dce3;
     }
 
-    /* =====================================================
-       HERO
-    ===================================================== */
+    /* HERO */
 
     .hero-container {
         display: flex;
@@ -1398,9 +1446,7 @@ footer .copyright {
         padding: 10px;
     }
 
-    /* =====================================================
-       TEAM
-    ===================================================== */
+    /* TEAM */
 
     .team-section {
         width: 100%;
@@ -1442,31 +1488,24 @@ footer .copyright {
         width: 100%;
     }
 
-    /*
-       MOBILE TEAM PHOTO FIX
-
-       The old version forced every image into a
-       250px-tall box. This caused the photos to be
-       cropped or leave large blank spaces.
-
-       The image now keeps its natural aspect ratio.
+    /* MOBILE TEAM PHOTO
+       Keeps the whole image visible.
     */
 
     .team-photo {
-        position: relative;
         width: 100%;
-        height: auto;
-        min-height: 0;
-        overflow: hidden;
+        height: 250px;
+        aspect-ratio: auto;
+        overflow: visible;
         background: #FFF9F5;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .team-photo img {
         width: 100%;
-        height: auto;
-        min-height: 0;
-        display: block;
+        height: 100%;
         object-fit: contain;
         object-position: center center;
         background: #FFF9F5;
@@ -1491,9 +1530,7 @@ footer .copyright {
         font-size: 28px;
     }
 
-    /* =====================================================
-       WHAT WE DO
-    ===================================================== */
+    /* WHAT WE DO */
 
     .what-we-do {
         width: 100%;
@@ -1526,9 +1563,7 @@ footer .copyright {
         display: none;
     }
 
-    /* =====================================================
-       CTA
-    ===================================================== */
+    /* CTA */
 
     .cta {
         padding: 45px 20px;
@@ -1538,9 +1573,7 @@ footer .copyright {
         font-size: 34px;
     }
 
-    /* =====================================================
-       CONTACT
-    ===================================================== */
+    /* CONTACT */
 
     .contact-hero {
         padding: 60px 20px 50px;
@@ -1589,18 +1622,14 @@ footer .copyright {
         font-size: 32px;
     }
 
-    /* =====================================================
-       FOOTER — PHONE ONLY
-    ===================================================== */
+    /* FOOTER — MOBILE ONLY */
 
     .footer-container {
         width: 100%;
-        max-width: 100%;
         display: flex;
         flex-direction: column;
         gap: 40px;
         padding: 55px 25px;
-        text-align: center;
     }
 
     .footer-brand,
@@ -1612,6 +1641,14 @@ footer .copyright {
 
     .footer-logo {
         font-size: 40px;
+    }
+
+    .footer-brand p {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 
     .footer-content {
@@ -1640,20 +1677,12 @@ footer .copyright {
         font-size: 12px;
     }
 
-    footer > .copyright,
-    .footer-container + .copyright,
-    footer .copyright,
-    .footer-content .copyright {
-        width: 100%;
+    .copyright {
         font-size: 8px;
         padding: 7px 8px 0;
-        margin-top: 3px;
-        text-align: center;
     }
 
-    /* =====================================================
-       CARE KITS
-    ===================================================== */
+    /* CARE KITS */
 
     .care-kit-items {
         padding: 55px 20px 60px;
@@ -1698,9 +1727,7 @@ footer .copyright {
         border-radius: 12px;
     }
 
-    /* =====================================================
-       PROVIDED
-    ===================================================== */
+    /* PROVIDED */
 
     .provided-care {
         padding: 0 20px 25px;
@@ -1741,9 +1768,7 @@ footer .copyright {
         border-bottom: none;
     }
 
-    /* =====================================================
-       INNER CARDS
-    ===================================================== */
+    /* INNER CARDS */
 
     .inner-card-section {
         padding: 55px 0 70px;
@@ -1821,25 +1846,19 @@ footer .copyright {
         font-size: 43px;
     }
 
-    /*
-       KEEP TEAM PHOTOS FULL-SIZE ON SMALL PHONES
-    */
-
     .team-photo {
         width: 100%;
-        height: auto;
-        min-height: 0;
-        overflow: hidden;
+        height: 250px;
+        aspect-ratio: auto;
+        overflow: visible;
         background: #FFF9F5;
     }
 
     .team-photo img {
         width: 100%;
-        height: auto;
-        min-height: 0;
+        height: 100%;
         object-fit: contain;
         object-position: center center;
-        display: block;
     }
 
     .team-heart {
@@ -1913,7 +1932,7 @@ footer .copyright {
         font-size: 11px;
     }
 
-    .footer-content .copyright {
+    .copyright {
         font-size: 7px;
         padding: 6px 6px 0;
     }
@@ -1934,10 +1953,14 @@ footer .copyright {
     .large-card-top {
         height: 220px;
     }
+
+    .donation-hours h2 {
+        font-size: 30px;
+    }
 }
 
 /* =========================================================
-   FINAL UPDATES FROM PROJECT NOTES
+   FINAL PROJECT UPDATES
 ========================================================= */
 
 .get-involved .large-card-heart,
@@ -1950,6 +1973,10 @@ footer .copyright {
 .donation-hours {
     text-align: center;
 }
+
+/* =========================================================
+   PROVIDED ITEMS — TABLET
+========================================================= */
 
 @media (max-width: 900px) {
 
@@ -1966,6 +1993,10 @@ footer .copyright {
         border-right: none;
     }
 }
+
+/* =========================================================
+   MOBILE DONATION / PROVIDED
+========================================================= */
 
 @media (max-width: 600px) {
 
@@ -1998,54 +2029,9 @@ footer .copyright {
     }
 }
 
-@media (max-width: 400px) {
-
-    .donation-hours h2 {
-        font-size: 30px;
-    }
-}
-
 /* =========================================================
-   CARE KITS FINAL DESKTOP FIX
-   5 items on the first row, 4 centered on the second row.
-========================================================= */
-
-@media (min-width: 901px) {
-
-    .care-items-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .care-item {
-        border-right: 1px solid var(--line) !important;
-    }
-
-    .care-item:nth-child(5),
-    .care-item:nth-child(9) {
-        border-right: none !important;
-    }
-
-    .care-item:nth-child(6) {
-        grid-column: 2;
-    }
-
-    .featured-care {
-        background: transparent !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-    }
-}
-
-/* Remove the old duplicate donation message. */
-
-.care-kit-heading::after {
-    content: none !important;
-    display: none !important;
-}
-
-/* =========================================================
-   FINAL CARE KITS LAYOUT FIX
-   Desktop: 5 items on row 1, 4 centered on row 2.
+   CARE KITS — DESKTOP
+   5 items on first row, 4 centered on second row.
 ========================================================= */
 
 @media (min-width: 901px) {
@@ -2081,7 +2067,9 @@ footer .copyright {
     }
 }
 
-/* Remove the old extra donation message under WHAT WE DO. */
+/* =========================================================
+   REMOVE OLD DONATION MESSAGE
+========================================================= */
 
 .care-kit-heading::after {
     content: none !important;
@@ -2089,9 +2077,7 @@ footer .copyright {
 }
 
 /* =========================================================
-   MISSION CARD IMAGE FIX
-   Keeps the new Mission illustrations centered inside
-   the pink image area.
+   MISSION IMAGE FIX
 ========================================================= */
 
 .large-card-top {
@@ -2110,22 +2096,17 @@ footer .copyright {
 }
 
 /* =========================================================
-   TEAM PHOTO FIX
-   Keeps team photos centered on desktop.
+   TEAM PHOTO FINAL FIX
 ========================================================= */
 
 .team-photo img {
+    object-fit: contain;
     object-position: center center;
 }
 
-/* Avery's photo has extra space at the top,
-   so position it slightly lower. */
-
-.team-card:nth-child(2) .team-photo img {
-    object-position: center bottom;
-}
-
-/* Keep Mission images centered on mobile too. */
+/* =========================================================
+   KEEP MISSION IMAGES CENTERED ON MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
 
@@ -2136,26 +2117,9 @@ footer .copyright {
         object-position: center center;
     }
 
-    .team-card:nth-child(2) .team-photo img {
-        object-position: center bottom;
-    }
-
-    /*
-       FINAL MOBILE TEAM PHOTO RULE
-       Overrides the old fixed-height behavior.
-    */
-
-    .team-photo {
-        width: 100%;
-        height: auto;
-        min-height: 0;
-        overflow: hidden;
-    }
-
     .team-photo img {
         width: 100%;
-        height: auto;
-        min-height: 0;
+        height: 100%;
         object-fit: contain;
         object-position: center center;
     }
