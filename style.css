@@ -1434,13 +1434,12 @@ footer {
         justify-content: center;
     }
 
-    .team-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center center;
-        background: #FFF9F5;
-    }
+  .team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
 
     .team-card h3 {
         font-size: 29px;
