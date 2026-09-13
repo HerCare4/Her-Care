@@ -376,7 +376,7 @@ header {
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center top;
+    object-position: center center;
 }
 
 .team-heart {
@@ -862,8 +862,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* DONATION MESSAGE — ADDED */
-
 /* CARE KIT GRID */
 
 .care-items-grid {
@@ -1085,6 +1083,8 @@ footer {
     text-align: center;
 }
 
+/* MAIN HOME-STYLE FOOTER */
+
 .footer-container {
     max-width: 1100px;
     margin: auto;
@@ -1092,72 +1092,6 @@ footer {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
     gap: 45px;
-}
-
-.footer-content {
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 25px 20px 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    text-align: center;
-}
-
-.footer-content h3 {
-    font-family: "Cormorant Garamond",serif;
-    font-size: 27px;
-    font-weight: 600;
-    color: #302a35;
-    margin: 0;
-}
-
-.footer-content > p {
-    margin: 0;
-    font-size: 10px;
-    color: #625967;
-}
-
-.footer-content .social-icons,
-.social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 3px;
-}
-
-.footer-content .social-icons a,
-.social-icons a {
-    width: 30px;
-    height: 30px;
-    background: #F7C6D9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    transition: .25s ease;
-}
-
-.footer-content .social-icons a:hover,
-.social-icons a:hover {
-    transform: translateY(-3px);
-    background: #EBA9C4;
-}
-
-.footer-content .copyright,
-.copyright {
-    width: 100%;
-    border-top: 1px solid #e9bfd0;
-    padding: 7px 10px 0;
-    margin-top: 3px;
-    text-align: center;
-    font-size: 9px;
-    color: #746976;
 }
 
 .footer-logo {
@@ -1206,6 +1140,118 @@ footer {
     color: #E66F98;
 }
 
+/* SOCIAL ICONS */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 3px;
+}
+
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    background: #F7C6D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: .25s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+/* =========================================================
+   OLD / ALTERNATIVE FOOTER SUPPORT
+========================================================= */
+
+/*
+   Some pages use .footer-content instead of
+   .footer-container.
+
+   DESKTOP:
+   Make the sections horizontal.
+
+   MOBILE:
+   The media query below changes it back
+   to a vertical layout.
+*/
+
+.footer-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 45px 30px 15px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    align-items: start;
+    justify-content: center;
+
+    column-gap: 45px;
+    row-gap: 25px;
+
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-family: "Cormorant Garamond",serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #302a35;
+    margin: 0;
+}
+
+.footer-content > p {
+    margin: 0;
+    font-size: 10px;
+    color: #625967;
+}
+
+.footer-content .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 3px;
+}
+
+.footer-content .social-icons a {
+    width: 30px;
+    height: 30px;
+    background: #F7C6D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: .25s ease;
+}
+
+.footer-content .social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+/* COPYRIGHT */
+
+.footer-content .copyright,
+.copyright {
+    width: 100%;
+    border-top: 1px solid #e9bfd0;
+    padding: 7px 10px 0;
+    margin-top: 3px;
+    text-align: center;
+    font-size: 9px;
+    color: #746976;
+}
+
 /* =========================================================
    TABLET
 ========================================================= */
@@ -1246,6 +1292,18 @@ footer {
     .four-card-grid,
     .three-card-grid {
         grid-template-columns: repeat(2,1fr);
+    }
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 }
 
@@ -1434,12 +1492,13 @@ footer {
         justify-content: center;
     }
 
-  .team-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-}
+    .team-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+        background: #FFF9F5;
+    }
 
     .team-card h3 {
         font-size: 29px;
@@ -1552,7 +1611,10 @@ footer {
         font-size: 32px;
     }
 
-    /* FOOTER */
+    /* =====================================================
+       FOOTER — PHONE ONLY
+       Stack everything vertically.
+    ===================================================== */
 
     .footer-container {
         width: 100%;
@@ -1576,7 +1638,16 @@ footer {
         width: 100%;
         max-width: 100%;
         padding: 25px 15px 10px;
-        gap: 5px;
+
+        /* PHONE = VERTICAL */
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 6px;
+        text-align: center;
     }
 
     .footer-content h3 {
@@ -1875,7 +1946,6 @@ footer {
     }
 }
 
-
 /* =========================================================
    FINAL UPDATES FROM PROJECT NOTES
 ========================================================= */
@@ -1892,6 +1962,7 @@ footer {
 }
 
 @media (max-width: 900px) {
+
     .provided-items {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
@@ -1907,6 +1978,7 @@ footer {
 }
 
 @media (max-width: 600px) {
+
     .donation-hours {
         width: 100%;
         padding: 35px 20px 5px;
@@ -1937,12 +2009,11 @@ footer {
 }
 
 @media (max-width: 400px) {
+
     .donation-hours h2 {
         font-size: 30px;
     }
 }
-
-
 
 /* =========================================================
    CARE KITS FINAL DESKTOP FIX
@@ -1950,6 +2021,7 @@ footer {
 ========================================================= */
 
 @media (min-width: 901px) {
+
     .care-items-grid {
         grid-template-columns: repeat(5, 1fr);
     }
@@ -1974,7 +2046,8 @@ footer {
     }
 }
 
-/* Remove the old duplicate donation message. */
+/* Remove old duplicate donation message. */
+
 .care-kit-heading::after {
     content: none !important;
     display: none !important;
@@ -1986,6 +2059,7 @@ footer {
 ========================================================= */
 
 @media (min-width: 901px) {
+
     .care-items-grid {
         grid-template-columns: repeat(5, 1fr) !important;
         grid-auto-flow: row;
@@ -2017,17 +2091,15 @@ footer {
     }
 }
 
-/* Remove the old extra donation message under WHAT WE DO. */
+/* Remove old extra donation message. */
+
 .care-kit-heading::after {
     content: none !important;
     display: none !important;
 }
 
-
 /* =========================================================
    MISSION CARD IMAGE FIX
-   Keeps the new Mission illustrations centered inside
-   the pink image area.
 ========================================================= */
 
 .large-card-top {
@@ -2045,25 +2117,22 @@ footer {
     object-position: center center;
 }
 
-
 /* =========================================================
    TEAM PHOTO FIX
-   Keeps team photos centered.
 ========================================================= */
 
 .team-photo img {
     object-position: center center;
 }
 
+/* Avery's photo */
 
-/* Avery's photo has extra space at the top,
-   so position it slightly lower. */
 .team-card:nth-child(2) .team-photo img {
     object-position: center bottom;
 }
 
-
 /* Keep Mission images centered on mobile too. */
+
 @media (max-width: 768px) {
 
     .large-card-top img {
@@ -2076,5 +2145,4 @@ footer {
     .team-card:nth-child(2) .team-photo img {
         object-position: center bottom;
     }
-
 }
