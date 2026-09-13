@@ -347,7 +347,7 @@ header {
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 25px;
 }
 
@@ -361,16 +361,10 @@ header {
     min-width: 0;
 }
 
-/* =========================================================
-   TEAM PHOTO FIX
-   Uses a portrait ratio so the photos are not cropped.
-========================================================= */
-
 .team-photo {
     position: relative;
     width: 100%;
-    aspect-ratio: 3 / 4;
-    height: auto;
+    height: 250px;
     overflow: visible;
     background: #FFF9F5;
     display: block;
@@ -382,14 +376,6 @@ header {
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center center;
-}
-
-/* Keep each portrait centered */
-.team-card:nth-child(1) .team-photo img,
-.team-card:nth-child(2) .team-photo img,
-.team-card:nth-child(3) .team-photo img,
-.team-card:nth-child(4) .team-photo img {
     object-position: center center;
 }
 
@@ -546,7 +532,7 @@ header {
 
 .what-we-do .what-card h3 {
     margin: 18px 10px 10px;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 24px;
     line-height: 1.15;
     color: #262331;
@@ -582,7 +568,7 @@ header {
 }
 
 .cta h2 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 42px;
     color: #625666;
     line-height: 1.2;
@@ -618,7 +604,7 @@ header {
 }
 
 .contact-hero h1 {
-    font-family: "Cormorant Garamond", serif !important;
+    font-family: "Cormorant Garamond",serif !important;
     font-size: 58px;
     font-weight: 600;
     margin: 10px 0 15px;
@@ -651,7 +637,7 @@ header {
 }
 
 .contact-intro h2 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 45px;
     font-weight: 600;
     margin: 10px 0 20px;
@@ -688,7 +674,7 @@ header {
 }
 
 .contact-note strong {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 22px;
 }
 
@@ -707,7 +693,7 @@ header {
 
 .contact-card h2,
 .contact-card h3 {
-    font-family: "Cormorant Garamond", serif !important;
+    font-family: "Cormorant Garamond",serif !important;
     color: var(--text);
 }
 
@@ -790,7 +776,7 @@ header {
 }
 
 .page-cta h2 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 38px;
     margin: 8px 0 25px;
     color: var(--text);
@@ -907,7 +893,7 @@ header {
 
 .care-item h3,
 .provided-item h3 {
-    font: 600 27px/1.15 "Cormorant Garamond", serif;
+    font: 600 27px/1.15 "Cormorant Garamond",serif;
     color: #262331;
     margin-bottom: 10px;
 }
@@ -963,7 +949,7 @@ header {
 }
 
 .provided-content h2 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 40px;
     line-height: 1.1;
     color: var(--dark);
@@ -977,7 +963,7 @@ header {
 }
 
 .provided-heart {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 85px;
     line-height: 1;
     color: #ED7199;
@@ -990,7 +976,7 @@ header {
     margin: auto;
     padding: 35px 0 80px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 
 .provided-item {
@@ -1019,7 +1005,7 @@ header {
 }
 
 .inner-section-heading h2 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 40px;
     color: var(--text);
     margin-bottom: 10px;
@@ -1039,12 +1025,12 @@ header {
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 25px;
 }
 
 .four-card-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
 }
 
 .inner-card {
@@ -1081,7 +1067,7 @@ header {
 }
 
 .large-inner-card h3 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 29px;
     margin: 48px 15px 10px;
     color: #262331;
@@ -1096,7 +1082,7 @@ header {
 }
 
 /* =========================================================
-   FOOTER
+   FOOTER — HOME STYLE
 ========================================================= */
 
 footer {
@@ -1107,87 +1093,27 @@ footer {
     text-align: center;
 }
 
+/* NEW HOME-STYLE FOOTER */
+
 .footer-container {
+    width: 100%;
     max-width: 1100px;
     margin: auto;
     padding: 65px 30px;
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
     gap: 45px;
+    text-align: left;
 }
 
-.footer-content {
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 25px 20px 12px;
+.footer-brand {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    text-align: center;
-}
-
-.footer-content h3 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 27px;
-    font-weight: 600;
-    color: #302a35;
-    margin: 0;
-}
-
-.footer-content > p {
-    margin: 0;
-    font-size: 10px;
-    color: #625967;
-}
-
-.footer-content .social-icons,
-.social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 3px;
-}
-
-.footer-content .social-icons a,
-.social-icons a {
-    width: 30px;
-    height: 30px;
-    background: #F7C6D9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    transition: .25s ease;
-}
-
-.footer-content .social-icons a:hover,
-.social-icons a:hover {
-    transform: translateY(-3px);
-    background: #EBA9C4;
-}
-
-.footer-content .copyright,
-footer > .copyright,
-footer .footer-container + .copyright,
-footer .copyright {
-    display: block !important;
-    width: 100% !important;
-    border-top: 1px solid #e9bfd0 !important;
-    padding: 10px 10px 0 !important;
-    margin: 10px 0 0 !important;
-    text-align: center !important;
-    font-family: "Montserrat", sans-serif !important;
-    font-size: 14px !important;
-    color: #746976 !important;
+    align-items: flex-start;
 }
 
 .footer-logo {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond",serif;
     font-size: 40px;
     color: #302a35;
     line-height: 1;
@@ -1232,6 +1158,109 @@ footer .copyright {
     color: #E66F98;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    background: #F7C6D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: .25s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+/* COPYRIGHT */
+
+footer > .copyright,
+footer .footer-content > .copyright,
+footer .footer-container + .copyright,
+footer .copyright {
+    display: block !important;
+    width: 100% !important;
+    border-top: 1px solid #e9bfd0 !important;
+    padding: 10px 10px 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 14px !important;
+    color: #746976 !important;
+}
+
+/* =========================================================
+   OLD FOOTER COMPATIBILITY
+   Makes older pages look like the Home footer instead
+   of collapsing everything into one giant column.
+========================================================= */
+
+.footer-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 30px 20px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-family: "Cormorant Garamond",serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #302a35;
+    margin: 0 0 4px;
+}
+
+.footer-content > p {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: #625967;
+    line-height: 1.6;
+}
+
+/* Old footer headings */
+
+.footer-content h4 {
+    color: #36303A;
+    font-size: 16px;
+    margin: 25px 0 10px;
+}
+
+/* Old footer links */
+
+.footer-content a {
+    color: #625967;
+    font-size: 14px;
+}
+
+.footer-content a:hover {
+    color: #E66F98;
+}
+
+/* Old footer social icons */
+
+.footer-content .social-icons {
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Old footer copyright */
+
+.footer-content .copyright {
+    margin-top: 25px !important;
+}
+
 /* =========================================================
    TABLET
 ========================================================= */
@@ -1251,7 +1280,7 @@ footer .copyright {
     }
 
     .care-items-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
         row-gap: 40px;
     }
 
@@ -1284,7 +1313,14 @@ footer .copyright {
     .care-kits-grid,
     .four-card-grid,
     .three-card-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
     }
 }
 
@@ -1411,15 +1447,34 @@ footer .copyright {
         min-height: 58px;
     }
 
+    /* MOBILE HERO IMAGE */
+
     .hero-image {
         width: 100%;
         height: auto;
-        aspect-ratio: 1 / 1;
+        min-height: 0;
+        overflow: visible;
         border-radius: 0 0 55px 0;
     }
 
     .team-frame {
+        width: 100%;
+        height: auto;
         padding: 10px;
+    }
+
+    .frame-inner {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .hero-team-photo {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        object-fit: contain;
+        object-position: center;
     }
 
     /* TEAM */
@@ -1464,26 +1519,23 @@ footer .copyright {
         width: 100%;
     }
 
-    /*
-       IMPORTANT:
-       Keep the team photos portrait on phones.
-       This prevents the images from becoming tiny,
-       stretched, or heavily cropped.
-    */
-
     .team-photo {
         width: 100%;
-        aspect-ratio: 3 / 4;
         height: auto;
+        min-height: 250px;
         overflow: visible;
         background: #FFF9F5;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .team-photo img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: auto;
+        min-height: 250px;
+        display: block;
+        object-fit: contain;
         object-position: center center;
         background: #FFF9F5;
     }
@@ -1599,7 +1651,9 @@ footer .copyright {
         font-size: 32px;
     }
 
-    /* FOOTER */
+    /* =====================================================
+       FOOTER MOBILE
+    ===================================================== */
 
     .footer-container {
         width: 100%;
@@ -1607,6 +1661,7 @@ footer .copyright {
         flex-direction: column;
         gap: 40px;
         padding: 55px 25px;
+        text-align: center;
     }
 
     .footer-brand,
@@ -1619,35 +1674,47 @@ footer .copyright {
         font-size: 40px;
     }
 
+    .footer-brand p {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* OLD FOOTER MOBILE */
+
     .footer-content {
         width: 100%;
         max-width: 100%;
-        padding: 25px 15px 10px;
-        gap: 5px;
+        padding: 45px 20px 15px;
+        text-align: center;
     }
 
     .footer-content h3 {
-        font-size: 24px;
+        font-size: 40px;
     }
 
     .footer-content > p {
-        font-size: 9px;
+        font-size: 13px;
+    }
+
+    .footer-content h4 {
+        font-size: 15px;
+        margin-top: 25px;
     }
 
     .footer-content .social-icons {
         gap: 7px;
-        margin-top: 3px;
+        margin-top: 15px;
     }
 
     .footer-content .social-icons a {
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
         font-size: 12px;
-    }
-
-    .footer-content .copyright {
-        font-size: 8px;
-        padding: 7px 8px 0;
     }
 
     /* CARE KITS */
@@ -1661,9 +1728,8 @@ footer .copyright {
     }
 
     .care-kit-heading::after {
-        max-width: 500px;
-        font-size: 11px;
-        padding: 8px 15px;
+        content: none !important;
+        display: none !important;
     }
 
     .care-items-grid {
@@ -1776,6 +1842,13 @@ footer .copyright {
         height: 230px;
     }
 
+    .large-card-top img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+    }
+
     .large-inner-card h3 {
         font-size: 29px;
         margin-top: 48px;
@@ -1784,21 +1857,6 @@ footer .copyright {
     .large-inner-card p {
         font-size: 13px;
         max-width: 250px;
-    }
-
-    /* DONATION HOURS */
-
-    .donation-hours {
-        width: 100%;
-        padding: 35px 20px 5px;
-    }
-
-    .donation-hours h2 {
-        font-size: 34px;
-    }
-
-    .donation-hours p:last-child {
-        font-size: 13px;
     }
 }
 
@@ -1829,22 +1887,19 @@ footer .copyright {
         font-size: 43px;
     }
 
-    /*
-       Keep team portraits proportional on small phones.
-    */
-
     .team-photo {
         width: 100%;
-        aspect-ratio: 3 / 4;
         height: auto;
+        min-height: 230px;
         overflow: visible;
         background: #FFF9F5;
     }
 
     .team-photo img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: auto;
+        min-height: 230px;
+        object-fit: contain;
         object-position: center center;
     }
 
@@ -1897,16 +1952,19 @@ footer .copyright {
     }
 
     .footer-content {
-        padding: 20px 12px 9px;
-        gap: 4px;
+        padding: 40px 15px 12px;
     }
 
     .footer-content h3 {
-        font-size: 22px;
+        font-size: 36px;
     }
 
     .footer-content > p {
-        font-size: 8px;
+        font-size: 12px;
+    }
+
+    .footer-content h4 {
+        font-size: 14px;
     }
 
     .footer-content .social-icons {
@@ -1914,20 +1972,22 @@ footer .copyright {
     }
 
     .footer-content .social-icons a {
-        width: 27px;
-        height: 27px;
+        width: 28px;
+        height: 28px;
         font-size: 11px;
     }
 
-    .footer-content .copyright {
-        font-size: 7px;
-        padding: 6px 6px 0;
+    footer > .copyright,
+    footer .footer-content > .copyright,
+    footer .footer-container + .copyright,
+    footer .copyright {
+        font-size: 11px !important;
+        padding: 9px 8px 0 !important;
     }
 
     .care-kit-heading::after {
-        font-size: 10px;
-        line-height: 1.5;
-        padding: 8px 10px;
+        content: none !important;
+        display: none !important;
     }
 
     .inner-card-grid,
@@ -1939,10 +1999,6 @@ footer .copyright {
 
     .large-card-top {
         height: 220px;
-    }
-
-    .donation-hours h2 {
-        font-size: 30px;
     }
 }
 
@@ -1999,7 +2055,7 @@ footer .copyright {
     }
 }
 
-/* Remove old duplicate donation message. */
+/* Remove old duplicate donation message */
 
 .care-kit-heading::after {
     content: none !important;
@@ -2007,31 +2063,85 @@ footer .copyright {
 }
 
 /* =========================================================
-   FINAL TEAM PHOTO POSITION
+   TEAM PHOTO FINAL FIX
 ========================================================= */
 
 .team-photo img {
     object-position: center center;
 }
 
+/* Avery */
+
+.team-card:nth-child(2) .team-photo img {
+    object-position: center bottom;
+}
+
 /* =========================================================
-   MISSION IMAGE FIX
+   MISSION IMAGE FINAL FIX
 ========================================================= */
 
+.large-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
 .large-card-top img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
     object-position: center center;
 }
 
+/* =========================================================
+   FINAL MOBILE IMAGE FIX
+========================================================= */
+
 @media (max-width: 768px) {
+
+    .hero-image {
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
+
+    .team-frame {
+        height: auto !important;
+    }
+
+    .frame-inner {
+        height: auto !important;
+    }
+
+    .hero-team-photo {
+        height: auto !important;
+        width: 100% !important;
+        object-fit: contain !important;
+    }
+
+    .team-photo {
+        height: auto !important;
+        min-height: 250px;
+    }
+
+    .team-photo img {
+        height: auto !important;
+        min-height: 250px;
+        width: 100% !important;
+        object-fit: contain !important;
+        object-position: center center !important;
+    }
+
+    .team-card:nth-child(2) .team-photo img {
+        object-position: center center !important;
+    }
 
     .large-card-top img {
         width: 100%;
         height: 100%;
         object-fit: contain;
-        object-position: center center;
-    }
-
-    .team-photo img {
         object-position: center center;
     }
 }
