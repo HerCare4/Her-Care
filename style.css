@@ -245,15 +245,17 @@ header {
 
 .hero-image {
     width: 100%;
-    height: 520px;
+    height: 480px;
     overflow: hidden;
     border-radius: 0 0 80px 0;
 }
 
 .team-frame {
+    width: 100%;
+    height: 100%;
     border: 2px solid var(--rose);
     background: var(--blush);
-    padding: 14px;
+    padding: 10px;
     box-shadow: 0 12px 30px rgba(217,154,181,.18);
 }
 
@@ -271,8 +273,8 @@ header {
 .hero-team-photo {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    object-fit: fill;
+    object-position: center center;
     display: block;
 }
 
@@ -362,14 +364,14 @@ header {
 }
 
 /* =========================================================
-   TEAM PHOTO — FULL IMAGE FIT
+   TEAM PHOTOS
 ========================================================= */
 
 .team-photo {
     position: relative;
     width: 100%;
-    height: 220px;
-    overflow: visible;
+    height: 225px;
+    overflow: hidden;
     background: #FFF9F5;
     display: flex;
     align-items: center;
@@ -381,10 +383,19 @@ header {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: contain;
+    object-fit: fill;
     object-position: center center;
-    background: #FFF9F5;
 }
+
+/* Avery's photo */
+
+.team-card:nth-child(2) .team-photo img {
+    object-position: center center;
+}
+
+/* =========================================================
+   TEAM HEART
+========================================================= */
 
 .team-heart {
     position: absolute;
@@ -402,7 +413,7 @@ header {
     font-size: 28px;
     color: var(--rose);
     line-height: 1;
-    z-index: 10;
+    z-index: 20;
     box-shadow: 0 5px 12px rgba(217,154,181,.16);
     pointer-events: none;
 }
@@ -1057,11 +1068,11 @@ header {
 }
 
 /* =========================================================
-   MISSION PHOTO — SMALLER FRAME / FULL IMAGE
+   INNER CARD PHOTOS
 ========================================================= */
 
 .large-card-top {
-    height: 200px;
+    height: 210px;
     background: var(--blush);
     display: flex;
     align-items: center;
@@ -1073,7 +1084,7 @@ header {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: contain;
+    object-fit: fill;
     object-position: center center;
 }
 
@@ -1104,15 +1115,22 @@ footer {
     text-align: center;
 }
 
-/* MAIN HOME-STYLE FOOTER */
+/* =========================================================
+   MAIN HOME-STYLE FOOTER
+========================================================= */
 
 .footer-container {
+    width: 100%;
     max-width: 1100px;
     margin: auto;
     padding: 65px 30px;
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
     gap: 45px;
+}
+
+.footer-brand {
+    text-align: center;
 }
 
 .footer-logo {
@@ -1142,6 +1160,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    text-align: center;
 }
 
 .footer-column h4 {
@@ -1161,7 +1180,9 @@ footer {
     color: #E66F98;
 }
 
-/* SOCIAL ICONS */
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
 
 .social-icons {
     display: flex;
@@ -1186,6 +1207,28 @@ footer {
 .social-icons a:hover {
     transform: translateY(-3px);
     background: #EBA9C4;
+}
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+footer > .copyright,
+footer .footer-content > .copyright,
+footer .footer-container + .copyright,
+footer .copyright {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    border-top: 1px solid #e9bfd0 !important;
+    padding: 10px 10px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 14px !important;
+    color: #746976 !important;
 }
 
 /* =========================================================
@@ -1245,19 +1288,6 @@ footer {
     background: #EBA9C4;
 }
 
-/* COPYRIGHT */
-
-.footer-content .copyright,
-.copyright {
-    width: 100%;
-    border-top: 1px solid #e9bfd0;
-    padding: 7px 10px 0;
-    margin-top: 3px;
-    text-align: center;
-    font-size: 9px;
-    color: #746976;
-}
-
 /* =========================================================
    TABLET
 ========================================================= */
@@ -1300,6 +1330,8 @@ footer {
         grid-template-columns: repeat(2,1fr);
     }
 
+    /* FOOTER */
+
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 35px;
@@ -1308,6 +1340,16 @@ footer {
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
+    }
+
+    /* TEAM */
+
+    .team-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .team-photo {
+        height: 225px;
     }
 }
 
@@ -1390,7 +1432,9 @@ footer {
         border-bottom: 1px solid #f0dce3;
     }
 
-    /* HERO */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero-container {
         display: flex;
@@ -1434,17 +1478,30 @@ footer {
         min-height: 58px;
     }
 
+    /* =====================================================
+       HERO PHOTO
+    ===================================================== */
+
     .hero-image {
         width: 100%;
-        height: 360px;
+        height: 340px;
         border-radius: 0 0 55px 0;
     }
 
     .team-frame {
-        padding: 10px;
+        padding: 8px;
     }
 
-    /* TEAM */
+    .hero-team-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        object-position: center center;
+    }
+
+    /* =====================================================
+       TEAM
+    ===================================================== */
 
     .team-section {
         width: 100%;
@@ -1486,12 +1543,14 @@ footer {
         width: 100%;
     }
 
-    /* TEAM PHOTOS */
+    /* =====================================================
+       TEAM PHOTO — MOBILE
+    ===================================================== */
 
     .team-photo {
         width: 100%;
-        height: 220px;
-        overflow: visible;
+        height: 225px;
+        overflow: hidden;
         background: #FFF9F5;
         display: flex;
         align-items: center;
@@ -1501,9 +1560,27 @@ footer {
     .team-photo img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: fill;
         object-position: center center;
         background: #FFF9F5;
+    }
+
+    .team-card:nth-child(2) .team-photo img {
+        object-position: center center;
+    }
+
+    /* =====================================================
+       TEAM HEART — MOBILE
+    ===================================================== */
+
+    .team-heart {
+        left: 50%;
+        bottom: -27px;
+        transform: translateX(-50%);
+        width: 54px;
+        height: 54px;
+        font-size: 28px;
+        z-index: 20;
     }
 
     .team-card h3 {
@@ -1516,33 +1593,9 @@ footer {
         padding: 0 30px;
     }
 
-    .team-heart {
-        left: 50%;
-        bottom: -27px;
-        transform: translateX(-50%);
-        width: 54px;
-        height: 54px;
-        font-size: 28px;
-    }
-
-    /* MISSION PHOTO */
-
-    .large-card-top {
-        height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    .large-card-top img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center center;
-    }
-
-    /* WHAT WE DO */
+    /* =====================================================
+       WHAT WE DO
+    ===================================================== */
 
     .what-we-do {
         width: 100%;
@@ -1575,7 +1628,9 @@ footer {
         display: none;
     }
 
-    /* CTA */
+    /* =====================================================
+       CTA
+    ===================================================== */
 
     .cta {
         padding: 45px 20px;
@@ -1585,7 +1640,9 @@ footer {
         font-size: 34px;
     }
 
-    /* CONTACT */
+    /* =====================================================
+       CONTACT
+    ===================================================== */
 
     .contact-hero {
         padding: 60px 20px 50px;
@@ -1634,7 +1691,9 @@ footer {
         font-size: 32px;
     }
 
-    /* FOOTER — PHONE ONLY */
+    /* =====================================================
+       FOOTER — PHONE
+    ===================================================== */
 
     .footer-container {
         width: 100%;
@@ -1648,6 +1707,7 @@ footer {
     .footer-column {
         width: 100%;
         align-items: center;
+        text-align: center;
     }
 
     .footer-logo {
@@ -1685,12 +1745,26 @@ footer {
         font-size: 12px;
     }
 
-    .footer-content .copyright {
-        font-size: 8px;
-        padding: 7px 8px 0;
+    /* CENTER COPYRIGHT */
+
+    footer > .copyright,
+    footer .footer-content > .copyright,
+    footer .footer-container + .copyright,
+    footer .copyright {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 10px 15px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        font-size: 11px !important;
     }
 
-    /* CARE KITS */
+    /* =====================================================
+       CARE KITS
+    ===================================================== */
 
     .care-kit-items {
         padding: 55px 20px 60px;
@@ -1701,9 +1775,8 @@ footer {
     }
 
     .care-kit-heading::after {
-        max-width: 500px;
-        font-size: 11px;
-        padding: 8px 15px;
+        content: none !important;
+        display: none !important;
     }
 
     .care-items-grid {
@@ -1735,7 +1808,9 @@ footer {
         border-radius: 12px;
     }
 
-    /* PROVIDED */
+    /* =====================================================
+       PROVIDED
+    ===================================================== */
 
     .provided-care {
         padding: 0 20px 25px;
@@ -1776,7 +1851,9 @@ footer {
         border-bottom: none;
     }
 
-    /* INNER CARDS */
+    /* =====================================================
+       INNER CARDS
+    ===================================================== */
 
     .inner-card-section {
         padding: 55px 0 70px;
@@ -1813,7 +1890,15 @@ footer {
     }
 
     .large-card-top {
-        height: 200px;
+        height: 210px;
+        overflow: hidden;
+    }
+
+    .large-card-top img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        object-position: center center;
     }
 
     .large-inner-card h3 {
@@ -1854,19 +1939,33 @@ footer {
         font-size: 43px;
     }
 
+    /* HERO PHOTO */
+
+    .hero-image {
+        height: 310px;
+    }
+
+    .team-frame {
+        padding: 7px;
+    }
+
+    /* TEAM PHOTO */
+
     .team-photo {
         width: 100%;
-        height: 200px;
-        overflow: visible;
+        height: 210px;
+        overflow: hidden;
         background: #FFF9F5;
     }
 
     .team-photo img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: fill;
         object-position: center center;
     }
+
+    /* HEART */
 
     .team-heart {
         left: 50%;
@@ -1875,6 +1974,7 @@ footer {
         width: 54px;
         height: 54px;
         font-size: 28px;
+        z-index: 20;
     }
 
     .what-we-do .what-card {
@@ -1916,6 +2016,8 @@ footer {
         height: 38px;
     }
 
+    /* FOOTER */
+
     .footer-content {
         padding: 20px 12px 9px;
         gap: 4px;
@@ -1939,15 +2041,19 @@ footer {
         font-size: 11px;
     }
 
-    .footer-content .copyright {
-        font-size: 7px;
-        padding: 6px 6px 0;
+    footer > .copyright,
+    footer .footer-content > .copyright,
+    footer .footer-container + .copyright,
+    footer .copyright {
+        font-size: 9px !important;
+        padding: 8px 8px !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
 
     .care-kit-heading::after {
-        font-size: 10px;
-        line-height: 1.5;
-        padding: 8px 10px;
+        content: none !important;
+        display: none !important;
     }
 
     .inner-card-grid,
@@ -1958,7 +2064,18 @@ footer {
     }
 
     .large-card-top {
-        height: 190px;
+        height: 195px;
+    }
+
+    .large-card-top img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        object-position: center center;
+    }
+
+    .donation-hours h2 {
+        font-size: 30px;
     }
 }
 
@@ -2033,43 +2150,7 @@ footer {
 
 /* =========================================================
    CARE KITS FINAL DESKTOP FIX
-========================================================= */
-
-@media (min-width: 901px) {
-
-    .care-items-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .care-item {
-        border-right: 1px solid var(--line) !important;
-    }
-
-    .care-item:nth-child(5),
-    .care-item:nth-child(9) {
-        border-right: none !important;
-    }
-
-    .care-item:nth-child(6) {
-        grid-column: 2;
-    }
-
-    .featured-care {
-        background: transparent !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-    }
-}
-
-/* Remove old duplicate donation message. */
-
-.care-kit-heading::after {
-    content: none !important;
-    display: none !important;
-}
-
-/* =========================================================
-   FINAL CARE KITS LAYOUT FIX
+   5 items on first row, 4 centered on second row.
 ========================================================= */
 
 @media (min-width: 901px) {
@@ -2105,7 +2186,7 @@ footer {
     }
 }
 
-/* Remove old extra donation message. */
+/* Remove old duplicate donation message */
 
 .care-kit-heading::after {
     content: none !important;
@@ -2113,60 +2194,76 @@ footer {
 }
 
 /* =========================================================
-   FINAL PHOTO FIX
+   FINAL PHOTO SAFETY FIX
 ========================================================= */
 
-/* Mission photo */
-.large-card-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.large-card-top img {
+/* Keep hero photo completely inside its frame */
+.hero-team-photo {
     width: 100%;
     height: 100%;
-    display: block;
-    object-fit: contain;
-    object-position: center center;
+    object-fit: fill !important;
+    object-position: center center !important;
 }
 
-/* All team photos */
+/* Keep team photos completely inside their frames */
 .team-photo {
-    overflow: visible;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden !important;
 }
 
 .team-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center center;
-    background: #FFF9F5;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;
+    object-position: center center !important;
 }
 
-/* Keep the hearts fully visible */
+/* Keep all hearts completely visible */
 .team-heart {
-    z-index: 20;
+    z-index: 50 !important;
 }
 
-/* Mobile Mission photo */
-@media (max-width: 768px) {
+/* Keep mission/card photos inside their boxes */
+.large-card-top {
+    overflow: hidden !important;
+}
 
-    .large-card-top img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center center;
-    }
+.large-card-top img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;
+    object-position: center center !important;
+}
 
-    .team-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center center;
-    }
+/* =========================================================
+   FINAL FOOTER CENTERING
+========================================================= */
+
+footer {
+    text-align: center !important;
+}
+
+.footer-container {
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.footer-brand,
+.footer-column {
+    text-align: center !important;
+}
+
+.social-icons {
+    justify-content: center !important;
+}
+
+footer > .copyright,
+footer .copyright {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
