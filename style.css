@@ -245,17 +245,15 @@ header {
 
 .hero-image {
     width: 100%;
-    height: 480px;
+    height: 520px;
     overflow: hidden;
     border-radius: 0 0 80px 0;
 }
 
 .team-frame {
-    width: 100%;
-    height: 100%;
     border: 2px solid var(--rose);
     background: var(--blush);
-    padding: 10px;
+    padding: 14px;
     box-shadow: 0 12px 30px rgba(217,154,181,.18);
 }
 
@@ -273,8 +271,8 @@ header {
 .hero-team-photo {
     width: 100%;
     height: 100%;
-    object-fit: fill;
-    object-position: center center;
+    object-fit: cover;
+    object-position: center;
     display: block;
 }
 
@@ -363,15 +361,11 @@ header {
     min-width: 0;
 }
 
-/* =========================================================
-   TEAM PHOTOS
-========================================================= */
-
 .team-photo {
     position: relative;
     width: 100%;
-    height: 225px;
-    overflow: hidden;
+    height: 250px;
+    overflow: visible;
     background: #FFF9F5;
     display: flex;
     align-items: center;
@@ -380,22 +374,13 @@ header {
 }
 
 .team-photo img {
-    width: 100%;
+    width: auto;
     height: 100%;
+    max-width: 100%;
     display: block;
-    object-fit: fill;
+    object-fit: contain;
     object-position: center center;
 }
-
-/* Avery's photo */
-
-.team-card:nth-child(2) .team-photo img {
-    object-position: center center;
-}
-
-/* =========================================================
-   TEAM HEART
-========================================================= */
 
 .team-heart {
     position: absolute;
@@ -413,7 +398,7 @@ header {
     font-size: 28px;
     color: var(--rose);
     line-height: 1;
-    z-index: 20;
+    z-index: 10;
     box-shadow: 0 5px 12px rgba(217,154,181,.16);
     pointer-events: none;
 }
@@ -880,12 +865,26 @@ header {
     letter-spacing: 1px;
 }
 
+/* DONATION MESSAGE — ADDED */
+.care-kit-heading::after {
+    content: "Donations of these items may qualify for community service hours. Please check with your school or organization for approval.";
+    display: block;
+    max-width: 700px;
+    margin: 14px auto 0;
+    padding: 10px 20px;
+    color: #776C78;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* CARE KIT GRID */
+
 .care-items-grid {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5,1fr);
     column-gap: 0;
     row-gap: 50px;
 }
@@ -897,7 +896,7 @@ header {
     padding: 0 20px;
 }
 
-.care-item:not(:nth-child(4n)) {
+.care-item:not(:nth-child(5n)) {
     border-right: 1px solid var(--line);
 }
 
@@ -926,10 +925,10 @@ header {
 }
 
 .featured-care {
-    background: transparent;
-    padding-top: 0;
-    padding-bottom: 0;
-    border-radius: 0;
+    background: #FCEEF3;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    border-radius: 12px;
 }
 
 .featured-care .care-icon {
@@ -1067,25 +1066,9 @@ header {
     overflow: hidden;
 }
 
-/* =========================================================
-   INNER CARD PHOTOS
-========================================================= */
-
 .large-card-top {
-    height: 210px;
+    height: 230px;
     background: var(--blush);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.large-card-top img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: fill;
-    object-position: center center;
 }
 
 .large-inner-card h3 {
@@ -1115,12 +1098,7 @@ footer {
     text-align: center;
 }
 
-/* =========================================================
-   MAIN HOME-STYLE FOOTER
-========================================================= */
-
 .footer-container {
-    width: 100%;
     max-width: 1100px;
     margin: auto;
     padding: 65px 30px;
@@ -1129,8 +1107,70 @@ footer {
     gap: 45px;
 }
 
-.footer-brand {
+.footer-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 20px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
     text-align: center;
+}
+
+.footer-content h3 {
+    font-family: "Cormorant Garamond",serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #302a35;
+    margin: 0;
+}
+
+.footer-content > p {
+    margin: 0;
+    font-size: 10px;
+    color: #625967;
+}
+
+.footer-content .social-icons,
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 3px;
+}
+
+.footer-content .social-icons a,
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    background: #F7C6D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: .25s ease;
+}
+
+.footer-content .social-icons a:hover,
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+.footer-content .copyright,
+.copyright {
+    width: 100%;
+    border-top: 1px solid #e9bfd0;
+    padding: 7px 10px 0;
+    margin-top: 3px;
+    text-align: center;
+    font-size: 9px;
+    color: #746976;
 }
 
 .footer-logo {
@@ -1160,7 +1200,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    text-align: center;
 }
 
 .footer-column h4 {
@@ -1178,114 +1217,6 @@ footer {
 
 .footer-column a:hover {
     color: #E66F98;
-}
-
-/* =========================================================
-   SOCIAL ICONS
-========================================================= */
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 3px;
-}
-
-.social-icons a {
-    width: 30px;
-    height: 30px;
-    background: #F7C6D9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    transition: .25s ease;
-}
-
-.social-icons a:hover {
-    transform: translateY(-3px);
-    background: #EBA9C4;
-}
-
-/* =========================================================
-   COPYRIGHT
-========================================================= */
-
-footer > .copyright,
-footer .footer-content > .copyright,
-footer .footer-container + .copyright,
-footer .copyright {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    border-top: 1px solid #e9bfd0 !important;
-    padding: 10px 10px !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-    font-family: "Montserrat", sans-serif !important;
-    font-size: 14px !important;
-    color: #746976 !important;
-}
-
-/* =========================================================
-   OLD / ALTERNATIVE FOOTER SUPPORT
-========================================================= */
-
-.footer-content {
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 45px 30px 15px;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
-    align-items: start;
-    justify-content: center;
-    column-gap: 45px;
-    row-gap: 25px;
-    text-align: center;
-}
-
-.footer-content h3 {
-    font-family: "Cormorant Garamond",serif;
-    font-size: 27px;
-    font-weight: 600;
-    color: #302a35;
-    margin: 0;
-}
-
-.footer-content > p {
-    margin: 0;
-    font-size: 10px;
-    color: #625967;
-}
-
-.footer-content .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 3px;
-}
-
-.footer-content .social-icons a {
-    width: 30px;
-    height: 30px;
-    background: #F7C6D9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    transition: .25s ease;
-}
-
-.footer-content .social-icons a:hover {
-    transform: translateY(-3px);
-    background: #EBA9C4;
 }
 
 /* =========================================================
@@ -1328,28 +1259,6 @@ footer .copyright {
     .four-card-grid,
     .three-card-grid {
         grid-template-columns: repeat(2,1fr);
-    }
-
-    /* FOOTER */
-
-    .footer-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 35px;
-    }
-
-    .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    /* TEAM */
-
-    .team-container {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .team-photo {
-        height: 225px;
     }
 }
 
@@ -1432,9 +1341,7 @@ footer .copyright {
         border-bottom: 1px solid #f0dce3;
     }
 
-    /* =====================================================
-       HERO
-    ===================================================== */
+    /* HERO */
 
     .hero-container {
         display: flex;
@@ -1478,30 +1385,17 @@ footer .copyright {
         min-height: 58px;
     }
 
-    /* =====================================================
-       HERO PHOTO
-    ===================================================== */
-
     .hero-image {
         width: 100%;
-        height: 340px;
+        height: 360px;
         border-radius: 0 0 55px 0;
     }
 
     .team-frame {
-        padding: 8px;
+        padding: 10px;
     }
 
-    .hero-team-photo {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-        object-position: center center;
-    }
-
-    /* =====================================================
-       TEAM
-    ===================================================== */
+    /* TEAM */
 
     .team-section {
         width: 100%;
@@ -1543,14 +1437,10 @@ footer .copyright {
         width: 100%;
     }
 
-    /* =====================================================
-       TEAM PHOTO — MOBILE
-    ===================================================== */
-
     .team-photo {
         width: 100%;
-        height: 225px;
-        overflow: hidden;
+        height: 250px;
+        overflow: visible;
         background: #FFF9F5;
         display: flex;
         align-items: center;
@@ -1558,29 +1448,12 @@ footer .copyright {
     }
 
     .team-photo img {
-        width: 100%;
+        width: auto;
         height: 100%;
-        object-fit: fill;
+        max-width: 100%;
+        object-fit: contain;
         object-position: center center;
         background: #FFF9F5;
-    }
-
-    .team-card:nth-child(2) .team-photo img {
-        object-position: center center;
-    }
-
-    /* =====================================================
-       TEAM HEART — MOBILE
-    ===================================================== */
-
-    .team-heart {
-        left: 50%;
-        bottom: -27px;
-        transform: translateX(-50%);
-        width: 54px;
-        height: 54px;
-        font-size: 28px;
-        z-index: 20;
     }
 
     .team-card h3 {
@@ -1593,9 +1466,16 @@ footer .copyright {
         padding: 0 30px;
     }
 
-    /* =====================================================
-       WHAT WE DO
-    ===================================================== */
+    .team-heart {
+        left: 50%;
+        bottom: -27px;
+        transform: translateX(-50%);
+        width: 54px;
+        height: 54px;
+        font-size: 28px;
+    }
+
+    /* WHAT WE DO */
 
     .what-we-do {
         width: 100%;
@@ -1628,9 +1508,7 @@ footer .copyright {
         display: none;
     }
 
-    /* =====================================================
-       CTA
-    ===================================================== */
+    /* CTA */
 
     .cta {
         padding: 45px 20px;
@@ -1640,9 +1518,7 @@ footer .copyright {
         font-size: 34px;
     }
 
-    /* =====================================================
-       CONTACT
-    ===================================================== */
+    /* CONTACT */
 
     .contact-hero {
         padding: 60px 20px 50px;
@@ -1691,9 +1567,7 @@ footer .copyright {
         font-size: 32px;
     }
 
-    /* =====================================================
-       FOOTER — PHONE
-    ===================================================== */
+    /* FOOTER */
 
     .footer-container {
         width: 100%;
@@ -1707,7 +1581,6 @@ footer .copyright {
     .footer-column {
         width: 100%;
         align-items: center;
-        text-align: center;
     }
 
     .footer-logo {
@@ -1718,12 +1591,7 @@ footer .copyright {
         width: 100%;
         max-width: 100%;
         padding: 25px 15px 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        text-align: center;
+        gap: 5px;
     }
 
     .footer-content h3 {
@@ -1745,26 +1613,12 @@ footer .copyright {
         font-size: 12px;
     }
 
-    /* CENTER COPYRIGHT */
-
-    footer > .copyright,
-    footer .footer-content > .copyright,
-    footer .footer-container + .copyright,
-    footer .copyright {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        text-align: center !important;
-        padding: 10px 15px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        font-size: 11px !important;
+    .footer-content .copyright {
+        font-size: 8px;
+        padding: 7px 8px 0;
     }
 
-    /* =====================================================
-       CARE KITS
-    ===================================================== */
+    /* CARE KITS */
 
     .care-kit-items {
         padding: 55px 20px 60px;
@@ -1775,8 +1629,9 @@ footer .copyright {
     }
 
     .care-kit-heading::after {
-        content: none !important;
-        display: none !important;
+        max-width: 500px;
+        font-size: 11px;
+        padding: 8px 15px;
     }
 
     .care-items-grid {
@@ -1808,9 +1663,7 @@ footer .copyright {
         border-radius: 12px;
     }
 
-    /* =====================================================
-       PROVIDED
-    ===================================================== */
+    /* PROVIDED */
 
     .provided-care {
         padding: 0 20px 25px;
@@ -1851,9 +1704,7 @@ footer .copyright {
         border-bottom: none;
     }
 
-    /* =====================================================
-       INNER CARDS
-    ===================================================== */
+    /* INNER CARDS */
 
     .inner-card-section {
         padding: 55px 0 70px;
@@ -1890,15 +1741,7 @@ footer .copyright {
     }
 
     .large-card-top {
-        height: 210px;
-        overflow: hidden;
-    }
-
-    .large-card-top img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-        object-position: center center;
+        height: 230px;
     }
 
     .large-inner-card h3 {
@@ -1939,33 +1782,21 @@ footer .copyright {
         font-size: 43px;
     }
 
-    /* HERO PHOTO */
-
-    .hero-image {
-        height: 310px;
-    }
-
-    .team-frame {
-        padding: 7px;
-    }
-
-    /* TEAM PHOTO */
-
     .team-photo {
         width: 100%;
-        height: 210px;
-        overflow: hidden;
+        height: 250px;
+        overflow: visible;
         background: #FFF9F5;
     }
 
     .team-photo img {
-        width: 100%;
+        width: auto;
         height: 100%;
-        object-fit: fill;
+        max-width: 100%;
+        object-fit: contain;
         object-position: center center;
+        background: #FFF9F5;
     }
-
-    /* HEART */
 
     .team-heart {
         left: 50%;
@@ -1974,7 +1805,6 @@ footer .copyright {
         width: 54px;
         height: 54px;
         font-size: 28px;
-        z-index: 20;
     }
 
     .what-we-do .what-card {
@@ -2016,8 +1846,6 @@ footer .copyright {
         height: 38px;
     }
 
-    /* FOOTER */
-
     .footer-content {
         padding: 20px 12px 9px;
         gap: 4px;
@@ -2041,19 +1869,15 @@ footer .copyright {
         font-size: 11px;
     }
 
-    footer > .copyright,
-    footer .footer-content > .copyright,
-    footer .footer-container + .copyright,
-    footer .copyright {
-        font-size: 9px !important;
-        padding: 8px 8px !important;
-        justify-content: center !important;
-        text-align: center !important;
+    .footer-content .copyright {
+        font-size: 7px;
+        padding: 6px 6px 0;
     }
 
     .care-kit-heading::after {
-        content: none !important;
-        display: none !important;
+        font-size: 10px;
+        line-height: 1.5;
+        padding: 8px 10px;
     }
 
     .inner-card-grid,
@@ -2064,20 +1888,10 @@ footer .copyright {
     }
 
     .large-card-top {
-        height: 195px;
-    }
-
-    .large-card-top img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-        object-position: center center;
-    }
-
-    .donation-hours h2 {
-        font-size: 30px;
+        height: 220px;
     }
 }
+
 
 /* =========================================================
    FINAL UPDATES FROM PROJECT NOTES
@@ -2095,7 +1909,6 @@ footer .copyright {
 }
 
 @media (max-width: 900px) {
-
     .provided-items {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
@@ -2111,7 +1924,6 @@ footer .copyright {
 }
 
 @media (max-width: 600px) {
-
     .donation-hours {
         width: 100%;
         padding: 35px 20px 5px;
@@ -2142,128 +1954,14 @@ footer .copyright {
 }
 
 @media (max-width: 400px) {
-
     .donation-hours h2 {
         font-size: 30px;
     }
 }
 
-/* =========================================================
-   CARE KITS FINAL DESKTOP FIX
-   5 items on first row, 4 centered on second row.
-========================================================= */
 
 @media (min-width: 901px) {
-
-    .care-items-grid {
-        grid-template-columns: repeat(5, 1fr) !important;
-        grid-auto-flow: row;
+    .care-items-grid .care-item:nth-child(6) {
+        grid-column: 2;
     }
-
-    .care-item {
-        border-right: 1px solid var(--line) !important;
-    }
-
-    .care-item:nth-child(5),
-    .care-item:nth-child(9) {
-        border-right: none !important;
-    }
-
-    .care-item:nth-child(6) {
-        grid-column: 2 !important;
-    }
-
-    .care-item:nth-child(7),
-    .care-item:nth-child(8),
-    .care-item:nth-child(9) {
-        grid-column: auto;
-    }
-
-    .featured-care {
-        background: transparent !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-    }
-}
-
-/* Remove old duplicate donation message */
-
-.care-kit-heading::after {
-    content: none !important;
-    display: none !important;
-}
-
-/* =========================================================
-   FINAL PHOTO SAFETY FIX
-========================================================= */
-
-/* Keep hero photo completely inside its frame */
-.hero-team-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: fill !important;
-    object-position: center center !important;
-}
-
-/* Keep team photos completely inside their frames */
-.team-photo {
-    overflow: hidden !important;
-}
-
-.team-photo img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: fill !important;
-    object-position: center center !important;
-}
-
-/* Keep all hearts completely visible */
-.team-heart {
-    z-index: 50 !important;
-}
-
-/* Keep mission/card photos inside their boxes */
-.large-card-top {
-    overflow: hidden !important;
-}
-
-.large-card-top img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: fill !important;
-    object-position: center center !important;
-}
-
-/* =========================================================
-   FINAL FOOTER CENTERING
-========================================================= */
-
-footer {
-    text-align: center !important;
-}
-
-.footer-container {
-    width: 100%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.footer-brand,
-.footer-column {
-    text-align: center !important;
-}
-
-.social-icons {
-    justify-content: center !important;
-}
-
-footer > .copyright,
-footer .copyright {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
 }
