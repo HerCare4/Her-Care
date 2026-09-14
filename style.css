@@ -268,11 +268,13 @@ header {
     overflow: hidden;
 }
 
+/* Force the hero photo to fully fill its frame with no
+   letterboxing gaps — this must win over any other rule. */
 .hero-team-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
     display: block;
 }
 
@@ -329,16 +331,6 @@ header {
     margin-bottom: 3px;
 }
 
-/* About page team section label was inheriting the tiny 12px base
-   .section-label size while every other section label on the site
-   is 16-17px — bring it in line. */
-.team-title .section-label {
-    font-size: 16px;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    color: #E86691;
-}
-
 .our-team-description h3 {
     font-size: 21px;
     color: #514857;
@@ -371,13 +363,19 @@ header {
     min-width: 0;
 }
 
+/* =========================================================
+   TEAM PHOTO — FULL IMAGE FIT
+========================================================= */
+
 .team-photo {
     position: relative;
     width: 100%;
-    height: 250px;
-    overflow: visible;
+    height: 220px;
+    overflow: hidden;
     background: #FFF9F5;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-bottom: 1px solid #edbfd0;
 }
 
@@ -385,8 +383,9 @@ header {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center center;
+    background: #FFF9F5;
 }
 
 .team-heart {
@@ -405,7 +404,7 @@ header {
     font-size: 28px;
     color: var(--rose);
     line-height: 1;
-    z-index: 10;
+    z-index: 20;
     box-shadow: 0 5px 12px rgba(217,154,181,.16);
     pointer-events: none;
 }
@@ -538,12 +537,6 @@ header {
 .peach-care {
     background: #FAD9C1;
     color: #9B6650;
-}
-
-.white-care {
-    background: #FFFFFF !important;
-    border: 2px solid #F0C7D6;
-    color: #ED7199 !important;
 }
 
 .what-we-do .what-card h3 {
@@ -878,8 +871,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* CARE KIT GRID */
-
 .care-items-grid {
     width: 100%;
     max-width: 1100px;
@@ -994,7 +985,7 @@ header {
     margin: auto;
     padding: 35px 0 80px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 
 .provided-item {
@@ -1067,9 +1058,25 @@ header {
     overflow: hidden;
 }
 
+/* =========================================================
+   MISSION PHOTO — SMALLER FRAME / FULL IMAGE
+========================================================= */
+
 .large-card-top {
-    height: 230px;
+    height: 200px;
     background: var(--blush);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.large-card-top img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center center;
 }
 
 .large-inner-card h3 {
@@ -1088,7 +1095,7 @@ header {
 }
 
 /* =========================================================
-   FOOTER
+   FOOTER (simple centered footer used on inner pages)
 ========================================================= */
 
 footer {
@@ -1097,15 +1104,6 @@ footer {
     border-top: 1px solid #efc5d5;
     margin-top: auto;
     text-align: center;
-}
-
-.footer-container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 65px 30px;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
-    gap: 45px;
 }
 
 .footer-content {
@@ -1221,17 +1219,41 @@ footer {
 }
 
 /* =========================================================
-   TABLET
+   HOMEPAGE FOOTER — HORIZONTAL 4-COLUMN GRID
+   (.footer-grid is only used on index.html, so this never
+   affects the simple centered footer on the other pages)
 ========================================================= */
 
-@media (min-width: 901px) {
-    /* Give the donation/community-service block more breathing
-       room on the left instead of sitting flush against center. */
-    .donation-hours {
-        padding-left: 90px;
-        padding-right: 30px;
-    }
+.footer-grid {
+    display: grid !important;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    align-items: start;
+    justify-content: center;
+    column-gap: 45px;
+    row-gap: 30px;
+    max-width: 1100px;
+    padding: 65px 30px 30px;
+    text-align: left;
 }
+
+.footer-grid .footer-brand,
+.footer-grid .footer-column {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.footer-grid .social-icons {
+    justify-content: flex-start;
+}
+
+.footer-grid .copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 900px) {
 
@@ -1271,17 +1293,9 @@ footer {
         grid-template-columns: repeat(2,1fr);
     }
 
-    .provided-items {
+    .footer-grid {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 40px;
-    }
-
-    .provided-item:nth-child(odd) {
-        border-right: 1px solid #E99DB9;
-    }
-
-    .provided-item:nth-child(even) {
-        border-right: none;
+        gap: 35px;
     }
 }
 
@@ -1460,10 +1474,12 @@ footer {
         width: 100%;
     }
 
+    /* TEAM PHOTOS */
+
     .team-photo {
         width: 100%;
-        height: 250px;
-        overflow: visible;
+        height: 220px;
+        overflow: hidden;
         background: #FFF9F5;
         display: flex;
         align-items: center;
@@ -1495,6 +1511,23 @@ footer {
         width: 54px;
         height: 54px;
         font-size: 28px;
+    }
+
+    /* MISSION PHOTO */
+
+    .large-card-top {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .large-card-top img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
     }
 
     /* WHAT WE DO */
@@ -1589,31 +1622,18 @@ footer {
         font-size: 32px;
     }
 
-    /* FOOTER */
-
-    .footer-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        padding: 55px 25px;
-    }
-
-    .footer-brand,
-    .footer-column {
-        width: 100%;
-        align-items: center;
-    }
-
-    .footer-logo {
-        font-size: 40px;
-    }
+    /* FOOTER — PHONE ONLY */
 
     .footer-content {
         width: 100%;
         max-width: 100%;
         padding: 25px 15px 10px;
-        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        text-align: center;
     }
 
     .footer-content h3 {
@@ -1640,6 +1660,31 @@ footer {
         padding: 7px 8px 0;
     }
 
+    .footer-grid {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+        padding: 55px 25px;
+        max-width: 100%;
+    }
+
+    .footer-grid .footer-brand,
+    .footer-grid .footer-column {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-grid .social-icons {
+        justify-content: center;
+    }
+
+    .footer-grid .footer-logo {
+        font-size: 40px;
+    }
+
     /* CARE KITS */
 
     .care-kit-items {
@@ -1648,6 +1693,12 @@ footer {
 
     .care-kit-heading {
         margin-bottom: 40px;
+    }
+
+    .care-kit-heading::after {
+        max-width: 500px;
+        font-size: 11px;
+        padding: 8px 15px;
     }
 
     .care-items-grid {
@@ -1757,7 +1808,7 @@ footer {
     }
 
     .large-card-top {
-        height: 230px;
+        height: 200px;
     }
 
     .large-inner-card h3 {
@@ -1800,8 +1851,8 @@ footer {
 
     .team-photo {
         width: 100%;
-        height: 250px;
-        overflow: visible;
+        height: 200px;
+        overflow: hidden;
         background: #FFF9F5;
     }
 
@@ -1888,6 +1939,12 @@ footer {
         padding: 6px 6px 0;
     }
 
+    .care-kit-heading::after {
+        font-size: 10px;
+        line-height: 1.5;
+        padding: 8px 10px;
+    }
+
     .inner-card-grid,
     .care-kits-grid,
     .four-card-grid,
@@ -1896,10 +1953,9 @@ footer {
     }
 
     .large-card-top {
-        height: 220px;
+        height: 190px;
     }
 }
-
 
 /* =========================================================
    FINAL UPDATES FROM PROJECT NOTES
@@ -1916,7 +1972,24 @@ footer {
     text-align: center;
 }
 
+@media (max-width: 900px) {
+
+    .provided-items {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+
+    .provided-item:nth-child(odd) {
+        border-right: 1px solid #E99DB9;
+    }
+
+    .provided-item:nth-child(even) {
+        border-right: none;
+    }
+}
+
 @media (max-width: 600px) {
+
     .donation-hours {
         width: 100%;
         padding: 35px 20px 5px;
@@ -1947,48 +2020,41 @@ footer {
 }
 
 @media (max-width: 400px) {
+
     .donation-hours h2 {
         font-size: 30px;
     }
 }
 
 /* =========================================================
-   CARE KITS FINAL DESKTOP FIX
-   5 items on the first row, 4 centered on the second row.
+   CARE KITS FINAL LAYOUT FIX
+   5 items on row 1, 4 centered on row 2
 ========================================================= */
 
 @media (min-width: 901px) {
-    /* 10 virtual tracks (2 per card) so a 4-item row can be
-       offset by half a card-width on each side for true centering */
+
     .care-items-grid {
-        grid-template-columns: repeat(10, 1fr) !important;
+        grid-template-columns: repeat(5, 1fr) !important;
         grid-auto-flow: row;
     }
 
     .care-item {
-        grid-column: span 2;
         border-right: 1px solid var(--line) !important;
     }
 
-    .care-item:nth-child(5) {
+    .care-item:nth-child(5),
+    .care-item:nth-child(9) {
         border-right: none !important;
     }
 
     .care-item:nth-child(6) {
-        grid-column: 2 / span 2 !important;
+        grid-column: 2 !important;
     }
 
-    .care-item:nth-child(7) {
-        grid-column: 4 / span 2 !important;
-    }
-
-    .care-item:nth-child(8) {
-        grid-column: 6 / span 2 !important;
-    }
-
+    .care-item:nth-child(7),
+    .care-item:nth-child(8),
     .care-item:nth-child(9) {
-        grid-column: 8 / span 2 !important;
-        border-right: none !important;
+        grid-column: auto;
     }
 
     .featured-care {
@@ -1998,7 +2064,6 @@ footer {
     }
 }
 
-/* Remove the old extra donation message under WHAT WE DO. */
 .care-kit-heading::after {
     content: none !important;
     display: none !important;
