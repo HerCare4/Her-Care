@@ -329,6 +329,16 @@ header {
     margin-bottom: 3px;
 }
 
+/* About page team section label was inheriting the tiny 12px base
+   .section-label size while every other section label on the site
+   is 16-17px — bring it in line. */
+.team-title .section-label {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #E86691;
+}
+
 .our-team-description h3 {
     font-size: 21px;
     color: #514857;
@@ -367,19 +377,16 @@ header {
     height: 250px;
     overflow: visible;
     background: #FFF9F5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     border-bottom: 1px solid #edbfd0;
 }
 
 .team-photo img {
-    width: auto;
+    width: 100%;
     height: 100%;
-    max-width: 100%;
     display: block;
-    object-fit: contain;
-    object-position: center center;
+    object-fit: cover;
+    object-position: center top;
 }
 
 .team-heart {
@@ -531,6 +538,12 @@ header {
 .peach-care {
     background: #FAD9C1;
     color: #9B6650;
+}
+
+.white-care {
+    background: #FFFFFF !important;
+    border: 2px solid #F0C7D6;
+    color: #ED7199 !important;
 }
 
 .what-we-do .what-card h3 {
@@ -838,7 +851,7 @@ header {
 .donation-hours p:last-child {
     max-width: 900px;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.7;
     color: var(--muted);
 }
@@ -865,18 +878,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* DONATION MESSAGE */
-.care-kit-heading::after {
-    content: "Donations of these items may qualify for community service hours. Please check with your school or organization for approval.";
-    display: block;
-    max-width: 700px;
-    margin: 14px auto 0;
-    padding: 10px 20px;
-    color: #776C78;
-    font-size: 12px;
-    line-height: 1.6;
-}
-
 /* CARE KIT GRID */
 
 .care-items-grid {
@@ -884,7 +885,7 @@ header {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 0;
     row-gap: 50px;
 }
@@ -896,7 +897,7 @@ header {
     padding: 0 20px;
 }
 
-.care-item:not(:nth-child(5n)) {
+.care-item:not(:nth-child(4n)) {
     border-right: 1px solid var(--line);
 }
 
@@ -925,10 +926,10 @@ header {
 }
 
 .featured-care {
-    background: #FCEEF3;
-    padding-top: 15px;
-    padding-bottom: 25px;
-    border-radius: 12px;
+    background: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 0;
 }
 
 .featured-care .care-icon {
@@ -993,7 +994,7 @@ header {
     margin: auto;
     padding: 35px 0 80px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
 }
 
 .provided-item {
@@ -1223,6 +1224,15 @@ footer {
    TABLET
 ========================================================= */
 
+@media (min-width: 901px) {
+    /* Give the donation/community-service block more breathing
+       room on the left instead of sitting flush against center. */
+    .donation-hours {
+        padding-left: 90px;
+        padding-right: 30px;
+    }
+}
+
 @media (max-width: 900px) {
 
     .what-we-do .what-container {
@@ -1259,6 +1269,19 @@ footer {
     .four-card-grid,
     .three-card-grid {
         grid-template-columns: repeat(2,1fr);
+    }
+
+    .provided-items {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+
+    .provided-item:nth-child(odd) {
+        border-right: 1px solid #E99DB9;
+    }
+
+    .provided-item:nth-child(even) {
+        border-right: none;
     }
 }
 
@@ -1448,9 +1471,8 @@ footer {
     }
 
     .team-photo img {
-        width: auto;
+        width: 100%;
         height: 100%;
-        max-width: 100%;
         object-fit: contain;
         object-position: center center;
         background: #FFF9F5;
@@ -1628,12 +1650,6 @@ footer {
         margin-bottom: 40px;
     }
 
-    .care-kit-heading::after {
-        max-width: 500px;
-        font-size: 11px;
-        padding: 8px 15px;
-    }
-
     .care-items-grid {
         grid-template-columns: 1fr;
         row-gap: 35px;
@@ -1790,12 +1806,10 @@ footer {
     }
 
     .team-photo img {
-        width: auto;
+        width: 100%;
         height: 100%;
-        max-width: 100%;
         object-fit: contain;
         object-position: center center;
-        background: #FFF9F5;
     }
 
     .team-heart {
@@ -1874,12 +1888,6 @@ footer {
         padding: 6px 6px 0;
     }
 
-    .care-kit-heading::after {
-        font-size: 10px;
-        line-height: 1.5;
-        padding: 8px 10px;
-    }
-
     .inner-card-grid,
     .care-kits-grid,
     .four-card-grid,
@@ -1906,21 +1914,6 @@ footer {
 
 .donation-hours {
     text-align: center;
-}
-
-@media (max-width: 900px) {
-    .provided-items {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 40px;
-    }
-
-    .provided-item:nth-child(odd) {
-        border-right: 1px solid #E99DB9;
-    }
-
-    .provided-item:nth-child(even) {
-        border-right: none;
-    }
 }
 
 @media (max-width: 600px) {
@@ -1959,107 +1952,43 @@ footer {
     }
 }
 
-
 /* =========================================================
-   FINAL FIXES
-========================================================= */
-
-/* Remove old duplicate donation message */
-.care-kit-heading::after {
-    content: none !important;
-    display: none !important;
-}
-
-/* Keep individual team photos proportional and fully visible */
-.team-photo {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    background: #FFF9F5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid #edbfd0;
-}
-
-.team-photo img {
-    width: auto;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    object-fit: contain;
-    object-position: center center;
-}
-
-/* Tablet and mobile team photos */
-@media (max-width: 900px) {
-    .team-photo {
-        width: 100%;
-        height: 250px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .team-photo img {
-        width: auto;
-        height: 100%;
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        object-position: center center;
-    }
-}
-
-/* Small phones */
-@media (max-width: 600px) {
-    .team-photo {
-        width: 100%;
-        height: 220px;
-        overflow: hidden;
-    }
-
-    .team-photo img {
-        width: auto;
-        height: 100%;
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        object-position: center center;
-    }
-}
-
-/* =========================================================
-   CARE KIT GRID FIX
+   CARE KITS FINAL DESKTOP FIX
+   5 items on the first row, 4 centered on the second row.
 ========================================================= */
 
 @media (min-width: 901px) {
-
+    /* 10 virtual tracks (2 per card) so a 4-item row can be
+       offset by half a card-width on each side for true centering */
     .care-items-grid {
-        grid-template-columns: repeat(5, 1fr) !important;
+        grid-template-columns: repeat(10, 1fr) !important;
         grid-auto-flow: row;
     }
 
     .care-item {
+        grid-column: span 2;
         border-right: 1px solid var(--line) !important;
     }
 
-    .care-item:nth-child(5),
-    .care-item:nth-child(9) {
+    .care-item:nth-child(5) {
         border-right: none !important;
     }
 
     .care-item:nth-child(6) {
-        grid-column: 2 !important;
+        grid-column: 2 / span 2 !important;
     }
 
-    .care-item:nth-child(7),
-    .care-item:nth-child(8),
+    .care-item:nth-child(7) {
+        grid-column: 4 / span 2 !important;
+    }
+
+    .care-item:nth-child(8) {
+        grid-column: 6 / span 2 !important;
+    }
+
     .care-item:nth-child(9) {
-        grid-column: auto;
+        grid-column: 8 / span 2 !important;
+        border-right: none !important;
     }
 
     .featured-care {
@@ -2069,59 +1998,8 @@ footer {
     }
 }
 
-/* =========================================================
-   FINAL MOBILE TEAM PHOTO FIX
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .team-photo {
-        position: relative;
-        width: 100%;
-        height: 250px;
-        overflow: hidden;
-        background: #FFF9F5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .team-photo img {
-        width: auto;
-        height: 100%;
-        max-width: 100%;
-        max-height: 100%;
-        display: block;
-        object-fit: contain;
-        object-position: center center;
-    }
-}
-
-@media (max-width: 400px) {
-
-    .team-photo {
-        width: 100%;
-        height: 250px;
-        overflow: hidden;
-        background: #FFF9F5;
-    }
-
-    .team-photo img {
-        width: auto;
-        height: 100%;
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        object-position: center center;
-    }
-}
-
-/* =========================================================
-   FINAL CARE KIT POSITIONING
-========================================================= */
-
-@media (min-width: 901px) {
-    .care-items-grid .care-item:nth-child(6) {
-        grid-column: 2 !important;
-    }
+/* Remove the old extra donation message under WHAT WE DO. */
+.care-kit-heading::after {
+    content: none !important;
+    display: none !important;
 }
