@@ -241,49 +241,41 @@ header {
 
 /* =========================================================
    HERO TEAM FRAME
-   Fits the team photo without cropping
 ========================================================= */
 
 .hero-image {
-    width: min(100%, 520px);
-    max-width: 520px;
-    justify-self: center;
+    width: min(100%, 400px);
+    aspect-ratio: 3 / 4;
+    height: auto;
     overflow: hidden;
-    border: 2px solid var(--rose);
-    border-radius: 28px;
-    padding: 12px;
-    background: linear-gradient(
-        135deg,
-        var(--blush),
-        var(--lavender)
-    );
-    box-shadow:
-        0 15px 35px rgba(217,154,181,.18);
+    border-radius: 0 0 80px 0;
 }
 
 .team-frame {
-    position: relative;
+    border: 2px solid var(--rose);
+    background: var(--blush);
+    padding: 14px;
+    box-shadow: 0 12px 30px rgba(217,154,181,.18);
 }
 
 .frame-inner {
     width: 100%;
-    aspect-ratio: 16 / 10;
+    height: 100%;
     border: 1px solid rgba(217,154,181,.7);
-    border-radius: 18px;
-    background: var(--cream);
+    background: linear-gradient(135deg,#FFF9F5,#FCE4EC 55%,#DCC6E0);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
 .hero-team-photo {
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: contain;
-    object-position: center center;
-    background: var(--cream);
+    object-position: center;
+    display: block;
+    background: #FFF9F5;
 }
 
 /* =========================================================
@@ -386,7 +378,7 @@ header {
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center center;
+    object-position: center top;
 }
 
 .team-heart {
@@ -872,8 +864,7 @@ header {
     letter-spacing: 1px;
 }
 
-/* DONATION MESSAGE */
-
+/* DONATION MESSAGE — ADDED */
 .care-kit-heading::after {
     content: "Donations of these items may qualify for community service hours. Please check with your school or organization for approval.";
     display: block;
@@ -1172,18 +1163,13 @@ footer {
 
 .footer-content .copyright,
 .copyright {
-    position: relative;
     width: 100%;
     border-top: 1px solid #e9bfd0;
-    padding: 5px 5px 5px;
-    margin-top: 12px;
+    padding: 7px 10px 0;
+    margin-top: 3px;
     text-align: center;
-    font-size: 12px;
+    font-size: 9px;
     color: #746976;
-    background: transparent;
-    transform: none;
-    left: auto;
-    top: auto;
 }
 
 .footer-logo {
@@ -1272,17 +1258,6 @@ footer {
     .four-card-grid,
     .three-card-grid {
         grid-template-columns: repeat(2,1fr);
-    }
-
-    /* HERO FRAME */
-
-    .hero-image {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .frame-inner {
-        aspect-ratio: 16 / 10;
     }
 }
 
@@ -1409,23 +1384,16 @@ footer {
         min-height: 58px;
     }
 
-    /* HERO FRAME */
-
     .hero-image {
         width: 100%;
-        max-width: 500px;
-        padding: 9px;
-        border-radius: 22px;
+        max-width: 400px;
+        aspect-ratio: 3 / 4;
+        height: auto;
+        border-radius: 0 0 55px 0;
     }
 
-    .frame-inner {
-        aspect-ratio: 16 / 10;
-        border-radius: 14px;
-    }
-
-    .hero-team-photo {
-        object-fit: contain;
-        object-position: center center;
+    .team-frame {
+        padding: 10px;
     }
 
     /* TEAM */
@@ -1814,24 +1782,6 @@ footer {
         font-size: 43px;
     }
 
-    /* HERO FRAME */
-
-    .hero-image {
-        width: 100%;
-        max-width: 100%;
-        padding: 7px;
-        border-radius: 18px;
-    }
-
-    .frame-inner {
-        aspect-ratio: 16 / 10;
-        border-radius: 12px;
-    }
-
-    /*
-       Keep individual team-photo styling unchanged.
-    */
-
     .team-photo {
         width: 100%;
         height: 250px;
@@ -1840,12 +1790,10 @@ footer {
     }
 
     .team-photo img {
-        width: auto;
+        width: 100%;
         height: 100%;
-        max-width: 100%;
         object-fit: contain;
         object-position: center center;
-        background: #FFF9F5;
     }
 
     .team-heart {
@@ -1942,6 +1890,7 @@ footer {
     }
 }
 
+
 /* =========================================================
    FINAL UPDATES FROM PROJECT NOTES
 ========================================================= */
@@ -1958,7 +1907,6 @@ footer {
 }
 
 @media (max-width: 900px) {
-
     .provided-items {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
@@ -1974,7 +1922,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-
     .donation-hours {
         width: 100%;
         padding: 35px 20px 5px;
@@ -2005,95 +1952,91 @@ footer {
 }
 
 @media (max-width: 400px) {
-
     .donation-hours h2 {
         font-size: 30px;
     }
 }
 
-/* =========================================================
-   HERO FRAME FINAL
-   Photo stays fully visible and centered.
-   Individual team photos are NOT changed.
-========================================================= */
 
 @media (min-width: 901px) {
-
-    .hero-image {
-        width: min(100%, 520px);
-        max-width: 520px;
-        height: auto;
-        justify-self: center;
-        overflow: hidden;
-        border: 2px solid var(--rose);
-        border-radius: 28px;
-        padding: 12px;
-        background: linear-gradient(
-            135deg,
-            var(--blush),
-            var(--lavender)
-        );
-        box-shadow:
-            0 15px 35px rgba(217,154,181,.18);
+    .care-items-grid .care-item:nth-child(6) {
+        grid-column: 2;
     }
+}
 
-    .team-frame {
-        position: relative;
-    }
+/* =========================================================
+   PHOTO FIXES ONLY — MISSION + TEAM PHOTOS
+   No other page styles are changed here.
+========================================================= */
 
-    .frame-inner {
-        width: 100%;
-        aspect-ratio: 16 / 10;
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        border: 1px solid rgba(217,154,181,.7);
-        border-radius: 18px;
-        background: var(--cream);
-    }
+/* Mission page photo */
+.large-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--blush);
+}
 
-    .hero-team-photo {
+.large-card-top img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center center;
+}
+
+/* Team photos */
+.team-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #FFF9F5;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center center;
+    background: #FFF9F5;
+}
+
+/* Keep the second team photo centered as well */
+.team-card:nth-child(2) .team-photo img {
+    object-position: center center;
+}
+
+@media (max-width: 768px) {
+    .large-card-top img {
         width: 100%;
         height: 100%;
         object-fit: contain;
         object-position: center center;
-        display: block;
-        background: var(--cream);
-    }
-
-    /*
-       IMPORTANT:
-       Individual team photos stay unchanged.
-    */
-
-    .team-photo {
-        position: relative;
-        width: 100%;
-        height: 250px;
-        overflow: visible;
-        background: #FFF9F5;
-        display: block;
-        border-bottom: 1px solid #edbfd0;
     }
 
     .team-photo img {
         width: 100%;
         height: 100%;
-        display: block;
-        object-fit: cover;
+        object-fit: contain;
+        object-position: center center;
+    }
+
+    .team-card:nth-child(2) .team-photo img {
         object-position: center center;
     }
 }
 
-/* =========================================================
-   CARE KITS ORIGINAL DESKTOP POSITION
-========================================================= */
+@media (max-width: 400px) {
+    .large-card-top img {
+        object-fit: contain;
+        object-position: center center;
+    }
 
-@media (min-width: 901px) {
-
-    .care-items-grid .care-item:nth-child(6) {
-        grid-column: 2;
+    .team-photo img {
+        object-fit: contain;
+        object-position: center center;
     }
 }
