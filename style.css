@@ -271,9 +271,10 @@ header {
 .hero-team-photo {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
+    object-position: center center;
     display: block;
+    background: #FFF9F5;
 }
 
 /* =========================================================
@@ -367,18 +368,15 @@ header {
     height: 250px;
     overflow: visible;
     background: #FFF9F5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     border-bottom: 1px solid #edbfd0;
 }
 
 .team-photo img {
-    width: auto;
+    width: 100%;
     height: 100%;
-    max-width: 100%;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center center;
 }
 
@@ -1095,134 +1093,34 @@ footer {
     background: #FBE1EB;
     border-top: 1px solid #efc5d5;
     margin-top: auto;
-    text-align: left;
+    text-align: center;
 }
 
 .footer-container {
-    width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
-    padding: 8px 0 0;
+    margin: auto;
+    padding: 65px 30px;
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr 1.4fr;
-    gap: 35px;
-    align-items: start;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 45px;
 }
 
-.footer-brand {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
-
-.footer-logo {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 30px;
-    color: #302a35;
-    line-height: 1;
-}
-
-.footer-logo span {
-    color: #E779A0;
-    font-style: italic;
-}
-
-.footer-by {
-    margin-top: 2px;
-    font-size: 10px;
-    color: #625967;
-}
-
-.footer-brand p {
-    margin: 10px 0 0;
-    line-height: 1.4;
-    font-size: 10px;
-    color: #625967;
-}
-
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    text-align: left;
-}
-
-.footer-column h4 {
-    color: #36303A;
-    font-size: 12px;
-    margin: 0 0 4px;
-    letter-spacing: .3px;
-}
-
-.footer-column a,
-.footer-column p {
-    margin: 0;
-    font-size: 10px;
-    line-height: 1.35;
-    color: #625967;
-    text-decoration: none;
-}
-
-.footer-column a:hover {
-    color: #E66F98;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 7px;
-    margin-top: 10px;
-}
-
-.social-icons a {
-    width: 24px;
-    height: 24px;
-    background: #F7C6D9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    color: #625967;
-    text-decoration: none;
-    transition: .25s ease;
-}
-
-.social-icons a:hover {
-    transform: translateY(-2px);
-    background: #EBA9C4;
-}
-
-.copyright {
-    width: 100%;
-    border-top: 1px solid #e9bfd0;
-    padding: 7px 10px 5px;
-    margin-top: 8px;
-    text-align: center;
-    font-size: 8px;
-    color: #746976;
-}
-
-/* Legacy footer markup */
 .footer-content {
     width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
-    padding: 8px 0 5px;
+    margin: auto;
+    padding: 25px 20px 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 5px;
-    text-align: left;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
 }
 
 .footer-content h3 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 30px;
+    font-family: "Cormorant Garamond",serif;
+    font-size: 27px;
     font-weight: 600;
     color: #302a35;
     margin: 0;
@@ -1234,26 +1132,89 @@ footer {
     color: #625967;
 }
 
-.footer-content .social-icons {
-    justify-content: flex-start;
-    gap: 7px;
-    margin-top: 7px;
+.footer-content .social-icons,
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 3px;
 }
 
-.footer-content .social-icons a {
-    width: 24px;
-    height: 24px;
-    font-size: 11px;
+.footer-content .social-icons a,
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    background: #F7C6D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: .25s ease;
 }
 
-.footer-content .copyright {
+.footer-content .social-icons a:hover,
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+.footer-content .copyright,
+.copyright {
     width: 100%;
     border-top: 1px solid #e9bfd0;
     padding: 7px 10px 0;
-    margin-top: 5px;
+    margin-top: 3px;
     text-align: center;
-    font-size: 8px;
+    font-size: 9px;
     color: #746976;
+}
+
+.footer-logo {
+    font-family: "Cormorant Garamond",serif;
+    font-size: 40px;
+    color: #302a35;
+    line-height: 1;
+}
+
+.footer-logo span {
+    color: #E779A0;
+    font-style: italic;
+}
+
+.footer-by {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.footer-brand p {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column h4 {
+    color: #36303A;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer-column a,
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #625967;
+}
+
+.footer-column a:hover {
+    color: #E66F98;
 }
 
 /* =========================================================
@@ -1485,9 +1446,8 @@ footer {
     }
 
     .team-photo img {
-        width: auto;
+        width: 100%;
         height: 100%;
-        max-width: 100%;
         object-fit: contain;
         object-position: center center;
         background: #FFF9F5;
@@ -2000,82 +1960,5 @@ footer {
 @media (min-width: 901px) {
     .care-items-grid .care-item:nth-child(6) {
         grid-column: 2;
-    }
-}
-
-/* =========================================================
-   TEAM PHOTO DISPLAY — REQUESTED LAYOUT
-   Desktop: cover + center top
-   Mobile: contain + center center
-========================================================= */
-
-@media (min-width: 769px) {
-    .team-photo {
-        position: relative;
-        width: 100%;
-        height: 250px;
-        overflow: visible;
-        background: #FFF9F5;
-        display: block;
-        border-bottom: 1px solid #edbfd0;
-    }
-
-    .team-photo img {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-        object-position: center top;
-    }
-
-    /* Keep Avery's individual photo positioning */
-    .team-card:nth-child(2) .team-photo img {
-        object-position: center bottom;
-    }
-}
-
-@media (max-width: 768px) {
-    .team-photo {
-        width: 100%;
-        height: 250px;
-        overflow: visible;
-        background: #FFF9F5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .team-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center center;
-        background: #FFF9F5;
-    }
-
-    /* Keep Avery's individual photo positioning */
-    .team-card:nth-child(2) .team-photo img {
-        object-position: center bottom;
-    }
-}
-
-@media (max-width: 400px) {
-    .team-photo {
-        width: 100%;
-        height: 250px;
-        overflow: visible;
-        background: #FFF9F5;
-    }
-
-    .team-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center center;
-    }
-
-    /* Keep Avery's individual photo positioning */
-    .team-card:nth-child(2) .team-photo img {
-        object-position: center bottom;
     }
 }
