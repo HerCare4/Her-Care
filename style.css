@@ -376,7 +376,7 @@ header {
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center top;
+    object-position: center center;
 }
 
 .team-heart {
@@ -862,18 +862,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* DONATION MESSAGE — ADDED */
-.care-kit-heading::after {
-    content: "Donations of these items may qualify for community service hours. Please check with your school or organization for approval.";
-    display: block;
-    max-width: 700px;
-    margin: 14px auto 0;
-    padding: 10px 20px;
-    color: #776C78;
-    font-size: 12px;
-    line-height: 1.6;
-}
-
 /* CARE KIT GRID */
 
 .care-items-grid {
@@ -881,7 +869,7 @@ header {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 0;
     row-gap: 50px;
 }
@@ -893,7 +881,7 @@ header {
     padding: 0 20px;
 }
 
-.care-item:not(:nth-child(5n)) {
+.care-item:not(:nth-child(4n)) {
     border-right: 1px solid var(--line);
 }
 
@@ -922,10 +910,10 @@ header {
 }
 
 .featured-care {
-    background: #FCEEF3;
-    padding-top: 15px;
-    padding-bottom: 25px;
-    border-radius: 12px;
+    background: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 0;
 }
 
 .featured-care .care-icon {
@@ -1092,30 +1080,23 @@ footer {
     background: #FBE1EB;
     border-top: 1px solid #efc5d5;
     margin-top: auto;
-    text-align: left;
+    text-align: center;
 }
+
+/* MAIN HOME-STYLE FOOTER */
 
 .footer-container {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 8px 0 0;
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 30px;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 5px;
-    align-items: start;
-}
-
-.footer-brand {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 45px;
 }
 
 .footer-logo {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 30px;
+    font-family: "Cormorant Garamond",serif;
+    font-size: 40px;
     color: #302a35;
     line-height: 1;
 }
@@ -1126,100 +1107,102 @@ footer {
 }
 
 .footer-by {
-    margin-top: 2px;
-    font-size: 10px;
-    color: #625967;
+    margin-top: 5px;
+    font-size: 14px;
 }
 
 .footer-brand p {
-    margin: 10px 0 0;
-    line-height: 1.4;
-    font-size: 10px;
-    color: #625967;
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 14px;
 }
 
 .footer-column {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    text-align: left;
+    gap: 12px;
 }
 
 .footer-column h4 {
     color: #36303A;
-    font-size: 12px;
-    margin: 0 0 4px;
-    letter-spacing: .3px;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .footer-column a,
 .footer-column p {
-    margin: 0;
-    font-size: 10px;
-    line-height: 1.35;
+    font-size: 14px;
+    line-height: 1.5;
     color: #625967;
-    text-decoration: none;
 }
 
 .footer-column a:hover {
     color: #E66F98;
 }
 
+/* SOCIAL ICONS */
+
 .social-icons {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 7px;
-    margin-top: 10px;
+    gap: 8px;
+    margin-top: 3px;
 }
 
 .social-icons a {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     background: #F7C6D9;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
-    color: #625967;
-    text-decoration: none;
+    font-size: 13px;
     transition: .25s ease;
 }
 
 .social-icons a:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     background: #EBA9C4;
 }
 
-.copyright {
-    width: 100%;
-    border-top: 1px solid #e9bfd0;
-    padding: 7px 10px 5px;
-    margin-top: 8px;
-    text-align: center;
-    font-size: 8px;
-    color: #746976;
-}
+/* =========================================================
+   OLD / ALTERNATIVE FOOTER SUPPORT
+========================================================= */
 
-/* Legacy footer markup */
+/*
+   Some pages use .footer-content instead of
+   .footer-container.
+
+   DESKTOP:
+   Make the sections horizontal.
+
+   MOBILE:
+   The media query below changes it back
+   to a vertical layout.
+*/
+
 .footer-content {
     width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 8px 0 5px;
-    display: flex;
-    flex-direction: column;
+    max-width: 1100px;
+    margin: auto;
+    padding: 45px 30px 15px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    align-items: start;
     justify-content: center;
-    align-items: flex-start;
-    gap: 5px;
-    text-align: left;
+
+    column-gap: 45px;
+    row-gap: 25px;
+
+    text-align: center;
 }
 
 .footer-content h3 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 30px;
+    font-family: "Cormorant Garamond",serif;
+    font-size: 27px;
     font-weight: 600;
     color: #302a35;
     margin: 0;
@@ -1232,24 +1215,40 @@ footer {
 }
 
 .footer-content .social-icons {
-    justify-content: flex-start;
-    gap: 7px;
-    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 3px;
 }
 
 .footer-content .social-icons a {
-    width: 24px;
-    height: 24px;
-    font-size: 11px;
+    width: 30px;
+    height: 30px;
+    background: #F7C6D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: .25s ease;
 }
 
-.footer-content .copyright {
+.footer-content .social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+/* COPYRIGHT */
+
+.footer-content .copyright,
+.copyright {
     width: 100%;
     border-top: 1px solid #e9bfd0;
     padding: 7px 10px 0;
-    margin-top: 5px;
+    margin-top: 3px;
     text-align: center;
-    font-size: 8px;
+    font-size: 9px;
     color: #746976;
 }
 
@@ -1293,6 +1292,18 @@ footer {
     .four-card-grid,
     .three-card-grid {
         grid-template-columns: repeat(2,1fr);
+    }
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 }
 
@@ -1600,34 +1611,43 @@ footer {
         font-size: 32px;
     }
 
-    /* FOOTER */
+    /* =====================================================
+       FOOTER — PHONE ONLY
+       Stack everything vertically.
+    ===================================================== */
 
     .footer-container {
         width: 100%;
-        max-width: none;
-        margin: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 5px;
-        padding: 8px 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 55px 25px;
     }
 
     .footer-brand,
     .footer-column {
         width: 100%;
-        align-items: flex-start;
-        text-align: left;
+        align-items: center;
     }
 
     .footer-logo {
-        font-size: 30px;
+        font-size: 40px;
     }
 
     .footer-content {
         width: 100%;
         max-width: 100%;
         padding: 25px 15px 10px;
-        gap: 5px;
+
+        /* PHONE = VERTICAL */
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 6px;
+        text-align: center;
     }
 
     .footer-content h3 {
@@ -1881,12 +1901,8 @@ footer {
     }
 
     .footer-content {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        padding: 8px 0 5px;
-        gap: 5px;
-        align-items: flex-start;
+        padding: 20px 12px 9px;
+        gap: 4px;
     }
 
     .footer-content h3 {
@@ -1930,7 +1946,6 @@ footer {
     }
 }
 
-
 /* =========================================================
    FINAL UPDATES FROM PROJECT NOTES
 ========================================================= */
@@ -1947,6 +1962,7 @@ footer {
 }
 
 @media (max-width: 900px) {
+
     .provided-items {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
@@ -1962,6 +1978,7 @@ footer {
 }
 
 @media (max-width: 600px) {
+
     .donation-hours {
         width: 100%;
         padding: 35px 20px 5px;
@@ -1992,14 +2009,140 @@ footer {
 }
 
 @media (max-width: 400px) {
+
     .donation-hours h2 {
         font-size: 30px;
     }
 }
 
+/* =========================================================
+   CARE KITS FINAL DESKTOP FIX
+   5 items on the first row, 4 centered on the second row.
+========================================================= */
 
 @media (min-width: 901px) {
-    .care-items-grid .care-item:nth-child(6) {
+
+    .care-items-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .care-item {
+        border-right: 1px solid var(--line) !important;
+    }
+
+    .care-item:nth-child(5),
+    .care-item:nth-child(9) {
+        border-right: none !important;
+    }
+
+    .care-item:nth-child(6) {
         grid-column: 2;
+    }
+
+    .featured-care {
+        background: transparent !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+/* Remove old duplicate donation message. */
+
+.care-kit-heading::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* =========================================================
+   FINAL CARE KITS LAYOUT FIX
+   Desktop: 5 items on row 1, 4 centered on row 2.
+========================================================= */
+
+@media (min-width: 901px) {
+
+    .care-items-grid {
+        grid-template-columns: repeat(5, 1fr) !important;
+        grid-auto-flow: row;
+    }
+
+    .care-item {
+        border-right: 1px solid var(--line) !important;
+    }
+
+    .care-item:nth-child(5),
+    .care-item:nth-child(9) {
+        border-right: none !important;
+    }
+
+    .care-item:nth-child(6) {
+        grid-column: 2 !important;
+    }
+
+    .care-item:nth-child(7),
+    .care-item:nth-child(8),
+    .care-item:nth-child(9) {
+        grid-column: auto;
+    }
+
+    .featured-care {
+        background: transparent !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+/* Remove old extra donation message. */
+
+.care-kit-heading::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* =========================================================
+   MISSION CARD IMAGE FIX
+========================================================= */
+
+.large-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.large-card-top img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center center;
+}
+
+/* =========================================================
+   TEAM PHOTO FIX
+========================================================= */
+
+.team-photo img {
+    object-position: center center;
+}
+
+/* Avery's photo */
+
+.team-card:nth-child(2) .team-photo img {
+    object-position: center bottom;
+}
+
+/* Keep Mission images centered on mobile too. */
+
+@media (max-width: 768px) {
+
+    .large-card-top img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+    }
+
+    .team-card:nth-child(2) .team-photo img {
+        object-position: center bottom;
     }
 }
