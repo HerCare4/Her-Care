@@ -241,37 +241,39 @@ header {
 
 /* =========================================================
    HERO TEAM FRAME
+   Fits the team photo without cropping
 ========================================================= */
 
 .hero-image {
-    width: 400px;
-    max-width: 100%;
-    height: 520px;
-    overflow: hidden;
-    border-radius: 0 0 80px 0;
+    width: min(100%, 520px);
+    max-width: 520px;
     justify-self: center;
+    overflow: hidden;
+    border: 2px solid var(--rose);
+    border-radius: 28px;
+    padding: 12px;
+    background: linear-gradient(
+        135deg,
+        var(--blush),
+        var(--lavender)
+    );
+    box-shadow:
+        0 15px 35px rgba(217,154,181,.18);
 }
 
 .team-frame {
-    border: 2px solid var(--rose);
-    background: var(--blush);
-    padding: 14px;
-    box-shadow: 0 12px 30px rgba(217,154,181,.18);
+    position: relative;
 }
 
 .frame-inner {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16 / 10;
     border: 1px solid rgba(217,154,181,.7);
-    background: linear-gradient(
-        135deg,
-        #FFF9F5,
-        #FCE4EC 55%,
-        #DCC6E0
-    );
+    border-radius: 18px;
+    background: var(--cream);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
@@ -281,7 +283,7 @@ header {
     display: block;
     object-fit: contain;
     object-position: center center;
-    background: #FFF9F5;
+    background: var(--cream);
 }
 
 /* =========================================================
@@ -870,7 +872,7 @@ header {
     letter-spacing: 1px;
 }
 
-/* DONATION MESSAGE — ADDED */
+/* DONATION MESSAGE */
 
 .care-kit-heading::after {
     content: "Donations of these items may qualify for community service hours. Please check with your school or organization for approval.";
@@ -1272,14 +1274,15 @@ footer {
         grid-template-columns: repeat(2,1fr);
     }
 
-    /*
-       Keep the hero frame proportional while allowing
-       smaller tablet screens to fit.
-    */
+    /* HERO FRAME */
+
     .hero-image {
-        width: 400px;
-        max-width: 100%;
-        height: 520px;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .frame-inner {
+        aspect-ratio: 16 / 10;
     }
 }
 
@@ -1406,21 +1409,23 @@ footer {
         min-height: 58px;
     }
 
-    /*
-       Mobile version of the hero frame.
-       The frame keeps the same visual proportions
-       as the screenshot while fitting the screen.
-    */
+    /* HERO FRAME */
 
     .hero-image {
         width: 100%;
-        max-width: 400px;
-        height: 520px;
-        border-radius: 0 0 55px 0;
+        max-width: 500px;
+        padding: 9px;
+        border-radius: 22px;
     }
 
-    .team-frame {
-        padding: 10px;
+    .frame-inner {
+        aspect-ratio: 16 / 10;
+        border-radius: 14px;
+    }
+
+    .hero-team-photo {
+        object-fit: contain;
+        object-position: center center;
     }
 
     /* TEAM */
@@ -1809,6 +1814,20 @@ footer {
         font-size: 43px;
     }
 
+    /* HERO FRAME */
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+        padding: 7px;
+        border-radius: 18px;
+    }
+
+    .frame-inner {
+        aspect-ratio: 16 / 10;
+        border-radius: 12px;
+    }
+
     /*
        Keep individual team-photo styling unchanged.
     */
@@ -1921,17 +1940,6 @@ footer {
     .large-card-top {
         height: 220px;
     }
-
-    /*
-       Hero frame on very small phones.
-       Keeps the screenshot-style proportions.
-    */
-
-    .hero-image {
-        width: 100%;
-        max-width: 400px;
-        height: 520px;
-    }
 }
 
 /* =========================================================
@@ -2004,32 +2012,46 @@ footer {
 }
 
 /* =========================================================
-   HERO FRAME FINAL FIX
-   Matches the provided screenshot.
+   HERO FRAME FINAL
+   Photo stays fully visible and centered.
+   Individual team photos are NOT changed.
 ========================================================= */
 
 @media (min-width: 901px) {
 
     .hero-image {
-        width: 400px;
-        height: 520px;
-        max-width: 400px;
+        width: min(100%, 520px);
+        max-width: 520px;
+        height: auto;
         justify-self: center;
         overflow: hidden;
-        border-radius: 0 0 80px 0;
+        border: 2px solid var(--rose);
+        border-radius: 28px;
+        padding: 12px;
+        background: linear-gradient(
+            135deg,
+            var(--blush),
+            var(--lavender)
+        );
+        box-shadow:
+            0 15px 35px rgba(217,154,181,.18);
     }
 
     .team-frame {
-        padding: 14px;
+        position: relative;
     }
 
     .frame-inner {
         width: 100%;
-        height: 100%;
+        aspect-ratio: 16 / 10;
+        height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        border: 1px solid rgba(217,154,181,.7);
+        border-radius: 18px;
+        background: var(--cream);
     }
 
     .hero-team-photo {
@@ -2038,12 +2060,12 @@ footer {
         object-fit: contain;
         object-position: center center;
         display: block;
-        background: #FFF9F5;
+        background: var(--cream);
     }
 
     /*
        IMPORTANT:
-       Do not change individual team photos.
+       Individual team photos stay unchanged.
     */
 
     .team-photo {
