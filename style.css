@@ -245,7 +245,6 @@ header {
 
 .hero-image {
     width: 100%;
-    height: 520px;
     overflow: hidden;
     border-radius: 0 0 80px 0;
 }
@@ -259,20 +258,14 @@ header {
 
 .frame-inner {
     width: 100%;
-    height: 100%;
     border: 1px solid rgba(217,154,181,.7);
-    background: linear-gradient(135deg,#FFF9F5,#FCE4EC 55%,#DCC6E0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
+    display: block;
 }
 
 .hero-team-photo {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
     display: block;
 }
 
@@ -367,19 +360,16 @@ header {
     height: 250px;
     overflow: visible;
     background: #FFF9F5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     border-bottom: 1px solid #edbfd0;
 }
 
 .team-photo img {
-    width: auto;
+    width: 100%;
     height: 100%;
-    max-width: 100%;
     display: block;
-    object-fit: contain;
-    object-position: center center;
+    object-fit: cover;
+    object-position: center 20%;
 }
 
 .team-heart {
@@ -865,13 +855,16 @@ header {
     letter-spacing: 1px;
 }
 
-/* REMOVE OLD EXTRA DONATION MESSAGE */
+/* Remove old extra donation message */
 .care-kit-heading::after {
     content: none !important;
     display: none !important;
 }
 
-/* CARE KIT GRID — DESKTOP */
+/* =========================================================
+   CARE KIT GRID — DESKTOP
+   5 CARDS TOP / 4 CENTERED BELOW
+========================================================= */
 
 .care-items-grid {
     width: 100%;
@@ -891,15 +884,47 @@ header {
     grid-column: span 2;
 }
 
-.care-item:nth-child(1) { grid-column: 1 / span 2; }
-.care-item:nth-child(2) { grid-column: 3 / span 2; }
-.care-item:nth-child(3) { grid-column: 5 / span 2; }
-.care-item:nth-child(4) { grid-column: 7 / span 2; }
-.care-item:nth-child(5) { grid-column: 9 / span 2; }
-.care-item:nth-child(6) { grid-column: 2 / span 2; }
-.care-item:nth-child(7) { grid-column: 4 / span 2; }
-.care-item:nth-child(8) { grid-column: 6 / span 2; }
-.care-item:nth-child(9) { grid-column: 8 / span 2; }
+/* FIRST ROW */
+
+.care-item:nth-child(1) {
+    grid-column: 1 / span 2;
+}
+
+.care-item:nth-child(2) {
+    grid-column: 3 / span 2;
+}
+
+.care-item:nth-child(3) {
+    grid-column: 5 / span 2;
+}
+
+.care-item:nth-child(4) {
+    grid-column: 7 / span 2;
+}
+
+.care-item:nth-child(5) {
+    grid-column: 9 / span 2;
+}
+
+/* SECOND ROW — CENTERED */
+
+.care-item:nth-child(6) {
+    grid-column: 2 / span 2;
+}
+
+.care-item:nth-child(7) {
+    grid-column: 4 / span 2;
+}
+
+.care-item:nth-child(8) {
+    grid-column: 6 / span 2;
+}
+
+.care-item:nth-child(9) {
+    grid-column: 8 / span 2;
+}
+
+/* VERTICAL SEPARATORS */
 
 .care-item:nth-child(1),
 .care-item:nth-child(2),
@@ -940,11 +965,14 @@ header {
     color: #776C78;
 }
 
+/* FINAL CARE KIT CARD */
+
 .featured-care {
-    background: #FCEEF3;
-    padding-top: 15px;
-    padding-bottom: 25px;
-    border-radius: 12px;
+    background: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .featured-care .care-icon {
@@ -1009,7 +1037,7 @@ header {
     margin: auto;
     padding: 35px 0 80px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
 }
 
 .provided-item {
@@ -1111,134 +1139,34 @@ footer {
     background: #FBE1EB;
     border-top: 1px solid #efc5d5;
     margin-top: auto;
-    text-align: left;
+    text-align: center;
 }
 
 .footer-container {
-    width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
-    padding: 8px 0 0;
+    margin: auto;
+    padding: 65px 30px;
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr 1.4fr;
-    gap: 35px;
-    align-items: start;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 45px;
 }
 
-.footer-brand {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
-
-.footer-logo {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 30px;
-    color: #302a35;
-    line-height: 1;
-}
-
-.footer-logo span {
-    color: #E779A0;
-    font-style: italic;
-}
-
-.footer-by {
-    margin-top: 2px;
-    font-size: 10px;
-    color: #625967;
-}
-
-.footer-brand p {
-    margin: 10px 0 0;
-    line-height: 1.4;
-    font-size: 10px;
-    color: #625967;
-}
-
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    text-align: left;
-}
-
-.footer-column h4 {
-    color: #36303A;
-    font-size: 12px;
-    margin: 0 0 4px;
-    letter-spacing: .3px;
-}
-
-.footer-column a,
-.footer-column p {
-    margin: 0;
-    font-size: 10px;
-    line-height: 1.35;
-    color: #625967;
-    text-decoration: none;
-}
-
-.footer-column a:hover {
-    color: #E66F98;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 7px;
-    margin-top: 10px;
-}
-
-.social-icons a {
-    width: 24px;
-    height: 24px;
-    background: #F7C6D9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    color: #625967;
-    text-decoration: none;
-    transition: .25s ease;
-}
-
-.social-icons a:hover {
-    transform: translateY(-2px);
-    background: #EBA9C4;
-}
-
-.copyright {
-    width: 100%;
-    border-top: 1px solid #e9bfd0;
-    padding: 7px 10px 5px;
-    margin-top: 8px;
-    text-align: center;
-    font-size: 8px;
-    color: #746976;
-}
-
-/* Legacy footer markup */
 .footer-content {
     width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
-    padding: 8px 0 5px;
+    margin: auto;
+    padding: 25px 20px 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 5px;
-    text-align: left;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
 }
 
 .footer-content h3 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 30px;
+    font-family: "Cormorant Garamond",serif;
+    font-size: 27px;
     font-weight: 600;
     color: #302a35;
     margin: 0;
@@ -1250,26 +1178,94 @@ footer {
     color: #625967;
 }
 
-.footer-content .social-icons {
-    justify-content: flex-start;
-    gap: 7px;
-    margin-top: 7px;
+.footer-content .social-icons,
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 3px;
 }
 
-.footer-content .social-icons a {
-    width: 24px;
-    height: 24px;
-    font-size: 11px;
+.footer-content .social-icons a,
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    background: #F7C6D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: .25s ease;
 }
 
-.footer-content .copyright {
+.footer-content .social-icons a:hover,
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background: #EBA9C4;
+}
+
+.footer-content .copyright,
+.copyright {
+    position: relative;
     width: 100%;
     border-top: 1px solid #e9bfd0;
-    padding: 7px 10px 0;
-    margin-top: 5px;
+    padding: 10px 5px 5px;
+    margin-top: 12px;
     text-align: center;
-    font-size: 8px;
+    font-size: 14px;
     color: #746976;
+    background: transparent;
+    transform: none;
+    left: auto;
+    top: auto;
+}
+
+.footer-logo {
+    font-family: "Cormorant Garamond",serif;
+    font-size: 40px;
+    color: #302a35;
+    line-height: 1;
+}
+
+.footer-logo span {
+    color: #E779A0;
+    font-style: italic;
+}
+
+.footer-by {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.footer-brand p {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column h4 {
+    color: #36303A;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer-column a,
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #625967;
+}
+
+.footer-column a:hover {
+    color: #E66F98;
 }
 
 /* =========================================================
@@ -1290,17 +1286,25 @@ footer {
         display: none;
     }
 
+    /* CARE KITS — TABLET */
+
     .care-items-grid {
         grid-template-columns: repeat(2,1fr);
         row-gap: 40px;
     }
 
     .care-item {
+        grid-column: auto !important;
+        padding: 0 20px;
         border-right: none !important;
     }
 
     .care-item:nth-child(odd) {
         border-right: 1px solid var(--line) !important;
+    }
+
+    .care-item:nth-child(even) {
+        border-right: none !important;
     }
 
     .provided-content h2 {
@@ -1440,7 +1444,6 @@ footer {
 
     .hero-image {
         width: 100%;
-        height: 360px;
         border-radius: 0 0 55px 0;
     }
 
@@ -1501,9 +1504,8 @@ footer {
     }
 
     .team-photo img {
-        width: auto;
+        width: 100%;
         height: 100%;
-        max-width: 100%;
         object-fit: contain;
         object-position: center center;
         background: #FFF9F5;
@@ -1667,11 +1669,11 @@ footer {
     }
 
     .footer-content .copyright {
-        font-size: 8px;
-        padding: 7px 8px 0;
+        font-size: 11px;
+        padding: 9px 8px 0;
     }
 
-    /* CARE KITS — MOBILE FIX */
+    /* CARE KITS */
 
     .care-kit-items {
         padding: 55px 20px 60px;
@@ -1687,21 +1689,12 @@ footer {
     }
 
     .care-items-grid {
-        width: 100%;
-        display: grid;
         grid-template-columns: 1fr;
-        grid-auto-rows: auto;
         row-gap: 35px;
-        align-items: start;
     }
 
     .care-item {
-        width: 100%;
-        height: auto !important;
-        min-height: 0 !important;
         grid-column: auto !important;
-        grid-row: auto !important;
-        align-self: start;
         padding: 0 15px 30px;
         border-right: none !important;
         border-bottom: 1px solid var(--line);
@@ -1711,40 +1704,20 @@ footer {
         border-bottom: none;
     }
 
-    .care-item .care-line {
-        width: 100%;
-        max-width: 190px;
-        height: 1px;
-        margin: 0 auto 20px;
-    }
-
-    .care-item .care-icon {
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-
     .care-item h3 {
         font-size: 28px;
-        line-height: 1.15;
-        margin-bottom: 10px;
     }
 
     .care-item p {
         font-size: 13px;
-        line-height: 1.65;
         max-width: 250px;
-        margin: 0 auto;
     }
 
     .featured-care {
-        width: 100%;
-        height: auto !important;
-        min-height: 0 !important;
-        padding-top: 0 !important;
-        padding-bottom: 30px !important;
-        border-radius: 0 !important;
-        background: transparent !important;
-        box-shadow: none !important;
+        padding-top: 0;
+        padding-bottom: 30px;
+        border-radius: 0;
+        background: transparent;
     }
 
     /* PROVIDED */
@@ -1954,14 +1927,23 @@ footer {
     }
 
     .footer-content .copyright {
-        font-size: 7px;
+        font-size: 10px;
         padding: 6px 6px 0;
     }
 
+    /* CARE KITS */
+
     .care-kit-heading::after {
-        font-size: 10px;
-        line-height: 1.5;
-        padding: 8px 10px;
+        content: none !important;
+        display: none !important;
+    }
+
+    .care-items-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .care-item {
+        grid-column: auto !important;
     }
 
     .inner-card-grid,
@@ -1975,7 +1957,6 @@ footer {
         height: 220px;
     }
 }
-
 
 /* =========================================================
    FINAL UPDATES FROM PROJECT NOTES
@@ -1992,32 +1973,9 @@ footer {
     text-align: center;
 }
 
+/* PROVIDED ITEMS — TABLET */
+
 @media (max-width: 900px) {
-
-    /* CARE KITS — TABLET */
-
-    .care-items-grid {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 40px;
-    }
-
-    .care-item {
-        grid-column: auto !important;
-        padding: 0 20px;
-        border-right: none !important;
-    }
-
-    .care-item:nth-child(odd) {
-        border-right: 1px solid var(--line) !important;
-    }
-
-    .care-item:nth-child(even) {
-        border-right: none !important;
-    }
-
-    .care-item:nth-child(n+7) {
-        border-top: none;
-    }
 
     .provided-items {
         grid-template-columns: repeat(2, 1fr);
@@ -2033,7 +1991,12 @@ footer {
     }
 }
 
+/* =========================================================
+   FINAL MOBILE UPDATES
+========================================================= */
+
 @media (max-width: 600px) {
+
     .donation-hours {
         width: 100%;
         padding: 35px 20px 5px;
@@ -2064,8 +2027,8 @@ footer {
 }
 
 @media (max-width: 400px) {
+
     .donation-hours h2 {
         font-size: 30px;
     }
 }
-
