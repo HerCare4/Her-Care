@@ -272,9 +272,8 @@ header {
     width: 100%; 
     height: 100%; 
     display: block; 
-    object-fit: contain; 
+    object-fit: cover; 
     object-position: center center; 
-    background: #FFF9F5; 
 } 
  
 /* ========================================================= 
@@ -1966,4 +1965,4 @@ footer {
     .care-items-grid .care-item:nth-child(6) { 
         grid-column: 2; 
     } 
-} can you add it inot the css to give fully foxed css
+}
