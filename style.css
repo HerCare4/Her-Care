@@ -857,14 +857,8 @@ header {
  
 /* DONATION MESSAGE — ADDED */ 
 .care-kit-heading::after { 
-    content: "Donations of these items may qualify for community service hours. Please check with your school or organization for approval."; 
-    display: block; 
-    max-width: 700px; 
-    margin: 14px auto 0; 
-    padding: 10px 20px; 
-    color: #776C78; 
-    font-size: 12px; 
-    line-height: 1.6; 
+    content: none !important; 
+    display: none !important; 
 } 
  
 /* CARE KIT GRID */ 
@@ -983,7 +977,7 @@ header {
     margin: auto; 
     padding: 35px 0 80px; 
     display: grid; 
-    grid-template-columns: repeat(3,1fr); 
+    grid-template-columns: repeat(4,1fr); 
 } 
  
 .provided-item { 
