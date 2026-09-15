@@ -1157,10 +1157,10 @@ footer {
     position: relative; 
     width: 100%; 
     border-top: 1px solid #e9bfd0; 
-    padding: 5px 5px 5px; 
+    padding: 10px 5px 5px; 
     margin-top: 12px; 
     text-align: center; 
-    font-size: 12px; 
+    font-size: 14px; 
     color: #746976; 
     background: transparent; 
     transform: none; 
@@ -1607,8 +1607,8 @@ footer {
     } 
  
     .footer-content .copyright { 
-        font-size: 8px; 
-        padding: 7px 8px 0; 
+        font-size: 11px; 
+        padding: 9px 8px 0; 
     } 
  
     /* CARE KITS */ 
@@ -1863,7 +1863,7 @@ footer {
     } 
  
     .footer-content .copyright { 
-        font-size: 7px; 
+        font-size: 10px; 
         padding: 6px 6px 0; 
     } 
  
