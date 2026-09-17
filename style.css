@@ -245,6 +245,7 @@ header {
 
 .hero-image {
     width: 100%;
+    height: 520px;
     overflow: hidden;
     border-radius: 0 0 80px 0;
 }
@@ -258,14 +259,20 @@ header {
 
 .frame-inner {
     width: 100%;
+    height: 100%;
     border: 1px solid rgba(217,154,181,.7);
+    background: linear-gradient(135deg,#FFF9F5,#FCE4EC 55%,#DCC6E0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    display: block;
 }
 
 .hero-team-photo {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
 }
 
@@ -369,7 +376,7 @@ header {
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center top;
 }
 
 .team-heart {
@@ -855,16 +862,12 @@ header {
     letter-spacing: 1px;
 }
 
-/* Remove old extra donation message */
+/* CARE KIT GRID */
+
 .care-kit-heading::after {
     content: none !important;
     display: none !important;
 }
-
-/* =========================================================
-   CARE KIT GRID — DESKTOP
-   5 CARDS TOP / 4 CENTERED BELOW
-========================================================= */
 
 .care-items-grid {
     width: 100%;
@@ -884,47 +887,15 @@ header {
     grid-column: span 2;
 }
 
-/* FIRST ROW */
-
-.care-item:nth-child(1) {
-    grid-column: 1 / span 2;
-}
-
-.care-item:nth-child(2) {
-    grid-column: 3 / span 2;
-}
-
-.care-item:nth-child(3) {
-    grid-column: 5 / span 2;
-}
-
-.care-item:nth-child(4) {
-    grid-column: 7 / span 2;
-}
-
-.care-item:nth-child(5) {
-    grid-column: 9 / span 2;
-}
-
-/* SECOND ROW — CENTERED */
-
-.care-item:nth-child(6) {
-    grid-column: 2 / span 2;
-}
-
-.care-item:nth-child(7) {
-    grid-column: 4 / span 2;
-}
-
-.care-item:nth-child(8) {
-    grid-column: 6 / span 2;
-}
-
-.care-item:nth-child(9) {
-    grid-column: 8 / span 2;
-}
-
-/* VERTICAL SEPARATORS */
+.care-item:nth-child(1) { grid-column: 1 / span 2; }
+.care-item:nth-child(2) { grid-column: 3 / span 2; }
+.care-item:nth-child(3) { grid-column: 5 / span 2; }
+.care-item:nth-child(4) { grid-column: 7 / span 2; }
+.care-item:nth-child(5) { grid-column: 9 / span 2; }
+.care-item:nth-child(6) { grid-column: 2 / span 2; }
+.care-item:nth-child(7) { grid-column: 4 / span 2; }
+.care-item:nth-child(8) { grid-column: 6 / span 2; }
+.care-item:nth-child(9) { grid-column: 8 / span 2; }
 
 .care-item:nth-child(1),
 .care-item:nth-child(2),
@@ -965,14 +936,11 @@ header {
     color: #776C78;
 }
 
-/* FINAL CARE KIT CARD */
-
 .featured-care {
-    background: transparent;
-    padding-top: 0;
-    padding-bottom: 0;
-    border-radius: 0;
-    box-shadow: none;
+    background: #FCEEF3;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    border-radius: 12px;
 }
 
 .featured-care .care-icon {
@@ -1037,7 +1005,7 @@ header {
     margin: auto;
     padding: 35px 0 80px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 
 .provided-item {
@@ -1208,18 +1176,13 @@ footer {
 
 .footer-content .copyright,
 .copyright {
-    position: relative;
     width: 100%;
     border-top: 1px solid #e9bfd0;
-    padding: 10px 5px 5px;
-    margin-top: 12px;
+    padding: 7px 10px 0;
+    margin-top: 3px;
     text-align: center;
-    font-size: 14px;
+    font-size: 9px;
     color: #746976;
-    background: transparent;
-    transform: none;
-    left: auto;
-    top: auto;
 }
 
 .footer-logo {
@@ -1286,10 +1249,8 @@ footer {
         display: none;
     }
 
-    /* CARE KITS — TABLET */
-
     .care-items-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
     }
 
@@ -1444,6 +1405,7 @@ footer {
 
     .hero-image {
         width: 100%;
+        height: 360px;
         border-radius: 0 0 55px 0;
     }
 
@@ -1669,11 +1631,11 @@ footer {
     }
 
     .footer-content .copyright {
-        font-size: 11px;
-        padding: 9px 8px 0;
+        font-size: 8px;
+        padding: 7px 8px 0;
     }
 
-    /* CARE KITS */
+    /* CARE KITS — MOBILE FIX */
 
     .care-kit-items {
         padding: 55px 20px 60px;
@@ -1689,12 +1651,21 @@ footer {
     }
 
     .care-items-grid {
+        width: 100%;
+        display: grid;
         grid-template-columns: 1fr;
+        grid-auto-rows: auto;
         row-gap: 35px;
+        align-items: start;
     }
 
     .care-item {
+        width: 100%;
+        height: auto !important;
+        min-height: 0 !important;
         grid-column: auto !important;
+        grid-row: auto !important;
+        align-self: start;
         padding: 0 15px 30px;
         border-right: none !important;
         border-bottom: 1px solid var(--line);
@@ -1704,20 +1675,40 @@ footer {
         border-bottom: none;
     }
 
+    .care-item .care-line {
+        width: 100%;
+        max-width: 190px;
+        height: 1px;
+        margin: 0 auto 20px;
+    }
+
+    .care-item .care-icon {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
     .care-item h3 {
         font-size: 28px;
+        line-height: 1.15;
+        margin-bottom: 10px;
     }
 
     .care-item p {
         font-size: 13px;
+        line-height: 1.65;
         max-width: 250px;
+        margin: 0 auto;
     }
 
     .featured-care {
-        padding-top: 0;
-        padding-bottom: 30px;
-        border-radius: 0;
-        background: transparent;
+        width: 100%;
+        height: auto !important;
+        min-height: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 30px !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
     }
 
     /* PROVIDED */
@@ -1847,12 +1838,10 @@ footer {
     }
 
     .team-photo img {
-        width: auto;
+        width: 100%;
         height: 100%;
-        max-width: 100%;
         object-fit: contain;
         object-position: center center;
-        background: #FFF9F5;
     }
 
     .team-heart {
@@ -1927,23 +1916,14 @@ footer {
     }
 
     .footer-content .copyright {
-        font-size: 10px;
+        font-size: 7px;
         padding: 6px 6px 0;
     }
 
-    /* CARE KITS */
-
     .care-kit-heading::after {
-        content: none !important;
-        display: none !important;
-    }
-
-    .care-items-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .care-item {
-        grid-column: auto !important;
+        font-size: 10px;
+        line-height: 1.5;
+        padding: 8px 10px;
     }
 
     .inner-card-grid,
@@ -1957,6 +1937,7 @@ footer {
         height: 220px;
     }
 }
+
 
 /* =========================================================
    FINAL UPDATES FROM PROJECT NOTES
@@ -1973,10 +1954,7 @@ footer {
     text-align: center;
 }
 
-/* PROVIDED ITEMS — TABLET */
-
 @media (max-width: 900px) {
-
     .provided-items {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
@@ -1991,12 +1969,7 @@ footer {
     }
 }
 
-/* =========================================================
-   FINAL MOBILE UPDATES
-========================================================= */
-
 @media (max-width: 600px) {
-
     .donation-hours {
         width: 100%;
         padding: 35px 20px 5px;
@@ -2027,8 +2000,85 @@ footer {
 }
 
 @media (max-width: 400px) {
-
     .donation-hours h2 {
         font-size: 30px;
+    }
+}
+
+
+/* =========================================================
+   PHOTO FIXES ONLY — MISSION + TEAM PHOTOS
+   No other page styles are changed here.
+========================================================= */
+
+/* Mission page photo */
+.large-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--blush);
+}
+
+.large-card-top img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Team photos */
+.team-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #FFF9F5;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center center;
+    background: #FFF9F5;
+}
+
+/* Keep the second team photo centered as well */
+.team-card:nth-child(2) .team-photo img {
+    object-position: center center;
+}
+
+@media (max-width: 768px) {
+    .large-card-top img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .team-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+    }
+
+    .team-card:nth-child(2) .team-photo img {
+        object-position: center center;
+    }
+}
+
+@media (max-width: 400px) {
+    .large-card-top img {
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .team-photo img {
+        object-fit: contain;
+        object-position: center center;
     }
 }
