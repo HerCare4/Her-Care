@@ -860,7 +860,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* Remove old extra donation message */
 .care-kit-heading::after {
     content: none !important;
     display: none !important;
@@ -889,8 +888,6 @@ header {
     grid-column: span 2;
 }
 
-/* FIRST ROW */
-
 .care-item:nth-child(1) {
     grid-column: 1 / span 2;
 }
@@ -911,8 +908,6 @@ header {
     grid-column: 9 / span 2;
 }
 
-/* SECOND ROW — CENTERED */
-
 .care-item:nth-child(6) {
     grid-column: 2 / span 2;
 }
@@ -928,8 +923,6 @@ header {
 .care-item:nth-child(9) {
     grid-column: 8 / span 2;
 }
-
-/* VERTICAL SEPARATORS */
 
 .care-item:nth-child(1),
 .care-item:nth-child(2),
@@ -969,8 +962,6 @@ header {
     line-height: 1.65;
     color: #776C78;
 }
-
-/* FINAL CARE KIT CARD */
 
 .featured-care {
     background: transparent;
@@ -1136,9 +1127,7 @@ header {
 }
 
 /* =========================================================
-   GET INVOLVED — CENTERED ICON BADGES
-   Turns the plain emoji into a centered, colored circle
-   badge instead of a thin strip in the top of the card.
+   GET INVOLVED — OLD ICON SUPPORT
 ========================================================= */
 
 .get-involved-section .large-card-top {
@@ -2061,4 +2050,394 @@ footer {
     .donation-hours h2 {
         font-size: 30px;
     }
+}
+
+
+/* =========================================================
+   GET INVOLVED — NEW PASTEL CARD DESIGN
+========================================================= */
+
+.get-involved-section .large-inner-card {
+    min-height: 490px;
+    padding: 38px 30px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(217, 154, 181, 0.08);
+}
+
+/* =========================================================
+   INDIVIDUAL PASTEL CARD COLORS
+========================================================= */
+
+.get-involved-section .donate-card {
+    background: #FFF7FA;
+    border-color: #F3B8CE;
+}
+
+.get-involved-section .supplies-card {
+    background: #FAF7FF;
+    border-color: #D7C1E8;
+}
+
+.get-involved-section .volunteer-card {
+    background: #F5FAFF;
+    border-color: #B8DDF5;
+}
+
+.get-involved-section .awareness-card {
+    background: #F6FCF8;
+    border-color: #BFE3C9;
+}
+
+.get-involved-section .partner-card {
+    background: #FFFAF5;
+    border-color: #F2C9AA;
+}
+
+.get-involved-section .follow-card {
+    background: #FFF7FB;
+    border-color: #E7B2CE;
+}
+
+/* =========================================================
+   INVOLVEMENT ICON CIRCLE
+========================================================= */
+
+.get-involved-section .involvement-icon {
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    margin: 0 auto 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.get-involved-section .donate-card .involvement-icon {
+    background: #FAD8E7;
+    color: #C43E83;
+}
+
+.get-involved-section .supplies-card .involvement-icon {
+    background: #E3D3EF;
+    color: #925BAE;
+}
+
+.get-involved-section .volunteer-card .involvement-icon {
+    background: #C9E7FA;
+    color: #247DB9;
+}
+
+.get-involved-section .awareness-card .involvement-icon {
+    background: #CDEBD7;
+    color: #29915A;
+}
+
+.get-involved-section .partner-card .involvement-icon {
+    background: #FAD9C1;
+    color: #B85C25;
+}
+
+.get-involved-section .follow-card .involvement-icon {
+    background: #E9B5D0;
+    color: #A52D72;
+}
+
+.get-involved-section .involvement-icon svg {
+    width: 62px;
+    height: 62px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* =========================================================
+   CARD NUMBERS
+========================================================= */
+
+.get-involved-section .card-number {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.get-involved-section .card-number span {
+    width: 65px;
+    height: 1px;
+    display: block;
+}
+
+.get-involved-section .donate-card .card-number {
+    color: #D65A91;
+}
+
+.get-involved-section .donate-card .card-number span {
+    background: #E58AAF;
+}
+
+.get-involved-section .supplies-card .card-number {
+    color: #9B72B7;
+}
+
+.get-involved-section .supplies-card .card-number span {
+    background: #BFA4D0;
+}
+
+.get-involved-section .volunteer-card .card-number {
+    color: #4B98CC;
+}
+
+.get-involved-section .volunteer-card .card-number span {
+    background: #8BC4E7;
+}
+
+.get-involved-section .awareness-card .card-number {
+    color: #4B9C68;
+}
+
+.get-involved-section .awareness-card .card-number span {
+    background: #91C9A3;
+}
+
+.get-involved-section .partner-card .card-number {
+    color: #D6814F;
+}
+
+.get-involved-section .partner-card .card-number span {
+    background: #E5AF8A;
+}
+
+.get-involved-section .follow-card .card-number {
+    color: #C65D91;
+}
+
+.get-involved-section .follow-card .card-number span {
+    background: #DF91B7;
+}
+
+/* =========================================================
+   GET INVOLVED TITLES
+========================================================= */
+
+.get-involved-section .large-inner-card h3 {
+    margin: 0 0 14px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #302A35;
+}
+
+/* =========================================================
+   GET INVOLVED DESCRIPTIONS
+========================================================= */
+
+.get-involved-section .large-inner-card > p {
+    max-width: 285px;
+    margin: 0 auto;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #776C78;
+}
+
+/* =========================================================
+   GET INVOLVED HEART DIVIDER
+========================================================= */
+
+.get-involved-section .card-divider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: auto 0 22px;
+    font-family: serif;
+    font-size: 20px;
+}
+
+.get-involved-section .card-divider::before,
+.get-involved-section .card-divider::after {
+    content: "";
+    width: 55px;
+    height: 1px;
+    display: block;
+}
+
+.get-involved-section .donate-card .card-divider {
+    color: #E36B9D;
+}
+
+.get-involved-section .donate-card .card-divider::before,
+.get-involved-section .donate-card .card-divider::after {
+    background: #E9A3BD;
+}
+
+.get-involved-section .supplies-card .card-divider {
+    color: #A77BC0;
+}
+
+.get-involved-section .supplies-card .card-divider::before,
+.get-involved-section .supplies-card .card-divider::after {
+    background: #C8B1D7;
+}
+
+.get-involved-section .volunteer-card .card-divider {
+    color: #4D9DD2;
+}
+
+.get-involved-section .volunteer-card .card-divider::before,
+.get-involved-section .volunteer-card .card-divider::after {
+    background: #9CCCE8;
+}
+
+.get-involved-section .awareness-card .card-divider {
+    color: #4C9C67;
+}
+
+.get-involved-section .awareness-card .card-divider::before,
+.get-involved-section .awareness-card .card-divider::after {
+    background: #9CCAAA;
+}
+
+.get-involved-section .partner-card .card-divider {
+    color: #E28A58;
+}
+
+.get-involved-section .partner-card .card-divider::before,
+.get-involved-section .partner-card .card-divider::after {
+    background: #E9B895;
+}
+
+.get-involved-section .follow-card .card-divider {
+    color: #C85D91;
+}
+
+.get-involved-section .follow-card .card-divider::before,
+.get-involved-section .follow-card .card-divider::after {
+    background: #E0A0BD;
+}
+
+/* =========================================================
+   GET INVOLVED BUTTONS
+========================================================= */
+
+.get-involved-section .card-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 205px;
+    padding: 14px 24px;
+    border-radius: 30px;
+    background: #E95791;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.get-involved-section .card-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(217, 87, 145, 0.22);
+}
+
+/* =========================================================
+   GET INVOLVED — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .get-involved-section .large-inner-card {
+        min-height: 460px;
+    }
+
+}
+
+/* =========================================================
+   GET INVOLVED — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .get-involved-section .large-inner-card {
+        min-height: 440px;
+        padding: 32px 22px 28px;
+    }
+
+    .get-involved-section .involvement-icon {
+        width: 105px;
+        height: 105px;
+    }
+
+    .get-involved-section .involvement-icon svg {
+        width: 52px;
+        height: 52px;
+    }
+
+    .get-involved-section .large-inner-card h3 {
+        font-size: 31px;
+    }
+
+    .get-involved-section .card-number span {
+        width: 45px;
+    }
+
+}
+
+/* =========================================================
+   GET INVOLVED — SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .get-involved-section .large-inner-card {
+        min-height: 430px;
+        padding: 30px 18px 25px;
+    }
+
+    .get-involved-section .involvement-icon {
+        width: 95px;
+        height: 95px;
+        margin-bottom: 22px;
+    }
+
+    .get-involved-section .involvement-icon svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .get-involved-section .large-inner-card h3 {
+        font-size: 29px;
+    }
+
+    .get-involved-section .large-inner-card > p {
+        font-size: 13px;
+        max-width: 260px;
+    }
+
+    .get-involved-section .card-button {
+        min-width: 190px;
+        padding: 13px 20px;
+    }
+
 }
