@@ -1,6 +1,3 @@
-
-
-
 /* =========================================================
    HER CARE — STYLE.CSS
 ========================================================= */
@@ -524,6 +521,11 @@ header {
 .peach-care {
     background: #FAD9C1;
     color: #9B6650;
+}
+
+.rose-care {
+    background: var(--rose);
+    color: #FFFFFF;
 }
 
 .what-we-do .what-card h3 {
@@ -1131,6 +1133,31 @@ header {
     font-size: 13px;
     line-height: 1.65;
     color: var(--muted);
+}
+
+/* =========================================================
+   GET INVOLVED — CENTERED ICON BADGES
+   Turns the plain emoji into a centered, colored circle
+   badge instead of a thin strip in the top of the card.
+========================================================= */
+
+.get-involved-section .large-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.get-involved-section .large-card-heart {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    line-height: 1;
+    margin: 0;
+    box-shadow: 0 8px 20px rgba(217,154,181,.18);
 }
 
 /* =========================================================
