@@ -2058,7 +2058,6 @@ footer {
 ========================================================= */
 
 .get-involved-section .large-inner-card {
-    min-height: 490px;
     padding: 38px 30px 32px;
     display: flex;
     flex-direction: column;
